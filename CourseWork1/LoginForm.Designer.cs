@@ -34,7 +34,6 @@ namespace CourseWork1
             this.BtnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelMessage = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnGuest = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -83,18 +82,6 @@ namespace CourseWork1
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
-            // labelMessage
-            // 
-            this.labelMessage.AutoSize = true;
-            this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessage.ForeColor = System.Drawing.Color.Red;
-            this.labelMessage.Location = new System.Drawing.Point(256, 271);
-            this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(244, 13);
-            this.labelMessage.TabIndex = 5;
-            this.labelMessage.Text = "Please Enter Correct Username/Password";
-            this.labelMessage.Visible = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -122,7 +109,6 @@ namespace CourseWork1
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.BtnGuest);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnLogin);
@@ -143,7 +129,6 @@ namespace CourseWork1
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnGuest;
     }

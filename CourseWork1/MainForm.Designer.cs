@@ -46,6 +46,7 @@ namespace CourseWork1
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.SystemColors.ControlText;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.TicketFormMenu,
@@ -59,10 +60,12 @@ namespace CourseWork1
             // 
             // openToolStripMenuItem
             // 
+            this.openToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.EntryFormMenu,
             this.ExitFormMenu,
             this.ReportFormMenu});
+            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.openToolStripMenuItem.Text = "Open";
@@ -70,26 +73,27 @@ namespace CourseWork1
             // EntryFormMenu
             // 
             this.EntryFormMenu.Name = "EntryFormMenu";
-            this.EntryFormMenu.Size = new System.Drawing.Size(109, 22);
+            this.EntryFormMenu.Size = new System.Drawing.Size(180, 22);
             this.EntryFormMenu.Text = "Entry";
             this.EntryFormMenu.Click += new System.EventHandler(this.EntryFormMenu_Click);
             // 
             // ExitFormMenu
             // 
             this.ExitFormMenu.Name = "ExitFormMenu";
-            this.ExitFormMenu.Size = new System.Drawing.Size(109, 22);
+            this.ExitFormMenu.Size = new System.Drawing.Size(180, 22);
             this.ExitFormMenu.Text = "Exit";
             this.ExitFormMenu.Click += new System.EventHandler(this.ExitFormMenu_Click);
             // 
             // ReportFormMenu
             // 
             this.ReportFormMenu.Name = "ReportFormMenu";
-            this.ReportFormMenu.Size = new System.Drawing.Size(109, 22);
+            this.ReportFormMenu.Size = new System.Drawing.Size(180, 22);
             this.ReportFormMenu.Text = "Report";
             this.ReportFormMenu.Click += new System.EventHandler(this.ReportFormMenu_Click);
             // 
             // TicketFormMenu
             // 
+            this.TicketFormMenu.ForeColor = System.Drawing.Color.White;
             this.TicketFormMenu.Name = "TicketFormMenu";
             this.TicketFormMenu.Size = new System.Drawing.Size(50, 20);
             this.TicketFormMenu.Text = "Ticket";
@@ -97,6 +101,7 @@ namespace CourseWork1
             // 
             // VisitorFormMenu
             // 
+            this.VisitorFormMenu.ForeColor = System.Drawing.Color.White;
             this.VisitorFormMenu.Name = "VisitorFormMenu";
             this.VisitorFormMenu.Size = new System.Drawing.Size(57, 20);
             this.VisitorFormMenu.Text = "Visitors";
@@ -105,6 +110,7 @@ namespace CourseWork1
             // uSERToolStripMenuItem
             // 
             this.uSERToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.uSERToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.uSERToolStripMenuItem.Name = "uSERToolStripMenuItem";
             this.uSERToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.uSERToolStripMenuItem.Text = "USER";

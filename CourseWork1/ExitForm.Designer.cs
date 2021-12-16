@@ -45,6 +45,7 @@ namespace CourseWork1
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnExitComplete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.inputId)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,6 +134,7 @@ namespace CourseWork1
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnExit
             // 
@@ -207,11 +209,22 @@ namespace CourseWork1
             this.label13.Text = "label13";
             this.label13.Visible = false;
             // 
+            // btnExitComplete
+            // 
+            this.btnExitComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.btnExitComplete.Location = new System.Drawing.Point(83, 404);
+            this.btnExitComplete.Name = "btnExitComplete";
+            this.btnExitComplete.Size = new System.Drawing.Size(112, 30);
+            this.btnExitComplete.TabIndex = 16;
+            this.btnExitComplete.Text = "Exit Done";
+            this.btnExitComplete.UseVisualStyleBackColor = true;
+            // 
             // ExitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnExitComplete);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -228,6 +241,7 @@ namespace CourseWork1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExitForm";
             this.Text = "ExitForm";
             ((System.ComponentModel.ISupportInitialize)(this.inputId)).EndInit();
@@ -254,5 +268,6 @@ namespace CourseWork1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnExitComplete;
     }
 }

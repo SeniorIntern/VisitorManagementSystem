@@ -112,9 +112,9 @@ namespace CourseWork1
             // VisitorsGridView
             // 
             this.VisitorsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.VisitorsGridView.Location = new System.Drawing.Point(372, 47);
+            this.VisitorsGridView.Location = new System.Drawing.Point(297, 47);
             this.VisitorsGridView.Name = "VisitorsGridView";
-            this.VisitorsGridView.Size = new System.Drawing.Size(368, 352);
+            this.VisitorsGridView.Size = new System.Drawing.Size(443, 348);
             this.VisitorsGridView.TabIndex = 16;
             // 
             // EntryForm
@@ -130,6 +130,7 @@ namespace CourseWork1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EntryForm";
             this.Text = "EntryForm";
             this.Load += new System.EventHandler(this.EntryForm_Load_1);

@@ -37,7 +37,7 @@ namespace CourseWork1
             else
             {
                 // show labelMessage(Username password not valid)
-                labelMessage.Visible = true;
+                MessageBox.Show("your Username/Password is not correct");
             }
         }
     }

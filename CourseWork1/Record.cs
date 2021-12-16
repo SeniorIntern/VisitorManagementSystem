@@ -8,12 +8,13 @@ namespace CourseWork1
 {
     internal class Record
     {
-        public int Id { get; set; }
-        public String TktType { get; set; }
-        public int Count { get; set; }
-        public DateTime EntryTime { get; set; }
-        public DateTime ExitTime { get; set; }
+        //newCode C03 starts(12/16)
+        public int VId { get; set; }
+        public String VType { get; set; }
+        public int VCount { get; set; }
+        public DateTime VEntrytime { get; set; }
+        public DateTime VExitTime { get; set; }
         public float Income { get; set; }
-
+        //newCode C03 ends(12/16)
     }
 }

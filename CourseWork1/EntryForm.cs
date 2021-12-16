@@ -25,21 +25,15 @@ namespace CourseWork1
             MainForm.EntryView = null; 
         }
 
-
         string filePath = "C:\\ProjectFiles\\visitors.csv";
 
         public void ReadCsvFile()
         {
-            // string records = File.ReadAllText(filePath);
-            // OutputBox.Text = records;
             GlobalValues.VisitorList = new List<Visitor>();
             string[] visitors = File.ReadAllLines(filePath);
             foreach (string s in visitors)
             {
-                // s-> {"1,	KhukuriRam, Kharel,	8"}
                 string[] st = s.Split(',');
-                // st-> {"1",	"KhukuriRam" "Kharel",	"8"}
-
                 Visitor vt = new Visitor();
                 vt.Id = Convert.ToInt32(st[0]);
                 vt.Type = st[1];
@@ -52,8 +46,6 @@ namespace CourseWork1
 
         private void EntryForm_Load_1(object sender, EventArgs e)
         {
-            //StudentGridView.DataSource = GlobalValues.StudentList;
-            //MainForm.ReadCsvFile();
             VisitorsGridView.DataSource = null;
             ReadCsvFile();
         }
@@ -66,50 +58,53 @@ namespace CourseWork1
 
         private void BtnAddStudent_Click_1(object sender, EventArgs e)
         {
-            try
+            // newCode C01 starts(12/16)
+            if (VisitorId.Value < 1 || VisitorType.SelectedItem == null || VisitorCount.Value == 0)
             {
-                Visitor v = new Visitor();
-                v.Id = (int)VisitorId.Value;
-                v.Type = VisitorType.Text;
-                v.Count = (int)VisitorCount.Value;
-
-                GlobalValues.VisitorList.Add(v);
-
-                AddStudentToCsv(v.Id, v.Type, v.Count);
-                VisitorId.Value = v.Id + 1;
-                VisitorType.Text = "";
-                VisitorCount.Value = v.Count;
+                MessageBox.Show("Please enter valid info");
+                return;
             }
-            catch (FormatException fe)
+            else if (VisitorType.SelectedItem.ToString().Equals("Group") && VisitorCount.Value < 5) // incomplete
             {
-                MessageBox.Show("Invalid Input! Please enter correct data.");
+                MessageBox.Show("Group must have at least 5 people");
+                return;
             }
-            VisitorsGridView.DataSource = null;
-            VisitorsGridView.DataSource = GlobalValues.VisitorList;
-        }
+            else
+            {
+                try
+                {
+                    Visitor v = new Visitor();
+                    v.Id = (int)VisitorId.Value;
+                    v.Type = VisitorType.Text;
+                    v.Count = (int)VisitorCount.Value;
 
-        /*
-        if(inputId.Value <1 || comboType.SelectedItem == null)
-        {
-            MessageBox.Show("Please enter valid info");
-            return;
-        }
-        else if(comboType.SelectedItem.ToString().Equals("Group") && input) // incomplete
-        {
-	        MessageBox.Show("Group must have at least 5 people");
-        }
+                    GlobalValues.VisitorList.Add(v);
 
-        Record r = new Record()
-        r.Id = (int)inputId.Value;
-        r.TktType = comboType.SelectedItem.ToString();
-        r.Count = (int)inputCount.Value
-        r.EntryTime = DateTime.Now;
-        r.ExitTime = r.EntryTime;
+                    AddStudentToCsv(v.Id, v.Type, v.Count);
+                    VisitorId.Value = v.Id + 1;
+                    VisitorType.Text = "";
+                    VisitorCount.Value = v.Count;
+                }
+                catch (FormatException fe)
+                {
+                    MessageBox.Show("Invalid Input! Please enter correct data.");
+                }
+                VisitorsGridView.DataSource = null;
+                VisitorsGridView.DataSource = GlobalValues.VisitorList;
+            }
 
-        GlobalValues.recordList.Add(r);
-        Helper.SaveRecordToFile(r);
-        ClearInputs();
-        MessageBox.Show("Ticket Issue Complete");
-        */
+            Record r = new Record();
+            r.VId = (int)VisitorId.Value;
+            r.VType = VisitorType.SelectedItem.ToString();
+            r.VCount = (int)VisitorCount.Value;
+            r.VEntrytime = DateTime.Now;
+            r.VExitTime = r.VEntrytime;
+
+            //GlobalValues.recordList.Add(r);
+            //helper.saverecordtofile(r);
+            //clearinputs();
+            //MessageBox.Show("ticket issue complete");
+            // newCode C01 ends
+        }
     }
 }
