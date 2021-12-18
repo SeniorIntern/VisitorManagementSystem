@@ -48,7 +48,7 @@ namespace CourseWork1
             this.BtnAddStudent.Location = new System.Drawing.Point(83, 237);
             this.BtnAddStudent.Name = "BtnAddStudent";
             this.BtnAddStudent.Size = new System.Drawing.Size(87, 27);
-            this.BtnAddStudent.TabIndex = 15;
+            this.BtnAddStudent.TabIndex = 4;
             this.BtnAddStudent.Text = "Add";
             this.BtnAddStudent.UseVisualStyleBackColor = true;
             this.BtnAddStudent.Click += new System.EventHandler(this.BtnAddStudent_Click_1);
@@ -63,21 +63,21 @@ namespace CourseWork1
             this.VisitorType.Location = new System.Drawing.Point(135, 101);
             this.VisitorType.Name = "VisitorType";
             this.VisitorType.Size = new System.Drawing.Size(87, 21);
-            this.VisitorType.TabIndex = 14;
+            this.VisitorType.TabIndex = 2;
             // 
             // VisitorCount
             // 
             this.VisitorCount.Location = new System.Drawing.Point(135, 157);
             this.VisitorCount.Name = "VisitorCount";
             this.VisitorCount.Size = new System.Drawing.Size(87, 20);
-            this.VisitorCount.TabIndex = 13;
+            this.VisitorCount.TabIndex = 3;
             // 
             // VisitorId
             // 
             this.VisitorId.Location = new System.Drawing.Point(135, 47);
             this.VisitorId.Name = "VisitorId";
             this.VisitorId.Size = new System.Drawing.Size(87, 20);
-            this.VisitorId.TabIndex = 12;
+            this.VisitorId.TabIndex = 1;
             // 
             // label3
             // 

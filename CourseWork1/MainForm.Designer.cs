@@ -38,7 +38,7 @@ namespace CourseWork1
             this.ReportFormMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TicketFormMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.VisitorFormMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.uSERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UserFormMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.LabelDate = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip.SuspendLayout();
@@ -51,7 +51,7 @@ namespace CourseWork1
             this.openToolStripMenuItem,
             this.TicketFormMenu,
             this.VisitorFormMenu,
-            this.uSERToolStripMenuItem});
+            this.UserFormMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(784, 24);
@@ -73,21 +73,21 @@ namespace CourseWork1
             // EntryFormMenu
             // 
             this.EntryFormMenu.Name = "EntryFormMenu";
-            this.EntryFormMenu.Size = new System.Drawing.Size(180, 22);
+            this.EntryFormMenu.Size = new System.Drawing.Size(109, 22);
             this.EntryFormMenu.Text = "Entry";
             this.EntryFormMenu.Click += new System.EventHandler(this.EntryFormMenu_Click);
             // 
             // ExitFormMenu
             // 
             this.ExitFormMenu.Name = "ExitFormMenu";
-            this.ExitFormMenu.Size = new System.Drawing.Size(180, 22);
+            this.ExitFormMenu.Size = new System.Drawing.Size(109, 22);
             this.ExitFormMenu.Text = "Exit";
             this.ExitFormMenu.Click += new System.EventHandler(this.ExitFormMenu_Click);
             // 
             // ReportFormMenu
             // 
             this.ReportFormMenu.Name = "ReportFormMenu";
-            this.ReportFormMenu.Size = new System.Drawing.Size(180, 22);
+            this.ReportFormMenu.Size = new System.Drawing.Size(109, 22);
             this.ReportFormMenu.Text = "Report";
             this.ReportFormMenu.Click += new System.EventHandler(this.ReportFormMenu_Click);
             // 
@@ -107,13 +107,13 @@ namespace CourseWork1
             this.VisitorFormMenu.Text = "Visitors";
             this.VisitorFormMenu.Click += new System.EventHandler(this.VisitorFormMenu_Click);
             // 
-            // uSERToolStripMenuItem
+            // UserFormMenu
             // 
-            this.uSERToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.uSERToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.uSERToolStripMenuItem.Name = "uSERToolStripMenuItem";
-            this.uSERToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.uSERToolStripMenuItem.Text = "USER";
+            this.UserFormMenu.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.UserFormMenu.BackColor = System.Drawing.Color.White;
+            this.UserFormMenu.Name = "UserFormMenu";
+            this.UserFormMenu.Size = new System.Drawing.Size(46, 20);
+            this.UserFormMenu.Text = "USER";
             // 
             // LabelDate
             // 
@@ -158,7 +158,7 @@ namespace CourseWork1
         private System.Windows.Forms.ToolStripMenuItem TicketFormMenu;
         private System.Windows.Forms.ToolStripMenuItem VisitorFormMenu;
         private System.Windows.Forms.Label LabelDate;
-        private System.Windows.Forms.ToolStripMenuItem uSERToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UserFormMenu;
         private System.Windows.Forms.Timer timer1;
     }
 }
