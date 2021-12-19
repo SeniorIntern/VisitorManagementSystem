@@ -124,14 +124,14 @@ namespace CourseWork1
             this.inputId.Location = new System.Drawing.Point(156, 59);
             this.inputId.Name = "inputId";
             this.inputId.Size = new System.Drawing.Size(70, 20);
-            this.inputId.TabIndex = 7;
+            this.inputId.TabIndex = 0;
             // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(257, 59);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 8;
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -141,7 +141,7 @@ namespace CourseWork1
             this.btnExit.Location = new System.Drawing.Point(379, 59);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 9;
+            this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

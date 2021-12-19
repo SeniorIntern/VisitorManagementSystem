@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+using System.IO;
+
+namespace CourseWork1
+{
+    public partial class TicketForm : Form
+    {
+        public TicketForm()
+        {
+            InitializeComponent();
+        }
+
+        public static void TicketForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainForm.TicketView = null;
+        }
+
+        string TfilePath = "C:\\ProjectFiles\\ticketRate.csv";
+
+        public void ReadTicketCsvFile()
+        {
+            GlobalValues.TicketList = new List<Ticket>();
+            string[] tickets = File.ReadAllLines(TfilePath);
+            foreach (string t in tickets)
+            {
+                string[] tr = t.Split(',');
+                Ticket tt = new Ticket();   // creating object of Ticket class
+                tt.TicketType = tr[0];
+                tt.Rate1hr = Convert.ToInt32(tr[1]);
+                tt.Rate2hr = Convert.ToInt32(tr[2]);
+                tt.Rate3hr = Convert.ToInt32(tr[3]);
+
+                GlobalValues.TicketList.Add(tt);
+            }
+            TicketsGridView.DataSource = GlobalValues.TicketList;
+        }
+
+        private void TicketForm_Load(object sender, EventArgs e)
+        {
+            TicketsGridView.DataSource = null;
+            ReadTicketCsvFile();
+        }
+
+        private void AddTktRateToCsv(string TicketType, int Rate1hr, int Rate2hr, int Rate3hr)
+        {
+            string newRate = "\n" + TicketType + "," + Rate1hr + "," + Rate2hr + "," + Rate3hr;
+            File.AppendAllText(TfilePath, newRate);
+        }
+
+        private void btnAddTicketRate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Ticket ti = new Ticket();
+                ti.TicketType = TicketType.Text;
+                ti.Rate1hr = (int)Ticket1HourRate.Value;
+                ti.Rate2hr = (int)Ticket2HourRate.Value;
+                ti.Rate3hr = (int)Ticket3HourRate.Value;
+
+                GlobalValues.TicketList.Add(ti);
+
+                AddTktRateToCsv(ti.TicketType, ti.Rate1hr, ti.Rate2hr, ti.Rate3hr);
+                TicketType.Text = "";
+                Ticket1HourRate.Value = ti.Rate1hr;
+                Ticket2HourRate.Value = ti.Rate2hr;
+                Ticket3HourRate.Value = ti.Rate3hr;
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show("Invalid Input! Please enter correct data.");
+            }
+            TicketsGridView.DataSource = null;
+            TicketsGridView.DataSource = GlobalValues.TicketList;
+        }
+    }
+}

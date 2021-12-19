@@ -15,77 +15,81 @@ namespace CourseWork1
 {
     public partial class EntryForm : Form
     {
-       public EntryForm()
+        public EntryForm()
         {
             InitializeComponent();
         }
-
-        public static void EntryForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            MainForm.EntryView = null; 
-        }
-
-        string filePath = "C:\\ProjectFiles\\visitors.csv";
-
-        public void ReadCsvFile()
-        {
-            GlobalValues.VisitorList = new List<Visitor>();
-            string[] visitors = File.ReadAllLines(filePath);
-            foreach (string s in visitors)
-            {
-                string[] st = s.Split(',');
-                Visitor vt = new Visitor();
-                vt.Id = Convert.ToInt32(st[0]);
-                vt.Type = st[1];
-                vt.Count = Convert.ToInt32(st[2]);
-
-                GlobalValues.VisitorList.Add(vt); 
-            }
-            VisitorsGridView.DataSource = GlobalValues.VisitorList;
-        }
-
-        private void EntryForm_Load_1(object sender, EventArgs e)
+        private void EntryForm_Load(object sender, EventArgs e)
         {
             VisitorsGridView.DataSource = null;
             ReadCsvFile();
         }
 
+        public static void EntryForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainForm.EntryView = null;
+        }
+
+        string filePath = "C:\\ProjectFiles\\visitors.csv";
         private void AddStudentToCsv(int Id, string Type, int Count)
         {
-            string newSt = "\n" + Id + "," + Type + "," + Count;
-            File.AppendAllText(filePath, newSt);
+            string newVt = "\n" + Id + "," + Type + "," + Count;
+            File.AppendAllText(filePath, newVt);
+        }
+
+        public void ReadCsvFile()
+        {
+            GlobalValues.VisitorList = new List<Visitor>();
+            string[] visitors = File.ReadAllLines(filePath);
+            foreach (string v in visitors)
+            {
+                string[] vs = v.Split(',');
+                Visitor vtrObjOne = new Visitor();    // creating object of Visitor class
+                vtrObjOne.Id = Convert.ToInt32(vs[0]);
+                vtrObjOne.Type = vs[1];
+                vtrObjOne.Count = Convert.ToInt32(vs[2]);
+
+                GlobalValues.VisitorList.Add(vtrObjOne);
+            }
+            VisitorsGridView.DataSource = GlobalValues.VisitorList;
         }
 
         private void BtnAddStudent_Click_1(object sender, EventArgs e)
         {
-            // newCode C01 starts(12/16)
-            if (VisitorId.Value < 1 || VisitorType.SelectedItem == null || VisitorCount.Value == 0)
+            if (VisitorType.SelectedItem.ToString().Equals("") || VisitorCount.Value == 0)
             {
                 MessageBox.Show("Please enter valid info");
                 return;
             }
-            else if (VisitorType.SelectedItem.ToString().Equals("Group") && VisitorCount.Value < 5) // incomplete
+            else if (VisitorType.SelectedItem.ToString().Equals("Group") && VisitorCount.Value < 5)
             {
                 MessageBox.Show("Group must have at least 5 people");
+                return;
+            }
+            else if (VisitorType.SelectedItem.ToString().Equals("Group") && VisitorCount.Value > 15)
+            {
+                MessageBox.Show("Group of 15 or more is not allowed");
                 return;
             }
             else
             {
                 try
                 {
-                    Visitor v = new Visitor();
-                    v.Id = (int)VisitorId.Value;
-                    v.Type = VisitorType.Text;
-                    v.Count = (int)VisitorCount.Value;
+                    Visitor vtrObjTwo = new Visitor();
+                    vtrObjTwo.Id = (int)VisitorId.Value;
+                    vtrObjTwo.Type = VisitorType.Text;
+                    vtrObjTwo.Count = (int)VisitorCount.Value;
 
-                    GlobalValues.VisitorList.Add(v);
+                    GlobalValues.VisitorList.Add(vtrObjTwo);
 
-                    AddStudentToCsv(v.Id, v.Type, v.Count);
-                    VisitorId.Value = v.Id + 1;
+                    AddStudentToCsv(vtrObjTwo.Id, vtrObjTwo.Type, vtrObjTwo.Count);
+                    VisitorId.Value = vtrObjTwo.Id + 1; // auto increment for visitor Id
                     VisitorType.Text = "";
-                    VisitorCount.Value = v.Count;
+                    VisitorCount.Value = vtrObjTwo.Count;
+
+                    MessageBox.Show("Ticket issue complete");
                 }
-                catch (FormatException fe)
+                catch (FormatException)
                 {
                     MessageBox.Show("Invalid Input! Please enter correct data.");
                 }
@@ -93,6 +97,7 @@ namespace CourseWork1
                 VisitorsGridView.DataSource = GlobalValues.VisitorList;
             }
 
+            // will be used for other forms. save records on a file
             Record r = new Record();
             r.VId = (int)VisitorId.Value;
             r.VType = VisitorType.SelectedItem.ToString();
@@ -103,7 +108,6 @@ namespace CourseWork1
             //GlobalValues.recordList.Add(r);
             //helper.saverecordtofile(r);
             //clearinputs();
-            //MessageBox.Show("ticket issue complete");
             // newCode C01 ends
         }
     }

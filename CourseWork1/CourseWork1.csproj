@@ -80,6 +80,7 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ticket.cs" />
     <Compile Include="TicketForm.cs">
       <SubType>Form</SubType>
     </Compile>

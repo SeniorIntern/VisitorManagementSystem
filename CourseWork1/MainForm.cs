@@ -15,7 +15,7 @@ namespace CourseWork1
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            menuStrip.Enabled = false; // fow disabling menustrip in logi screen
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -25,36 +25,38 @@ namespace CourseWork1
             this.LabelDate.Text = dt.ToString();
         }
 
-        LoginForm LF;
+        LoginForm LoginF;
         private void LF_FormClosed(object sender, FormClosedEventArgs e)
         {
-            LF = null;
-            // enable MenuStrip
+            LoginF = null;
+            // enable MenuStrip after closing login form
             menuStrip.Enabled = true;
         }
 
         // for showing login form
         private void ShowLogin()
         {
-            if (LF == null)
+            if (LoginF == null)
             {
-                LF = new LoginForm();
-                LF.FormClosed += LF_FormClosed;
-                LF.MdiParent = this;
-                LF.Show();
+                LoginF = new LoginForm();
+                LoginF.FormClosed += LF_FormClosed;
+                LoginF.MdiParent = this;
+                LoginF.Show();
             }
             else
             {
-                LF.Activate();
+                LoginF.Activate();
             }
         }
 
-        // for showing entry form
+        // for showing entry form onClicking menustrip-entry
         private void EntryFormMenu_Click(object sender, EventArgs e)
         {
             ShowEntryForm();
         }
+
         public static EntryForm EntryView;
+
         private void ShowEntryForm()
         {
             if (EntryView == null)
@@ -66,6 +68,26 @@ namespace CourseWork1
             else
             {
                 EntryView.Activate();
+            }
+        }
+
+        // for showing ticket form
+        private void TicketFormMenu_Click(object sender, EventArgs e)
+        {
+            ShowTicketForm();
+        }
+        public static TicketForm TicketView;
+        private void ShowTicketForm()
+        {
+            if (TicketView == null)
+            {
+                TicketView = new TicketForm();
+                TicketView.FormClosed += TicketForm.TicketForm_FormClosed;
+                TicketView.Show();
+            }
+            else
+            {
+                TicketView.Activate();
             }
         }
 
@@ -109,27 +131,7 @@ namespace CourseWork1
             }
         }
 
-        // for showing ticket form
-        private void TicketFormMenu_Click(object sender, EventArgs e)
-        {
-            ShowTicketForm();
-        }
-        public static TicketForm TicketView;
-        private void ShowTicketForm()
-        {
-            if (TicketView == null)
-            {
-                TicketView = new TicketForm();
-                TicketView.FormClosed += TicketForm.TicketForm_FormClosed;
-                TicketView.Show();
-            }
-            else
-            {
-                TicketView.Activate();
-            }
-        }
-
-        // for showing ticket form
+        // for showing visitor form
         private void VisitorFormMenu_Click(object sender, EventArgs e)
         {
             ShowVisitorForm();

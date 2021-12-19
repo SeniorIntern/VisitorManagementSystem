@@ -32,14 +32,14 @@ namespace CourseWork1
             this.BtnAddStudent = new System.Windows.Forms.Button();
             this.VisitorType = new System.Windows.Forms.ComboBox();
             this.VisitorCount = new System.Windows.Forms.NumericUpDown();
-            this.VisitorId = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.VisitorsGridView = new System.Windows.Forms.DataGridView();
+            this.VisitorId = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VisitorId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VisitorId)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnAddStudent
@@ -48,7 +48,7 @@ namespace CourseWork1
             this.BtnAddStudent.Location = new System.Drawing.Point(83, 237);
             this.BtnAddStudent.Name = "BtnAddStudent";
             this.BtnAddStudent.Size = new System.Drawing.Size(87, 27);
-            this.BtnAddStudent.TabIndex = 4;
+            this.BtnAddStudent.TabIndex = 3;
             this.BtnAddStudent.Text = "Add";
             this.BtnAddStudent.UseVisualStyleBackColor = true;
             this.BtnAddStudent.Click += new System.EventHandler(this.BtnAddStudent_Click_1);
@@ -63,21 +63,14 @@ namespace CourseWork1
             this.VisitorType.Location = new System.Drawing.Point(135, 101);
             this.VisitorType.Name = "VisitorType";
             this.VisitorType.Size = new System.Drawing.Size(87, 21);
-            this.VisitorType.TabIndex = 2;
+            this.VisitorType.TabIndex = 1;
             // 
             // VisitorCount
             // 
             this.VisitorCount.Location = new System.Drawing.Point(135, 157);
             this.VisitorCount.Name = "VisitorCount";
             this.VisitorCount.Size = new System.Drawing.Size(87, 20);
-            this.VisitorCount.TabIndex = 3;
-            // 
-            // VisitorId
-            // 
-            this.VisitorId.Location = new System.Drawing.Point(135, 47);
-            this.VisitorId.Name = "VisitorId";
-            this.VisitorId.Size = new System.Drawing.Size(87, 20);
-            this.VisitorId.TabIndex = 1;
+            this.VisitorCount.TabIndex = 2;
             // 
             // label3
             // 
@@ -112,31 +105,38 @@ namespace CourseWork1
             // VisitorsGridView
             // 
             this.VisitorsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.VisitorsGridView.Location = new System.Drawing.Point(297, 47);
+            this.VisitorsGridView.Location = new System.Drawing.Point(253, 47);
             this.VisitorsGridView.Name = "VisitorsGridView";
-            this.VisitorsGridView.Size = new System.Drawing.Size(443, 348);
+            this.VisitorsGridView.Size = new System.Drawing.Size(487, 414);
             this.VisitorsGridView.TabIndex = 16;
+            // 
+            // VisitorId
+            // 
+            this.VisitorId.Location = new System.Drawing.Point(135, 47);
+            this.VisitorId.Name = "VisitorId";
+            this.VisitorId.Size = new System.Drawing.Size(87, 20);
+            this.VisitorId.TabIndex = 0;
             // 
             // EntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.VisitorId);
             this.Controls.Add(this.VisitorsGridView);
             this.Controls.Add(this.BtnAddStudent);
             this.Controls.Add(this.VisitorType);
             this.Controls.Add(this.VisitorCount);
-            this.Controls.Add(this.VisitorId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EntryForm";
             this.Text = "EntryForm";
-            this.Load += new System.EventHandler(this.EntryForm_Load_1);
+            this.Load += new System.EventHandler(this.EntryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VisitorId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VisitorId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,10 +146,10 @@ namespace CourseWork1
         private System.Windows.Forms.Button BtnAddStudent;
         private System.Windows.Forms.ComboBox VisitorType;
         private System.Windows.Forms.NumericUpDown VisitorCount;
-        private System.Windows.Forms.NumericUpDown VisitorId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView VisitorsGridView;
+        private System.Windows.Forms.NumericUpDown VisitorId;
     }
 }
