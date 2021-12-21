@@ -45,7 +45,7 @@ namespace CourseWork1
             // BtnAddStudent
             // 
             this.BtnAddStudent.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnAddStudent.Location = new System.Drawing.Point(83, 237);
+            this.BtnAddStudent.Location = new System.Drawing.Point(59, 222);
             this.BtnAddStudent.Name = "BtnAddStudent";
             this.BtnAddStudent.Size = new System.Drawing.Size(87, 27);
             this.BtnAddStudent.TabIndex = 3;
@@ -60,14 +60,14 @@ namespace CourseWork1
             "Adult",
             "Child",
             "Group"});
-            this.VisitorType.Location = new System.Drawing.Point(135, 101);
+            this.VisitorType.Location = new System.Drawing.Point(115, 102);
             this.VisitorType.Name = "VisitorType";
             this.VisitorType.Size = new System.Drawing.Size(87, 21);
             this.VisitorType.TabIndex = 1;
             // 
             // VisitorCount
             // 
-            this.VisitorCount.Location = new System.Drawing.Point(135, 157);
+            this.VisitorCount.Location = new System.Drawing.Point(115, 158);
             this.VisitorCount.Name = "VisitorCount";
             this.VisitorCount.Size = new System.Drawing.Size(87, 20);
             this.VisitorCount.TabIndex = 2;
@@ -105,14 +105,14 @@ namespace CourseWork1
             // VisitorsGridView
             // 
             this.VisitorsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.VisitorsGridView.Location = new System.Drawing.Point(253, 47);
+            this.VisitorsGridView.Location = new System.Drawing.Point(230, 37);
             this.VisitorsGridView.Name = "VisitorsGridView";
-            this.VisitorsGridView.Size = new System.Drawing.Size(487, 414);
+            this.VisitorsGridView.Size = new System.Drawing.Size(514, 414);
             this.VisitorsGridView.TabIndex = 16;
             // 
             // VisitorId
             // 
-            this.VisitorId.Location = new System.Drawing.Point(135, 47);
+            this.VisitorId.Location = new System.Drawing.Point(115, 48);
             this.VisitorId.Name = "VisitorId";
             this.VisitorId.Size = new System.Drawing.Size(87, 20);
             this.VisitorId.TabIndex = 0;

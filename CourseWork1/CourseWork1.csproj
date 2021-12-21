@@ -59,6 +59,7 @@
       <DependentUpon>ExitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalValues.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -36,17 +36,17 @@ namespace CourseWork1
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.inputId = new System.Windows.Forms.NumericUpDown();
+            this.searchId = new System.Windows.Forms.NumericUpDown();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.labelCount = new System.Windows.Forms.Label();
             this.labelType = new System.Windows.Forms.Label();
             this.labelEntry = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnExitComplete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.inputId)).BeginInit();
+            this.labelExit = new System.Windows.Forms.Label();
+            this.labelDuration = new System.Windows.Forms.Label();
+            this.labelCost = new System.Windows.Forms.Label();
+            this.btnComplete = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.searchId)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,18 +113,18 @@ namespace CourseWork1
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(49, 320);
+            this.label7.Location = new System.Drawing.Point(49, 316);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Cost";
             // 
-            // inputId
+            // searchId
             // 
-            this.inputId.Location = new System.Drawing.Point(156, 59);
-            this.inputId.Name = "inputId";
-            this.inputId.Size = new System.Drawing.Size(70, 20);
-            this.inputId.TabIndex = 0;
+            this.searchId.Location = new System.Drawing.Point(156, 59);
+            this.searchId.Name = "searchId";
+            this.searchId.Size = new System.Drawing.Size(70, 20);
+            this.searchId.TabIndex = 0;
             // 
             // btnSearch
             // 
@@ -144,7 +144,7 @@ namespace CourseWork1
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Visible = false;
             // 
             // labelCount
             // 
@@ -176,64 +176,65 @@ namespace CourseWork1
             this.labelEntry.TabIndex = 12;
             this.labelEntry.Text = "label10";
             // 
-            // label11
+            // labelExit
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(152, 225);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 21);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "label11";
-            this.label11.Visible = false;
+            this.labelExit.AutoSize = true;
+            this.labelExit.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
+            this.labelExit.Location = new System.Drawing.Point(152, 225);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(80, 21);
+            this.labelExit.TabIndex = 13;
+            this.labelExit.Text = "label11";
+            this.labelExit.Visible = false;
             // 
-            // label12
+            // labelDuration
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(152, 270);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 21);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "label12";
-            this.label12.Visible = false;
+            this.labelDuration.AutoSize = true;
+            this.labelDuration.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
+            this.labelDuration.Location = new System.Drawing.Point(152, 270);
+            this.labelDuration.Name = "labelDuration";
+            this.labelDuration.Size = new System.Drawing.Size(80, 21);
+            this.labelDuration.TabIndex = 14;
+            this.labelDuration.Text = "label12";
+            this.labelDuration.Visible = false;
             // 
-            // label13
+            // labelCost
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(152, 320);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 21);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "label13";
-            this.label13.Visible = false;
+            this.labelCost.AutoSize = true;
+            this.labelCost.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
+            this.labelCost.Location = new System.Drawing.Point(152, 316);
+            this.labelCost.Name = "labelCost";
+            this.labelCost.Size = new System.Drawing.Size(80, 21);
+            this.labelCost.TabIndex = 15;
+            this.labelCost.Text = "label13";
+            this.labelCost.Visible = false;
             // 
-            // btnExitComplete
+            // btnComplete
             // 
-            this.btnExitComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.btnExitComplete.Location = new System.Drawing.Point(83, 404);
-            this.btnExitComplete.Name = "btnExitComplete";
-            this.btnExitComplete.Size = new System.Drawing.Size(112, 30);
-            this.btnExitComplete.TabIndex = 16;
-            this.btnExitComplete.Text = "Exit Done";
-            this.btnExitComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.btnComplete.Location = new System.Drawing.Point(83, 404);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(112, 30);
+            this.btnComplete.TabIndex = 16;
+            this.btnComplete.Text = "Complete";
+            this.btnComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Visible = false;
             // 
             // ExitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.btnExitComplete);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnComplete);
+            this.Controls.Add(this.labelCost);
+            this.Controls.Add(this.labelDuration);
+            this.Controls.Add(this.labelExit);
             this.Controls.Add(this.labelEntry);
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.labelCount);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.inputId);
+            this.Controls.Add(this.searchId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -244,7 +245,7 @@ namespace CourseWork1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExitForm";
             this.Text = "ExitForm";
-            ((System.ComponentModel.ISupportInitialize)(this.inputId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,15 +260,15 @@ namespace CourseWork1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown inputId;
+        private System.Windows.Forms.NumericUpDown searchId;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.Label labelEntry;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnExitComplete;
+        private System.Windows.Forms.Label labelExit;
+        private System.Windows.Forms.Label labelDuration;
+        private System.Windows.Forms.Label labelCost;
+        private System.Windows.Forms.Button btnComplete;
     }
 }

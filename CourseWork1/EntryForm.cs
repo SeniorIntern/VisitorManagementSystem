@@ -30,17 +30,17 @@ namespace CourseWork1
             MainForm.EntryView = null;
         }
 
-        string filePath = "C:\\ProjectFiles\\visitors.csv";
-        private void AddStudentToCsv(int Id, string Type, int Count)
+        string EntryfilePath = "C:\\ProjectFiles\\visitors.csv";
+        private void AddStudentToCsv(int Id, string Type, int Count, DateTime entryTime)
         {
-            string newVt = "\n" + Id + "," + Type + "," + Count;
-            File.AppendAllText(filePath, newVt);
+            string newVt = "\n" + Id + "," + Type + "," + Count + "," + entryTime;
+            File.AppendAllText(EntryfilePath, newVt);
         }
 
         public void ReadCsvFile()
         {
             GlobalValues.VisitorList = new List<Visitor>();
-            string[] visitors = File.ReadAllLines(filePath);
+            string[] visitors = File.ReadAllLines(EntryfilePath);
             foreach (string v in visitors)
             {
                 string[] vs = v.Split(',');
@@ -48,7 +48,7 @@ namespace CourseWork1
                 vtrObjOne.Id = Convert.ToInt32(vs[0]);
                 vtrObjOne.Type = vs[1];
                 vtrObjOne.Count = Convert.ToInt32(vs[2]);
-
+                vtrObjOne.entryTime = Convert.ToDateTime(vs[3]);
                 GlobalValues.VisitorList.Add(vtrObjOne);
             }
             VisitorsGridView.DataSource = GlobalValues.VisitorList;
@@ -79,10 +79,10 @@ namespace CourseWork1
                     vtrObjTwo.Id = (int)VisitorId.Value;
                     vtrObjTwo.Type = VisitorType.Text;
                     vtrObjTwo.Count = (int)VisitorCount.Value;
-
+                    vtrObjTwo.entryTime = DateTime.Now;
                     GlobalValues.VisitorList.Add(vtrObjTwo);
 
-                    AddStudentToCsv(vtrObjTwo.Id, vtrObjTwo.Type, vtrObjTwo.Count);
+                    AddStudentToCsv(vtrObjTwo.Id, vtrObjTwo.Type, vtrObjTwo.Count, vtrObjTwo.entryTime);
                     VisitorId.Value = vtrObjTwo.Id + 1; // auto increment for visitor Id
                     VisitorType.Text = "";
                     VisitorCount.Value = vtrObjTwo.Count;
@@ -98,17 +98,20 @@ namespace CourseWork1
             }
 
             // will be used for other forms. save records on a file
+            /*
             Record r = new Record();
             r.VId = (int)VisitorId.Value;
             r.VType = VisitorType.SelectedItem.ToString();
             r.VCount = (int)VisitorCount.Value;
-            r.VEntrytime = DateTime.Now;
-            r.VExitTime = r.VEntrytime;
+            //r.VEntryTime = DateTime.Now;
+            //r.VExitTime = r.VEntryTime;
+            
+            GlobalValues.RecordList.Add(r);
 
-            //GlobalValues.recordList.Add(r);
-            //helper.saverecordtofile(r);
-            //clearinputs();
-            // newCode C01 ends
+            // Helper.SaveRecordToFile(r);
+            //ClearInputs();
+            //MessageBox.Show(r.VType);
+            */
         }
     }
 }
