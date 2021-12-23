@@ -13,8 +13,9 @@ namespace CourseWork1
 {
     public partial class ExitForm : Form
     {
-        public static string rec;
-
+        static string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
+        // public static string rec; for testing 1
+        // public static string[] recArray = { "","",""}; for testing 1
         public ExitForm()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace CourseWork1
             MainForm.ExitView = null;
         }
 
+        // testing method
         public static void addRecord(string ID, string name, string age, string filepath)
         {
             try
@@ -40,62 +42,55 @@ namespace CourseWork1
             }
         }
 
-        public static void GetRecordWithId(string searchterm)
+        public static Visitor GetRecordWithId(string searchterm)
         {
-            string filepath = "testData.csv";
-            int positionOfSearchTerm = 1;
-            positionOfSearchTerm--;
-            string[] recordNotFound = { };
-            try
+            //
+            if (GlobalValues.VisitorList == null || GlobalValues.VisitorList.Count < 1)
             {
-                string[] lines = File.ReadAllLines(@filepath);
-                for (int i = 0; i < lines.Length; i++)
+                GlobalValues.VisitorList = Helper.ReadCsvFile(entryfilePath);
+            }
+            
+            int id = Convert.ToInt32(searchterm);
+            Visitor visitor = null;//= new Visitor();
+            foreach (Visitor v in GlobalValues.VisitorList)
+            {
+                if (v.Id == id)
                 {
-                    string[] fields = lines[i].Split(',');
-                    if (recordMatches(searchterm, fields, positionOfSearchTerm))
-                    {
-                        int Eid =  Int32.Parse(fields[0]);
-                        string etype =  fields[1];
-                        int Ecount = Int32.Parse(fields[2]);
-
-                        Record r = new Record();
-                        r.VId = Eid;
-                        r.VType = etype;
-                        r.VCount = Ecount;
-                        //r.VEntryTime = DateTime.Now;
-                        //r.VExitTime = r.VEntryTime;
-                        GlobalValues.RecordList.Add(r);
-
-                        rec = r.VId + "," + r.VType + "," + r.VCount;
-                        //string[] exitValues = new string[] { rec };
-                    }
+                    visitor = v;
                 }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("GetRecordWithId did an oopsie");
-            }
-        }
-
-        public static bool recordMatches(string searchTerm, string[] record, int positionOfSearchTerm)
-        {
-            if (record[positionOfSearchTerm].Equals(searchTerm))
-            {
-                return true;
-            }
-            return false;
+            return visitor;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            //String Id = searchId.Text;
-            //GetRecordWithId(Id);
-
             String Id = searchId.Text;
-            GetRecordWithId(Id);
+            Visitor v = GetRecordWithId(Id);
 
-            MessageBox.Show(rec);
-            labelCount.Text = rec[rec.Length - 1].ToString();
+            //MessageBox.Show(rec);  For testinig 1
+            //labelCount.Text = rec[rec.Length - 1].ToString(); For testing 1
+
+            labelType.Text = v.Type.ToString();
+            labelCount.Text = v.Count.ToString();
+            labelEntry.Text = v.entryTime.ToString();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            labelExit.Text = DateTime.Now.ToString();
+
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            /*
+            AddExitRecordsToCsv(vtrObjTwo.Id, vtrObjTwo.Type, vtrObjTwo.Count, vtrObjTwo.entryTime);
+            VisitorId.Value = vtrObjTwo.Id + 1; // auto increment for visitor Id
+            VisitorType.Text = "";
+            VisitorCount.Value = vtrObjTwo.Count;
+
+            MessageBox.Show("Visitor exit details Recorded");
+            */
         }
     }
 }

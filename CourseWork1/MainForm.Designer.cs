@@ -118,7 +118,7 @@ namespace CourseWork1
             // LabelDate
             // 
             this.LabelDate.AutoSize = true;
-            this.LabelDate.Location = new System.Drawing.Point(567, 9);
+            this.LabelDate.Location = new System.Drawing.Point(476, 9);
             this.LabelDate.Name = "LabelDate";
             this.LabelDate.Size = new System.Drawing.Size(53, 13);
             this.LabelDate.TabIndex = 9;

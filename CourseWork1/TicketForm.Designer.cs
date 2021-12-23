@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TicketThirdRate);
             this.Controls.Add(this.TicketType);
@@ -151,6 +151,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TicketForm";
             this.Text = "TicketForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TicketForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.TicketsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketFirstRate)).EndInit();

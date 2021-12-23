@@ -9,6 +9,23 @@ namespace CourseWork1
 {
     internal class Helper
     {
+        public static List<Visitor> ReadCsvFile(string entryFilePath)
+        {
+            string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
+            GlobalValues.VisitorList = new List<Visitor>();
+            string[] visitors = File.ReadAllLines(entryFilePath);
+            foreach (string v in visitors)
+            {
+                string[] vs = v.Split(',');
+                Visitor vtrObjOne = new Visitor();    // creating object of Visitor class
+                vtrObjOne.Id = Convert.ToInt32(vs[0]);
+                vtrObjOne.Type = vs[1];
+                vtrObjOne.Count = Convert.ToInt32(vs[2]);
+                vtrObjOne.entryTime = Convert.ToDateTime(vs[3]);
+                GlobalValues.VisitorList.Add(vtrObjOne);
+            }
+            return GlobalValues.VisitorList;
+        }
         /*
         
         public static void AppendRecordToCsv(string filepath, Record r)

@@ -57,7 +57,7 @@ namespace CourseWork1
 
         public static EntryForm EntryView;
 
-        private void ShowEntryForm()
+    private void ShowEntryForm()
         {
             if (EntryView == null)
             {

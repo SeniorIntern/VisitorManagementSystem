@@ -145,6 +145,7 @@ namespace CourseWork1
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Visible = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // labelCount
             // 
@@ -219,6 +220,7 @@ namespace CourseWork1
             this.btnComplete.Text = "Complete";
             this.btnComplete.UseVisualStyleBackColor = true;
             this.btnComplete.Visible = false;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
             // ExitForm
             // 

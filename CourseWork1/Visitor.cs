@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseWork1
 {
-    class Visitor
+    public class Visitor
     {
         public int Id { get; set; }
         public string Type { get; set; }
