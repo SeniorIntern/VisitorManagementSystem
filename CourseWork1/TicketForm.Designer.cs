@@ -38,10 +38,14 @@
             this.TicketType = new System.Windows.Forms.ComboBox();
             this.TicketThirdRate = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.TicketId = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Terms = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TicketsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketFirstRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketSecondRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketThirdRate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketId)).BeginInit();
             this.SuspendLayout();
             // 
             // TicketsGridView
@@ -55,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 98);
+            this.label1.Location = new System.Drawing.Point(51, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
@@ -64,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 50);
+            this.label2.Location = new System.Drawing.Point(51, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 2;
@@ -73,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 150);
+            this.label3.Location = new System.Drawing.Point(51, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 3;
@@ -81,7 +85,7 @@
             // 
             // btnAddRate
             // 
-            this.btnAddRate.Location = new System.Drawing.Point(83, 270);
+            this.btnAddRate.Location = new System.Drawing.Point(75, 306);
             this.btnAddRate.Name = "btnAddRate";
             this.btnAddRate.Size = new System.Drawing.Size(107, 29);
             this.btnAddRate.TabIndex = 4;
@@ -91,14 +95,14 @@
             // 
             // TicketFirstRate
             // 
-            this.TicketFirstRate.Location = new System.Drawing.Point(140, 96);
+            this.TicketFirstRate.Location = new System.Drawing.Point(147, 157);
             this.TicketFirstRate.Name = "TicketFirstRate";
             this.TicketFirstRate.Size = new System.Drawing.Size(84, 20);
             this.TicketFirstRate.TabIndex = 1;
             // 
             // TicketSecondRate
             // 
-            this.TicketSecondRate.Location = new System.Drawing.Point(140, 148);
+            this.TicketSecondRate.Location = new System.Drawing.Point(147, 209);
             this.TicketSecondRate.Name = "TicketSecondRate";
             this.TicketSecondRate.Size = new System.Drawing.Size(84, 20);
             this.TicketSecondRate.TabIndex = 2;
@@ -112,14 +116,14 @@
             "Group5",
             "Group10",
             "Group15"});
-            this.TicketType.Location = new System.Drawing.Point(140, 42);
+            this.TicketType.Location = new System.Drawing.Point(147, 103);
             this.TicketType.Name = "TicketType";
             this.TicketType.Size = new System.Drawing.Size(84, 21);
             this.TicketType.TabIndex = 0;
             // 
             // TicketThirdRate
             // 
-            this.TicketThirdRate.Location = new System.Drawing.Point(140, 195);
+            this.TicketThirdRate.Location = new System.Drawing.Point(147, 256);
             this.TicketThirdRate.Name = "TicketThirdRate";
             this.TicketThirdRate.Size = new System.Drawing.Size(84, 20);
             this.TicketThirdRate.TabIndex = 3;
@@ -127,17 +131,45 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 202);
+            this.label4.Location = new System.Drawing.Point(51, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "3 Hour Rate";
+            // 
+            // TicketId
+            // 
+            this.TicketId.Location = new System.Drawing.Point(145, 55);
+            this.TicketId.Name = "TicketId";
+            this.TicketId.Size = new System.Drawing.Size(86, 20);
+            this.TicketId.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(51, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Ticket Id";
+            // 
+            // Terms
+            // 
+            this.Terms.AutoSize = true;
+            this.Terms.Location = new System.Drawing.Point(268, 406);
+            this.Terms.Name = "Terms";
+            this.Terms.Size = new System.Drawing.Size(193, 13);
+            this.Terms.TabIndex = 12;
+            this.Terms.Text = "Terms and condictions Apply for groups";
             // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.Terms);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TicketId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TicketThirdRate);
             this.Controls.Add(this.TicketType);
@@ -151,12 +183,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TicketForm";
             this.Text = "TicketForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TicketForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.TicketsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketFirstRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketSecondRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketThirdRate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +206,8 @@
         private System.Windows.Forms.ComboBox TicketType;
         private System.Windows.Forms.NumericUpDown TicketThirdRate;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown TicketId;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Terms;
     }
 }

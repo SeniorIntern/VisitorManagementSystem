@@ -9,15 +9,16 @@ namespace CourseWork1
 {
     internal class Helper
     {
+        // create a method with returnType-list
         public static List<Visitor> ReadCsvFile(string entryFilePath)
         {
-            string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
             GlobalValues.VisitorList = new List<Visitor>();
             string[] visitors = File.ReadAllLines(entryFilePath);
             foreach (string v in visitors)
             {
                 string[] vs = v.Split(',');
-                Visitor vtrObjOne = new Visitor();    // creating object of Visitor class
+                if (vs.Length != 4) continue;
+                Visitor vtrObjOne = new Visitor();
                 vtrObjOne.Id = Convert.ToInt32(vs[0]);
                 vtrObjOne.Type = vs[1];
                 vtrObjOne.Count = Convert.ToInt32(vs[2]);
@@ -26,15 +27,29 @@ namespace CourseWork1
             }
             return GlobalValues.VisitorList;
         }
-        /*
-        
-        public static void AppendRecordToCsv(string filepath, Record r)
+
+
+        public static List<Ticket> ReadTktCsvFile(string ticketFilePath)
         {
-            string rec = r.VId + "," + r.VType + "," + r.VCount + "," + r.VEntrytime + "," + r.VExitTime + "," + r.Income;
-            string[] lines = new string[] { rec };
-            File.AppendAllLines(filepath, lines);
+            GlobalValues.TicketList = new List<Ticket>();
+            string[] tickets = File.ReadAllLines(ticketFilePath);
+            foreach (string t in tickets)
+            {
+                string[] ts = t.Split(',');
+                if (ts.Length != 5) continue;
+                Ticket tktObjOne = new Ticket();
+                tktObjOne.TktId = Convert.ToInt32(ts[0]);
+                tktObjOne.TktType = ts[1];
+                tktObjOne.Rate1hr = Convert.ToInt32(ts[2]);
+                tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
+                tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
+                GlobalValues.TicketList.Add(tktObjOne);
+            }
+            return GlobalValues.TicketList;
         }
 
+
+        /*
         public static void SaveRecordToFile(Record r)
         {
             string fullPath = Path.Combine(GlobalValues.DirPath, GlobalValues.fullPath) // incomplete
@@ -73,14 +88,6 @@ namespace CourseWork1
             return rateList;
         }
 
-        public static void GetCost()
-        {
-
-        }
-        
-        public static void GetRecordWithId(int id) { }
-        
-        public static string GetLinesFromFile(string filepath) { }
         */
     }
 }

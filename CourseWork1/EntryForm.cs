@@ -65,10 +65,11 @@ namespace CourseWork1
                     vtrObjTwo.Type = VisitorType.Text;
                     vtrObjTwo.Count = (int)VisitorCount.Value;
                     vtrObjTwo.entryTime = DateTime.Now;
+
                     GlobalValues.VisitorList.Add(vtrObjTwo);
 
                     AddStudentToCsv(vtrObjTwo.Id, vtrObjTwo.Type, vtrObjTwo.Count, vtrObjTwo.entryTime);
-                    VisitorId.Value = vtrObjTwo.Id + 1; // auto increment for visitor Id
+                    VisitorId.Value = vtrObjTwo.Id + 1; // auto increment for by 1 with inital visitor Id value
                     VisitorType.Text = "";
                     VisitorCount.Value = vtrObjTwo.Count;
 

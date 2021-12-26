@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CourseWork1
 {
-    internal class Ticket
+    public class Ticket
     {
+        public int TktId { get; set; }
         public string TktType { get; set; }
         public int Rate1hr { get; set; }
         public int Rate2hr { get; set; }

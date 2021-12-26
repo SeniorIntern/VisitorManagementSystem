@@ -133,7 +133,6 @@ namespace CourseWork1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EntryForm";
             this.Text = "EntryForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.EntryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorsGridView)).EndInit();

@@ -32,9 +32,9 @@ namespace CourseWork1
         }
 
         string TfilePath = "C:\\ProjectFiles\\ticketRate.csv";
-        private void AddTktRateToCsv(string TktType, int Rate1hr, int Rate2hr, int Rate3hr)
+        private void AddTktRateToCsv(int TktId, string TktType, int Rate1hr, int Rate2hr, int Rate3hr)
         {
-            string newRt = "\n" + TktType + "," + Rate1hr + "," + Rate2hr + "," + Rate3hr;
+            string newRt = "\n" + TktId + "," + TktType + "," + Rate1hr + "," + Rate2hr + "," + Rate3hr;
             File.AppendAllText(TfilePath, newRt);
         }
 
@@ -45,11 +45,13 @@ namespace CourseWork1
             foreach (string t in tickets)
             {
                 string[] ts = t.Split(',');
+                if (ts.Length != 5) continue;
                 Ticket tktObjOne = new Ticket();    // creating object of Visitor class
-                tktObjOne.TktType = ts[0];
-                tktObjOne.Rate1hr = Convert.ToInt32(ts[1]);
-                tktObjOne.Rate2hr = Convert.ToInt32(ts[2]);
-                tktObjOne.Rate3hr = Convert.ToInt32(ts[3]);
+                tktObjOne.TktId = Convert.ToInt32(ts[0]);
+                tktObjOne.TktType = ts[1];
+                tktObjOne.Rate1hr = Convert.ToInt32(ts[2]);
+                tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
+                tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
 
                 GlobalValues.TicketList.Add(tktObjOne);
             }
@@ -60,6 +62,7 @@ namespace CourseWork1
             try
             {
                 Ticket tktObjTwo = new Ticket();
+                tktObjTwo.TktId = (int)TicketId.Value;
                 tktObjTwo.TktType = TicketType.Text;
                 tktObjTwo.Rate1hr = (int)TicketFirstRate.Value;
                 tktObjTwo.Rate2hr = (int)TicketSecondRate.Value;
@@ -67,7 +70,8 @@ namespace CourseWork1
 
                 GlobalValues.TicketList.Add(tktObjTwo);
 
-                AddTktRateToCsv(tktObjTwo.TktType, tktObjTwo.Rate1hr, tktObjTwo.Rate2hr, tktObjTwo.Rate3hr);
+                AddTktRateToCsv(tktObjTwo.TktId, tktObjTwo.TktType, tktObjTwo.Rate1hr, tktObjTwo.Rate2hr, tktObjTwo.Rate3hr);
+                TicketId.Value = tktObjTwo.TktId + 1;
                 TicketType.Text = tktObjTwo.TktType;
                 TicketFirstRate.Value = tktObjTwo.Rate1hr;
                 TicketSecondRate.Value = tktObjTwo.Rate2hr;

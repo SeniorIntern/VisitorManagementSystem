@@ -30,14 +30,13 @@ namespace CourseWork1
             {
                 //set the user as admin
                 GlobalValues.IsAdmin = true;
-
                 // close the login form
                 Close();
             }
             else
             {
                 // show labelMessage(Username password not valid)
-                MessageBox.Show("your Username/Password is not correct");
+                MessageBox.Show("Your Username/Password is not correct");
             }
         }
     }

@@ -11,6 +11,5 @@ namespace CourseWork1
         public static bool IsAdmin;
         public static List<Visitor> VisitorList = new List<Visitor>();
         public static List<Ticket> TicketList = new List<Ticket>();
-        public static List<Record> RecordList = new List<Record>();
     }
 }

@@ -5,6 +5,11 @@
       "ProjectGuid": "b8b8a0f5-2a90-4a02-a3e8-2ebb949b9af6",
       "DisplayName": "CourseWork1",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1
