@@ -32,31 +32,34 @@ namespace CourseWork1
         }
 
         string TfilePath = "C:\\ProjectFiles\\ticketRate.csv";
-        private void AddTktRateToCsv(int TktId, string TktType, int Rate1hr, int Rate2hr, int Rate3hr)
+        private void AddTktRateToCsv(int TktId, string TktType, int Rate1hr, int Rate2hr, int Rate3hr, int RateXhr)
         {
-            string newRt = "\n" + TktId + "," + TktType + "," + Rate1hr + "," + Rate2hr + "," + Rate3hr;
+            string newRt = "\n" + TktId + "," + TktType + "," + Rate1hr + "," + Rate2hr + "," + Rate3hr + "," + RateXhr;
             File.AppendAllText(TfilePath, newRt);
         }
 
         public void ReadTktCsvFile()
         {
             GlobalValues.TicketList = new List<Ticket>();
-            string[]tickets = File.ReadAllLines(TfilePath);
+            string[] tickets = File.ReadAllLines(TfilePath);
             foreach (string t in tickets)
             {
                 string[] ts = t.Split(',');
-                if (ts.Length != 5) continue;
+                if (ts.Length != 6) continue;
                 Ticket tktObjOne = new Ticket();    // creating object of Visitor class
                 tktObjOne.TktId = Convert.ToInt32(ts[0]);
                 tktObjOne.TktType = ts[1];
                 tktObjOne.Rate1hr = Convert.ToInt32(ts[2]);
                 tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
                 tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
+                tktObjOne.RateXhr = Convert.ToInt32(ts[5]);
+
 
                 GlobalValues.TicketList.Add(tktObjOne);
             }
             TicketsGridView.DataSource = GlobalValues.TicketList;
         }
+
         private void btnAddRate_Click(object sender, EventArgs e)
         {
             try
@@ -67,15 +70,19 @@ namespace CourseWork1
                 tktObjTwo.Rate1hr = (int)TicketFirstRate.Value;
                 tktObjTwo.Rate2hr = (int)TicketSecondRate.Value;
                 tktObjTwo.Rate3hr = (int)TicketThirdRate.Value;
+                tktObjTwo.RateXhr = (int)TicketFourthRate.Value;
+
 
                 GlobalValues.TicketList.Add(tktObjTwo);
 
-                AddTktRateToCsv(tktObjTwo.TktId, tktObjTwo.TktType, tktObjTwo.Rate1hr, tktObjTwo.Rate2hr, tktObjTwo.Rate3hr);
+                AddTktRateToCsv(tktObjTwo.TktId, tktObjTwo.TktType, tktObjTwo.Rate1hr, tktObjTwo.Rate2hr, tktObjTwo.Rate3hr, tktObjTwo.RateXhr);
                 TicketId.Value = tktObjTwo.TktId + 1;
                 TicketType.Text = tktObjTwo.TktType;
                 TicketFirstRate.Value = tktObjTwo.Rate1hr;
                 TicketSecondRate.Value = tktObjTwo.Rate2hr;
                 TicketThirdRate.Value = tktObjTwo.Rate3hr;
+                TicketFourthRate.Value = tktObjTwo.RateXhr;
+
 
                 MessageBox.Show("Ticket Rate Added Sucessfully");
             }

@@ -247,6 +247,7 @@ namespace CourseWork1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExitForm";
             this.Text = "ExitForm";
+            this.Load += new System.EventHandler(this.ExitForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.searchId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

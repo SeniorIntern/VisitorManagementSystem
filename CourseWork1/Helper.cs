@@ -28,7 +28,6 @@ namespace CourseWork1
             return GlobalValues.VisitorList;
         }
 
-
         public static List<Ticket> ReadTktCsvFile(string ticketFilePath)
         {
             GlobalValues.TicketList = new List<Ticket>();
