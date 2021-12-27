@@ -13,8 +13,6 @@ namespace CourseWork1
 {
     public partial class ExitForm : Form
     {
-        static string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
-        static string ticketFilePath = "C:\\ProjectFiles\\ticketRate.csv";
 
         // settings instance variables
         static int TktId;
@@ -39,51 +37,12 @@ namespace CourseWork1
             MainForm.ExitView = null;
         }
 
-        // find entry details of the visitor by using visitorId
-        public static Visitor GetRecordWithId(string searchterm)
-        {
-            if (GlobalValues.VisitorList == null || GlobalValues.VisitorList.Count < 1)
-            {
-                GlobalValues.VisitorList = Helper.ReadCsvFile(entryfilePath);
-            }
-
-            int id = Convert.ToInt32(searchterm);
-            Visitor visitor = null;
-            foreach (Visitor v in GlobalValues.VisitorList)
-            {
-                if (v.Id == id)
-                {
-                    visitor = v;
-                }
-            }
-            return visitor;
-        }
-
-        public static Ticket GetTktRecordWithId(int searchterm)
-        {
-            if (GlobalValues.TicketList == null || GlobalValues.TicketList.Count < 1) // replace TicketList.Count
-            {
-                GlobalValues.TicketList = Helper.ReadTktCsvFile(ticketFilePath);
-            }
-
-            int tktid = searchterm;
-            Ticket ticket = null;
-            foreach (Ticket t in GlobalValues.TicketList)
-            {
-                if (t.TktId == tktid) // identify Id and id
-                {
-                    ticket = t;
-                }
-            }
-            return ticket;
-        }
-
         // fetch cost data for ticketType
         private void btnSearch_Click(object sender, EventArgs e)
         {
             
             String Id = searchId.Text;
-            Visitor v = GetRecordWithId(Id);
+            Visitor v = Helper.GetRecordWithId(Id);
             btnExit.Visible = true;
             try
             {
@@ -153,7 +112,7 @@ namespace CourseWork1
                 MessageBox.Show("Not available");
             }
             
-            Ticket t = GetTktRecordWithId(TktId);
+            Ticket t = Helper.GetTktRecordWithId(TktId);
 
             switch (totalHours)
             {

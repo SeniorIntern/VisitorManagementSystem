@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TicketFourthRate = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnUpdateRate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TicketsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketFirstRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketSecondRate)).BeginInit();
@@ -89,7 +90,7 @@
             // 
             // btnAddRate
             // 
-            this.btnAddRate.Location = new System.Drawing.Point(79, 348);
+            this.btnAddRate.Location = new System.Drawing.Point(88, 352);
             this.btnAddRate.Name = "btnAddRate";
             this.btnAddRate.Size = new System.Drawing.Size(107, 29);
             this.btnAddRate.TabIndex = 4;
@@ -193,11 +194,21 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Conditon #1 - From CSV";
             // 
+            // btnUpdateRate
+            // 
+            this.btnUpdateRate.Location = new System.Drawing.Point(88, 421);
+            this.btnUpdateRate.Name = "btnUpdateRate";
+            this.btnUpdateRate.Size = new System.Drawing.Size(107, 29);
+            this.btnUpdateRate.TabIndex = 16;
+            this.btnUpdateRate.Text = "Update Row";
+            this.btnUpdateRate.UseVisualStyleBackColor = true;
+            // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.btnUpdateRate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TicketFourthRate);
@@ -247,5 +258,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown TicketFourthRate;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnUpdateRate;
     }
 }

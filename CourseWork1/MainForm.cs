@@ -131,13 +131,15 @@ namespace CourseWork1
             }
         }
 
-        // for showing visitor form
-        private void VisitorFormMenu_Click(object sender, EventArgs e)
+        // for showing Holidays form. task- replace visitor form
+        private void HolidaysFormMenu_Click(object sender, EventArgs e)
         {
-            ShowVisitorForm();
+            ShowHolidaysForm();
+
         }
+
         public static VisitorForm VisitorView;
-        private void ShowVisitorForm()
+        private void ShowHolidaysForm()
         {
             if (VisitorView == null)
             {

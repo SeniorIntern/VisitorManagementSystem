@@ -37,7 +37,7 @@ namespace CourseWork1
             this.ExitFormMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportFormMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TicketFormMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.VisitorFormMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.HolidaysFormMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.UserFormMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.LabelDate = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -50,7 +50,7 @@ namespace CourseWork1
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.TicketFormMenu,
-            this.VisitorFormMenu,
+            this.HolidaysFormMenu,
             this.UserFormMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -99,13 +99,13 @@ namespace CourseWork1
             this.TicketFormMenu.Text = "Ticket";
             this.TicketFormMenu.Click += new System.EventHandler(this.TicketFormMenu_Click);
             // 
-            // VisitorFormMenu
+            // HolidaysFormMenu
             // 
-            this.VisitorFormMenu.ForeColor = System.Drawing.Color.White;
-            this.VisitorFormMenu.Name = "VisitorFormMenu";
-            this.VisitorFormMenu.Size = new System.Drawing.Size(57, 20);
-            this.VisitorFormMenu.Text = "Visitors";
-            this.VisitorFormMenu.Click += new System.EventHandler(this.VisitorFormMenu_Click);
+            this.HolidaysFormMenu.ForeColor = System.Drawing.Color.White;
+            this.HolidaysFormMenu.Name = "HolidaysFormMenu";
+            this.HolidaysFormMenu.Size = new System.Drawing.Size(65, 20);
+            this.HolidaysFormMenu.Text = "Holidays";
+            this.HolidaysFormMenu.Click += new System.EventHandler(this.HolidaysFormMenu_Click);
             // 
             // UserFormMenu
             // 
@@ -156,7 +156,7 @@ namespace CourseWork1
         private System.Windows.Forms.ToolStripMenuItem ExitFormMenu;
         private System.Windows.Forms.ToolStripMenuItem ReportFormMenu;
         private System.Windows.Forms.ToolStripMenuItem TicketFormMenu;
-        private System.Windows.Forms.ToolStripMenuItem VisitorFormMenu;
+        private System.Windows.Forms.ToolStripMenuItem HolidaysFormMenu;
         private System.Windows.Forms.Label LabelDate;
         private System.Windows.Forms.ToolStripMenuItem UserFormMenu;
         private System.Windows.Forms.Timer timer1;

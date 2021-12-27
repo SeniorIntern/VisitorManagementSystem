@@ -9,7 +9,10 @@ namespace CourseWork1
 {
     internal class Helper
     {
-        // create a method with returnType-list
+        static string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
+        static string ticketFilePath = "C:\\ProjectFiles\\ticketRate.csv";
+
+        // create a method with returnType-list for reading entry csv file
         public static List<Visitor> ReadCsvFile(string entryFilePath)
         {
             GlobalValues.VisitorList = new List<Visitor>();
@@ -45,6 +48,47 @@ namespace CourseWork1
                 GlobalValues.TicketList.Add(tktObjOne);
             }
             return GlobalValues.TicketList;
+        }
+
+        // ExitForm-find entry details of the visitor by using visitorId
+        public static Visitor GetRecordWithId(string searchterm)
+        {
+            if (GlobalValues.VisitorList == null || GlobalValues.VisitorList.Count < 1)
+            {
+                GlobalValues.VisitorList = ReadCsvFile(entryfilePath);
+
+            }
+
+            int id = Convert.ToInt32(searchterm);
+            Visitor visitor = null;
+            foreach (Visitor v in GlobalValues.VisitorList)
+            {
+                if (v.Id == id)
+                {
+                    visitor = v;
+                }
+            }
+            return visitor;
+        }
+
+        // ExitForm- get ticket Id using visitor type
+        public static Ticket GetTktRecordWithId(int searchterm)
+        {
+            if (GlobalValues.TicketList == null)
+            {
+                GlobalValues.TicketList = ReadTktCsvFile(ticketFilePath);
+            }
+
+            int tktid = searchterm;
+            Ticket ticket = null;
+            foreach (Ticket t in GlobalValues.TicketList)
+            {
+                if (t.TktId == tktid)
+                {
+                    ticket = t;
+                }
+            }
+            return ticket;
         }
 
 
