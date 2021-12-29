@@ -53,7 +53,7 @@ namespace CourseWork1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(49, 59);
+            this.label1.Location = new System.Drawing.Point(29, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 21);
             this.label1.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace CourseWork1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(49, 99);
+            this.label2.Location = new System.Drawing.Point(29, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 21);
             this.label2.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace CourseWork1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(49, 141);
+            this.label3.Location = new System.Drawing.Point(29, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 2;
@@ -83,7 +83,7 @@ namespace CourseWork1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(49, 183);
+            this.label4.Location = new System.Drawing.Point(29, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 21);
             this.label4.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace CourseWork1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(49, 228);
+            this.label5.Location = new System.Drawing.Point(29, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 21);
             this.label5.TabIndex = 4;
@@ -103,7 +103,7 @@ namespace CourseWork1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(49, 271);
+            this.label6.Location = new System.Drawing.Point(29, 242);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 21);
             this.label6.TabIndex = 5;
@@ -113,7 +113,7 @@ namespace CourseWork1
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(49, 316);
+            this.label7.Location = new System.Drawing.Point(29, 287);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 21);
             this.label7.TabIndex = 6;
@@ -121,14 +121,14 @@ namespace CourseWork1
             // 
             // searchId
             // 
-            this.searchId.Location = new System.Drawing.Point(156, 59);
+            this.searchId.Location = new System.Drawing.Point(136, 30);
             this.searchId.Name = "searchId";
             this.searchId.Size = new System.Drawing.Size(70, 20);
             this.searchId.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(257, 59);
+            this.btnSearch.Location = new System.Drawing.Point(237, 30);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -138,7 +138,7 @@ namespace CourseWork1
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(379, 59);
+            this.btnExit.Location = new System.Drawing.Point(339, 30);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 2;
@@ -151,7 +151,7 @@ namespace CourseWork1
             // 
             this.labelCount.AutoSize = true;
             this.labelCount.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.labelCount.Location = new System.Drawing.Point(152, 141);
+            this.labelCount.Location = new System.Drawing.Point(132, 112);
             this.labelCount.Name = "labelCount";
             this.labelCount.Size = new System.Drawing.Size(70, 21);
             this.labelCount.TabIndex = 10;
@@ -161,7 +161,7 @@ namespace CourseWork1
             // 
             this.labelType.AutoSize = true;
             this.labelType.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.labelType.Location = new System.Drawing.Point(152, 99);
+            this.labelType.Location = new System.Drawing.Point(132, 70);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(70, 21);
             this.labelType.TabIndex = 11;
@@ -171,7 +171,7 @@ namespace CourseWork1
             // 
             this.labelEntry.AutoSize = true;
             this.labelEntry.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.labelEntry.Location = new System.Drawing.Point(152, 183);
+            this.labelEntry.Location = new System.Drawing.Point(132, 154);
             this.labelEntry.Name = "labelEntry";
             this.labelEntry.Size = new System.Drawing.Size(80, 21);
             this.labelEntry.TabIndex = 12;
@@ -181,7 +181,7 @@ namespace CourseWork1
             // 
             this.labelExit.AutoSize = true;
             this.labelExit.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.labelExit.Location = new System.Drawing.Point(152, 225);
+            this.labelExit.Location = new System.Drawing.Point(132, 196);
             this.labelExit.Name = "labelExit";
             this.labelExit.Size = new System.Drawing.Size(80, 21);
             this.labelExit.TabIndex = 13;
@@ -192,7 +192,7 @@ namespace CourseWork1
             // 
             this.labelDuration.AutoSize = true;
             this.labelDuration.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.labelDuration.Location = new System.Drawing.Point(152, 270);
+            this.labelDuration.Location = new System.Drawing.Point(132, 241);
             this.labelDuration.Name = "labelDuration";
             this.labelDuration.Size = new System.Drawing.Size(80, 21);
             this.labelDuration.TabIndex = 14;
@@ -203,7 +203,7 @@ namespace CourseWork1
             // 
             this.labelCost.AutoSize = true;
             this.labelCost.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.labelCost.Location = new System.Drawing.Point(152, 316);
+            this.labelCost.Location = new System.Drawing.Point(132, 287);
             this.labelCost.Name = "labelCost";
             this.labelCost.Size = new System.Drawing.Size(80, 21);
             this.labelCost.TabIndex = 15;
@@ -213,7 +213,7 @@ namespace CourseWork1
             // btnComplete
             // 
             this.btnComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.btnComplete.Location = new System.Drawing.Point(83, 404);
+            this.btnComplete.Location = new System.Drawing.Point(63, 375);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(112, 30);
             this.btnComplete.TabIndex = 16;
@@ -226,7 +226,7 @@ namespace CourseWork1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.btnComplete);
             this.Controls.Add(this.labelCost);
             this.Controls.Add(this.labelDuration);

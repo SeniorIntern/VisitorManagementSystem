@@ -11,8 +11,9 @@ namespace CourseWork1
     {
         static string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
         static string ticketFilePath = "C:\\ProjectFiles\\ticketRate.csv";
+        static string recordFilePath = "C:\\ProjectFiles\\records.csv";
 
-        // create a method with returnType-list for reading entry csv file
+        // create a method with return type-list for reading entry csv file
         public static List<Visitor> ReadCsvFile(string entryFilePath)
         {
             GlobalValues.VisitorList = new List<Visitor>();
@@ -29,6 +30,27 @@ namespace CourseWork1
                 GlobalValues.VisitorList.Add(vtrObjOne);
             }
             return GlobalValues.VisitorList;
+        }
+
+        public static List<Record> ReadRecordCsvFile(string recordFilePath)
+        {
+            GlobalValues.RecordList = new List<Record>();
+            string[] records = File.ReadAllLines(recordFilePath);
+            foreach (string r in records)
+            {
+                string[] rc = r.Split(',');
+                if (rc.Length != 4) continue;
+                Record rcObjTwo = new Record();     // creating second object of record
+                rcObjTwo.vId = Convert.ToInt32(rc[0]);
+                rcObjTwo.vType = rc[1];
+                rcObjTwo.vCount = Convert.ToInt32(rc[2]);
+                rcObjTwo.vEntTime = Convert.ToDateTime(rc[3]);
+                rcObjTwo.vExtTime = Convert.ToDateTime(rc[4]);
+                rcObjTwo.vDuration = rc[5];
+                rcObjTwo.vCost = Convert.ToInt32(rc[3]);
+                GlobalValues.RecordList.Add(rcObjTwo);
+            }
+            return GlobalValues.RecordList;
         }
 
         public static List<Ticket> ReadTktCsvFile(string ticketFilePath)
@@ -91,6 +113,12 @@ namespace CourseWork1
             return ticket;
         }
 
+        // for saving exit details on CSV 
+        public static void AddRecordToCsv(int vId, string vType, int vCount, DateTime vEntTime, DateTime vExtTime, string vDuration, int vCost)
+        {
+            string newRc = "\n" + vId + "," + vType + "," + vCount + "," + vEntTime + "," + vExtTime + "," + vDuration + "," + vCost;
+            File.AppendAllText(recordFilePath, newRc);
+        }
 
         /*
         public static void SaveRecordToFile(Record r)

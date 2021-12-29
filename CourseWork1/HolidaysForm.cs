@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace CourseWork1
 {
-    public partial class VisitorForm : Form
+    public partial class HolidaysForm : Form
     {
-        public VisitorForm()
+        public HolidaysForm()
         {
             InitializeComponent();
         }
 
-        public static void VisitorForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void HolidaysForm_Load(object sender, EventArgs e)
         {
-            MainForm.VisitorView = null;
+
         }
+
+        public static void HolidaysForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainForm.HolidayView = null;
+        }
+
     }
 }

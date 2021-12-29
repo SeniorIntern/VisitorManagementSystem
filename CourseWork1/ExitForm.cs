@@ -13,13 +13,14 @@ namespace CourseWork1
 {
     public partial class ExitForm : Form
     {
+        static string recordFilePath = "C:\\ProjectFiles\\records.csv";
 
         // settings instance variables
         static int TktId;
         static int totalHours;
         static int totalCharge;
         static int rate;
-        static int m = 1;
+        static int m = 1; // m will be the multiplier. multiply rate per person by visitor count.
 
         public ExitForm()
         {
@@ -131,22 +132,46 @@ namespace CourseWork1
             }
 
             labelCost.Visible = true;
-            totalCharge = rate * m;
-            labelCost.Text = totalCharge.ToString(); 
+            if(DateTime.Now.DayOfWeek.ToString().Equals("Saturday")) {
+                totalCharge = rate/5 * m;
+            }
+            else{
+                totalCharge = rate * m;
+            }
+            labelCost.Text = totalCharge.ToString();
         }
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
-            /*
             // btnComplete will save all the details on a csv file.
-            AddExitRecordsToCsv(vtrObjTwo.Id, vtrObjTwo.Type, vtrObjTwo.Count, vtrObjTwo.entryTime);
-            VisitorId.Value = vtrObjTwo.Id + 1; // auto increment for visitor Id
-            VisitorType.Text = "";
-            VisitorCount.Value = vtrObjTwo.Count;
+            try
+            {
+                Record rcd = new Record();    // creating record' object
+                rcd.vId = (int)searchId.Value;
+                rcd.vType = labelType.Text;
+                rcd.vCount = Convert.ToInt32(labelCount.Text);
+                rcd.vEntTime = Convert.ToDateTime(labelEntry.Text);
+                rcd.vExtTime = Convert.ToDateTime(labelExit.Text);
+                rcd.vDuration = labelDuration.Text;
+                rcd.vCost = Convert.ToInt32(labelCost.Text);
 
-            MessageBox.Show("Visitor exit details Recorded");
-            */
+                GlobalValues.RecordList.Add(rcd);
+
+                Helper.AddRecordToCsv(rcd.vId, rcd.vType, rcd.vCount, rcd.vEntTime, rcd.vExtTime, rcd.vDuration, rcd.vCost);
+                rcd.vId = Convert.ToInt32(searchId.Value);
+                rcd.vType =  labelType.Text;
+                rcd.vCount = Convert.ToInt32(labelCount.Text);
+                rcd.vEntTime = Convert.ToDateTime(labelEntry.Text);
+                rcd.vExtTime = Convert.ToDateTime(labelExit.Text);
+                rcd.vDuration = labelDuration.Text;
+                rcd.vCost = Convert.ToInt32(labelCost.Text);
+                     
+                MessageBox.Show("Exit Record Saved");
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Something went wrong with btnComplete");
+            }
         }
-
     }
 }

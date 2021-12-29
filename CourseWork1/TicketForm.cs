@@ -38,6 +38,7 @@ namespace CourseWork1
             File.AppendAllText(TfilePath, newRt);
         }
 
+        // public static List<CreateUser> ReadTktCsvFile(string TfilePath)
         public void ReadTktCsvFile()
         {
             GlobalValues.TicketList = new List<Ticket>();
@@ -53,7 +54,6 @@ namespace CourseWork1
                 tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
                 tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
                 tktObjOne.RateXhr = Convert.ToInt32(ts[5]);
-
 
                 GlobalValues.TicketList.Add(tktObjOne);
             }

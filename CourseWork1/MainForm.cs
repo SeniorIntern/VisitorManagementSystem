@@ -138,18 +138,18 @@ namespace CourseWork1
 
         }
 
-        public static VisitorForm VisitorView;
+        public static HolidaysForm HolidayView;
         private void ShowHolidaysForm()
         {
-            if (VisitorView == null)
+            if (HolidayView == null)
             {
-                VisitorView = new VisitorForm();
-                VisitorView.FormClosed += VisitorForm.VisitorForm_FormClosed;
-                VisitorView.Show();
+                HolidayView = new HolidaysForm();
+                HolidayView.FormClosed += HolidaysForm.HolidaysForm_FormClosed;
+                HolidayView.Show();
             }
             else
             {
-                VisitorView.Activate();
+                HolidayView.Activate();
             }
         }
     }
