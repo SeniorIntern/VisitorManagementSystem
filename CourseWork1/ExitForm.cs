@@ -133,6 +133,7 @@ namespace CourseWork1
 
             labelCost.Visible = true;
             if(DateTime.Now.DayOfWeek.ToString().Equals("Saturday")) {
+                // applying 20% discount
                 totalCharge = rate/5 * m;
             }
             else{

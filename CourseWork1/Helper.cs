@@ -120,45 +120,55 @@ namespace CourseWork1
             File.AppendAllText(recordFilePath, newRc);
         }
 
-        /*
-        public static void SaveRecordToFile(Record r)
+        //public static List<Record> GetRecordsFromCSV(string filePath)
+        public static List<Record> GetRecordsFromCSV(string recordFilePath)
         {
-            string fullPath = Path.Combine(GlobalValues.DirPath, GlobalValues.fullPath) // incomplete
-            if (!Directory.Exists(GlobalValues.DirPath))
+            GlobalValues.RecordList = new List<Record>();
+            string[] records = File.ReadAllLines(recordFilePath);
+            foreach (string rds in records)
             {
-                //create Directory
-                Directory.CreateDirectory(GlobalValues.DirPath);
+                string[] recs = rds.Split(',');
+                if (recs.Length != 7) continue;
+                Record recObj = new Record();
+                recObj.vId = Convert.ToInt32(recs[0]);
+                recObj.vType = recs[1];
+                recObj.vCount = Convert.ToInt32(recs[2]);
+                recObj.vEntTime = Convert.ToDateTime(recs[3]);
+                recObj.vExtTime = Convert.ToDateTime(recs[4]);
+                recObj.vDuration = recs[5];
+                recObj.vCost = Convert.ToInt32(recs[6]);
+                GlobalValues.RecordList.Add(recObj);
             }
-            if (!File.Exists(fullPath))
-            {
-                File.Create(fullPath);
-            }
-            AppendRecordToCsv(fullPath, r);
-        }
-        
-        public static list<Ticket> GetTktRateList(string filepath)
-        {
-            if (!File.Exists(filePath))
-            {
-                return null;
-            }
-
-            List<Ticket> rateList = new List<Ticket>();
-            string[] rates = GetLinesFromFile(filePath);
-            foreach (string line in rates)
-            {
-                string[] st = line.Split(',');
-                if (st.Length != 5) continue;
-                Ticket rate = new Ticket();
-                rate.tktRate = st[0];
-                rate.Rate1hr = Convert.ToInt32(st[1]);
-                rate.Rate2hr = Convert.ToInt32(st[2]);
-                rate.Rate3hr = Convert.ToInt32(st[3]);
-                rateList.Add(rate);
-            }
-            return rateList;
+            return GlobalValues.RecordList;
         }
 
-        */
+        public static Report GetReportByDate(DateTime day)
+        {
+            //List<Record> recordList = GetRecordsFromCSV(Globalvalues.RecordFilePath);
+            List<Record> recordList = GetRecordsFromCSV(recordFilePath);
+            Report report = new Report();
+            report.Date = day;
+            foreach(Record r in recordList)
+            {
+                if (r.vEntTime.DayOfYear != day.DayOfYear) continue;
+                if(r.vType == "Adult")
+                {
+                    report.Adult += r.vCount;
+                    report.AdultIncome += r.vCost;
+                }
+                else if (r.vType == "Child")
+                {
+                    report.Children += r.vCount;
+                    report.ChildIncome += r.vCost;
+                }
+                else if (r.vType == "Group")
+                {
+                    report.Group += r.vCount;
+                    report.GroupIncome += r.vCost;
+                }
+            }
+            return report;
+        }
+
     }
 }
