@@ -15,7 +15,6 @@ namespace CourseWork1
 {
     public partial class EntryForm : Form
     {
-        string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
 
         public EntryForm()
         {
@@ -25,7 +24,7 @@ namespace CourseWork1
         private void EntryForm_Load(object sender, EventArgs e)
         {
             VisitorsGridView.DataSource = null;
-            VisitorsGridView.DataSource = Helper.ReadCsvFile(entryfilePath);
+            VisitorsGridView.DataSource = Helper.ReadCsvFile(Helper.entryFilePath);
         }
 
         public static void EntryForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -36,7 +35,7 @@ namespace CourseWork1
         private void AddStudentToCsv(int Id, string Type, int Count, DateTime entryTime)
         {
             string newVt = "\n" + Id + "," + Type + "," + Count + "," + entryTime;
-            File.AppendAllText(entryfilePath, newVt);
+            File.AppendAllText(Helper.entryFilePath, newVt);
         }
 
         private void BtnAddStudent_Click_1(object sender, EventArgs e)

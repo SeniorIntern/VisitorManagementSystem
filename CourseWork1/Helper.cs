@@ -9,15 +9,15 @@ namespace CourseWork1
 {
     internal class Helper
     {
-        static string entryfilePath = "C:\\ProjectFiles\\visitors.csv";
-        static string ticketFilePath = "C:\\ProjectFiles\\ticketRate.csv";
-        static string recordFilePath = "C:\\ProjectFiles\\records.csv";
+        public static string entryFilePath = "visitors.csv";
+        public static string ticketFilePath = "ticketRate.csv";
+        public static string recordFilePath = "records.csv";
 
         // create a method with return type-list for reading entry csv file
         public static List<Visitor> ReadCsvFile(string entryFilePath)
         {
             GlobalValues.VisitorList = new List<Visitor>();
-            string[] visitors = File.ReadAllLines(entryFilePath);
+            string[] visitors = File.ReadAllLines(Helper.entryFilePath);
             foreach (string v in visitors)
             {
                 string[] vs = v.Split(',');
@@ -77,7 +77,7 @@ namespace CourseWork1
         {
             if (GlobalValues.VisitorList == null || GlobalValues.VisitorList.Count < 1)
             {
-                GlobalValues.VisitorList = ReadCsvFile(entryfilePath);
+                GlobalValues.VisitorList = ReadCsvFile(entryFilePath);
 
             }
 

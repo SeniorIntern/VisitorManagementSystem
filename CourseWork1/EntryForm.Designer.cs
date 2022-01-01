@@ -37,6 +37,7 @@ namespace CourseWork1
             this.label1 = new System.Windows.Forms.Label();
             this.VisitorsGridView = new System.Windows.Forms.DataGridView();
             this.VisitorId = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorId)).BeginInit();
@@ -45,7 +46,7 @@ namespace CourseWork1
             // BtnAddStudent
             // 
             this.BtnAddStudent.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnAddStudent.Location = new System.Drawing.Point(59, 222);
+            this.BtnAddStudent.Location = new System.Drawing.Point(25, 218);
             this.BtnAddStudent.Name = "BtnAddStudent";
             this.BtnAddStudent.Size = new System.Drawing.Size(87, 27);
             this.BtnAddStudent.TabIndex = 3;
@@ -117,11 +118,22 @@ namespace CourseWork1
             this.VisitorId.Size = new System.Drawing.Size(87, 20);
             this.VisitorId.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(137, 218);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 27);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // EntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.VisitorId);
             this.Controls.Add(this.VisitorsGridView);
             this.Controls.Add(this.BtnAddStudent);
@@ -130,7 +142,6 @@ namespace CourseWork1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EntryForm";
             this.Text = "EntryForm";
             this.Load += new System.EventHandler(this.EntryForm_Load);
@@ -151,5 +162,6 @@ namespace CourseWork1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView VisitorsGridView;
         private System.Windows.Forms.NumericUpDown VisitorId;
+        private System.Windows.Forms.Button button1;
     }
 }

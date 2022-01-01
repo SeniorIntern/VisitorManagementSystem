@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourseWork1
 {
-    public partial class ReportForm : Form
+    public partial class DailyReportForm : Form
     {
-        public ReportForm()
+        public DailyReportForm()
         {
             InitializeComponent();
         }
@@ -48,6 +48,11 @@ namespace CourseWork1
         {
             Report r = Helper.GetReportByDate(dateTimerPicker.Value);
             UpdateReport(r);
+        }
+
+        private void DailyReportForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

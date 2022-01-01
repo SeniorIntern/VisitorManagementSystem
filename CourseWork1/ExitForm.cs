@@ -13,7 +13,6 @@ namespace CourseWork1
 {
     public partial class ExitForm : Form
     {
-        static string recordFilePath = "C:\\ProjectFiles\\records.csv";
 
         // settings instance variables
         static int TktId;

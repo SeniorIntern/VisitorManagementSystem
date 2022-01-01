@@ -5,17 +5,19 @@ namespace CourseWork1
 {
     public partial class MainForm : Form
     {
+        WeeklyReportForm wrf;
+        LoginForm LF;
 
         public MainForm()
         {
             InitializeComponent();
-            ShowLogin(); // For showing login Form when program starts
+            //ShowLogin(); // For showing login Form when program starts
             timer1.Start(); // for showing time
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            menuStrip.Enabled = false; // fow disabling menustrip in logi screen
+            //menuStrip.Enabled = false; // fow disabling menustrip
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -29,34 +31,16 @@ namespace CourseWork1
         private void LF_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoginF = null;
-            // enable MenuStrip after closing login form
-            menuStrip.Enabled = true;
+            menuStrip.Enabled = true;   // enable MenuStrip
         }
 
-        // for showing login form
-        private void ShowLogin()
-        {
-            if (LoginF == null)
-            {
-                LoginF = new LoginForm();
-                LoginF.FormClosed += LF_FormClosed;
-                LoginF.MdiParent = this;
-                LoginF.Show();
-            }
-            else
-            {
-                LoginF.Activate();
-            }
-        }
-
-        // for showing entry form onClicking menustrip-entry
-        private void EntryFormMenu_Click(object sender, EventArgs e)
+        // for showing entry form onClicking button
+        private void btnEntryForm_Click(object sender, EventArgs e)
         {
             ShowEntryForm();
         }
 
         public static EntryForm EntryView;
-
         private void ShowEntryForm()
         {
             if (EntryView == null)
@@ -71,31 +55,11 @@ namespace CourseWork1
             }
         }
 
-        // for showing ticket form
-        private void TicketFormMenu_Click(object sender, EventArgs e)
-        {
-            ShowTicketForm();
-        }
-        public static TicketForm TicketView;
-        private void ShowTicketForm()
-        {
-            if (TicketView == null)
-            {
-                TicketView = new TicketForm();
-                TicketView.FormClosed += TicketForm.TicketForm_FormClosed;
-                TicketView.Show();
-            }
-            else
-            {
-                TicketView.Activate();
-            }
-        }
-
-        // for showing exit form
-        private void ExitFormMenu_Click(object sender, EventArgs e)
+        private void btnExitForm_Click(object sender, EventArgs e)
         {
             ShowExitForm();
         }
+
         public static ExitForm ExitView;
         private void ShowExitForm()
         {
@@ -111,18 +75,18 @@ namespace CourseWork1
             }
         }
 
-        // for showing report form
-        private void ReportFormMenu_Click(object sender, EventArgs e)
+        private void btnDailyRepForm_Click(object sender, EventArgs e)
         {
-            ShowReportForm();
+            ShowDayReportForm();
         }
-        public static ReportForm ReportView;
-        private void ShowReportForm()
+
+        public static DailyReportForm ReportView;
+        private void ShowDayReportForm()
         {
             if (ReportView == null)
             {
-                ReportView = new ReportForm();
-                ReportView.FormClosed += ReportForm.ReportForm_FormClosed;
+                ReportView = new DailyReportForm();
+                ReportView.FormClosed += DailyReportForm.ReportForm_FormClosed;
                 ReportView.Show();
             }
             else
@@ -131,26 +95,52 @@ namespace CourseWork1
             }
         }
 
-        // for showing Holidays form. task- replace visitor form
-        private void HolidaysFormMenu_Click(object sender, EventArgs e)
+        private void btnTicketsForm_Click(object sender, EventArgs e)
         {
-            ShowHolidaysForm();
-
+            ShowTicketOptForm();
         }
 
-        public static HolidaysForm HolidayView;
-        private void ShowHolidaysForm()
+        public static TicketOptionForm TicketOptView;
+        private void ShowTicketOptForm()
         {
-            if (HolidayView == null)
+            if (TicketOptView == null)
             {
-                HolidayView = new HolidaysForm();
-                HolidayView.FormClosed += HolidaysForm.HolidaysForm_FormClosed;
-                HolidayView.Show();
+                TicketOptView = new TicketOptionForm();
+                TicketOptView.FormClosed += TicketOptionForm.TicketOptionForm_FormClosed;
+                TicketOptView.Show();
             }
             else
             {
-                HolidayView.Activate();
+                TicketOptView.Activate();
             }
         }
+
+        private void btnWeeklyRepForm_Click(object sender, EventArgs e)
+        {
+            ShowWeeklyReportForm();
+        }
+
+        public static WeeklyReportForm WeeklyReportView;
+        private void ShowWeeklyReportForm()
+        {
+            if (WeeklyReportView == null)
+            {
+                WeeklyReportView = new WeeklyReportForm();
+                WeeklyReportView.FormClosed += WeeklyReportForm.WeeklyReportForm_FormClosed;
+                WeeklyReportView.Show();
+            }
+            else
+            {
+                WeeklyReportView.Activate();
+            }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LF = new LoginForm();
+            LF.Show();
+        }
+
     }
 }

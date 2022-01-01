@@ -1,6 +1,6 @@
 ﻿namespace CourseWork1
 {
-    partial class ReportForm
+    partial class DailyReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -50,6 +50,7 @@
             this.labelTxnTotal = new System.Windows.Forms.Label();
             this.labelCountTotal = new System.Windows.Forms.Label();
             this.chartCount = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartCount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,7 +197,7 @@
             // 
             // dateTimerPicker
             // 
-            this.dateTimerPicker.Location = new System.Drawing.Point(44, 49);
+            this.dateTimerPicker.Location = new System.Drawing.Point(64, 375);
             this.dateTimerPicker.Name = "dateTimerPicker";
             this.dateTimerPicker.Size = new System.Drawing.Size(198, 20);
             this.dateTimerPicker.TabIndex = 18;
@@ -241,11 +242,22 @@
             this.chartCount.TabIndex = 21;
             this.chartCount.Text = "chart1";
             // 
-            // ReportForm
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(344, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 24);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Daily Report";
+            // 
+            // DailyReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.chartCount);
             this.Controls.Add(this.labelCountTotal);
             this.Controls.Add(this.labelTxnTotal);
@@ -264,9 +276,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ReportForm";
+            this.Name = "DailyReportForm";
             this.Text = "ReportForm";
+            this.Load += new System.EventHandler(this.DailyReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -293,5 +305,6 @@
         private System.Windows.Forms.Label labelTxnTotal;
         private System.Windows.Forms.Label labelCountTotal;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartCount;
+        private System.Windows.Forms.Label label6;
     }
 }

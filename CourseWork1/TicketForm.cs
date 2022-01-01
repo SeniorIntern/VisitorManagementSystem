@@ -28,21 +28,20 @@ namespace CourseWork1
 
         public static void TicketForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MainForm.TicketView = null;
+            TicketOptionForm.TicketView = null;
         }
 
-        string TfilePath = "C:\\ProjectFiles\\ticketRate.csv";
         private void AddTktRateToCsv(int TktId, string TktType, int Rate1hr, int Rate2hr, int Rate3hr, int RateXhr)
         {
             string newRt = "\n" + TktId + "," + TktType + "," + Rate1hr + "," + Rate2hr + "," + Rate3hr + "," + RateXhr;
-            File.AppendAllText(TfilePath, newRt);
+            File.AppendAllText(Helper.ticketFilePath, newRt);
         }
 
         // public static List<CreateUser> ReadTktCsvFile(string TfilePath)
         public void ReadTktCsvFile()
         {
             GlobalValues.TicketList = new List<Ticket>();
-            string[] tickets = File.ReadAllLines(TfilePath);
+            string[] tickets = File.ReadAllLines(Helper.ticketFilePath);
             foreach (string t in tickets)
             {
                 string[] ts = t.Split(',');
