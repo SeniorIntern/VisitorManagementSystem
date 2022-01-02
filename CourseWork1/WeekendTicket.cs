@@ -13,6 +13,7 @@ namespace CourseWork1
         public int weRate1hr { get; set; }
         public int weRate2hr { get; set; }
         public int weRate3hr { get; set; }
+        public int weRate4hr { get; set; }
         public int weRateXhr { get; set; }
     }
 }

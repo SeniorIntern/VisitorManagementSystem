@@ -17,7 +17,6 @@ L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\D
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\bin\Debug\CourseWork1.exe.config
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\bin\Debug\CourseWork1.exe
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\bin\Debug\CourseWork1.pdb
-L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.csproj.AssemblyReference.cache
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.csproj.SuggestedBindingRedirects.cache
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.EntryForm.resources
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.ExitForm.resources
@@ -33,3 +32,4 @@ L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\D
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.csproj.CoreCompileInputs.cache
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.exe
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.pdb
+L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.csproj.AssemblyReference.cache

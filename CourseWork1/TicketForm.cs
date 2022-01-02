@@ -41,14 +41,15 @@ namespace CourseWork1
             foreach (string t in tickets)
             {
                 string[] ts = t.Split(',');
-                if (ts.Length != 6) continue;
+                if (ts.Length != 7) continue;
                 Ticket tktObjOne = new Ticket();    // creating object of Visitor class
                 tktObjOne.TktId = Convert.ToInt32(ts[0]);
                 tktObjOne.TktType = ts[1];
                 tktObjOne.Rate1hr = Convert.ToInt32(ts[2]);
                 tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
                 tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
-                tktObjOne.RateXhr = Convert.ToInt32(ts[5]);
+                tktObjOne.Rate4hr = Convert.ToInt32(ts[5]);
+                tktObjOne.RateXhr = Convert.ToInt32(ts[6]);
                 GlobalValues.TicketList.Add(tktObjOne);
             }
         }
@@ -58,7 +59,7 @@ namespace CourseWork1
             string wdTktType = TicketType.Text;
 
             wdRates = Helper.ChangeWeekdayRate(wdTktType);  //to create
-            if (tbWdRate1hr.Text == "" || tbWdRate2hr.Text == "" || tbWdRate3hr.Text == "" || tbWdRateXhr.Text == "")
+            if (tbWdRate1hr.Text == "" || tbWdRate2hr.Text == "" || tbWdRate3hr.Text == "" || tbWdRate4hr.Text == "" || tbWdRateXhr.Text == "")
             {
                 MessageBox.Show("Textbox must not be empty.");
             }
@@ -69,6 +70,7 @@ namespace CourseWork1
                 wdRates.Rate1hr = Convert.ToInt32(tbWdRate1hr.Text);
                 wdRates.Rate2hr = Convert.ToInt32(tbWdRate2hr.Text);
                 wdRates.Rate3hr = Convert.ToInt32(tbWdRate3hr.Text);
+                wdRates.Rate4hr = Convert.ToInt32(tbWdRate4hr.Text);
                 wdRates.RateXhr = Convert.ToInt32(tbWdRateXhr.Text);
                 Helper.UpdateWeekdayRateToCsv();      //to create
                 MessageBox.Show("Update Sucessfull");

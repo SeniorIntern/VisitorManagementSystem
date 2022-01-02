@@ -43,6 +43,8 @@
             this.tbWdRate2hr = new System.Windows.Forms.TextBox();
             this.tbWdRate3hr = new System.Windows.Forms.TextBox();
             this.tbWdRateXhr = new System.Windows.Forms.TextBox();
+            this.tbWdRate4hr = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WeekdayTicketsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekdayTicketId)).BeginInit();
             this.SuspendLayout();
@@ -141,7 +143,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 284);
+            this.label6.Location = new System.Drawing.Point(12, 311);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 20);
             this.label6.TabIndex = 14;
@@ -180,16 +182,35 @@
             // 
             // tbWdRateXhr
             // 
-            this.tbWdRateXhr.Location = new System.Drawing.Point(137, 284);
+            this.tbWdRateXhr.Location = new System.Drawing.Point(137, 311);
             this.tbWdRateXhr.Name = "tbWdRateXhr";
             this.tbWdRateXhr.Size = new System.Drawing.Size(84, 20);
             this.tbWdRateXhr.TabIndex = 20;
+            // 
+            // tbWdRate4hr
+            // 
+            this.tbWdRate4hr.Location = new System.Drawing.Point(137, 274);
+            this.tbWdRate4hr.Name = "tbWdRate4hr";
+            this.tbWdRate4hr.Size = new System.Drawing.Size(84, 20);
+            this.tbWdRate4hr.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 274);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 20);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "4 Hour Rate";
             // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.tbWdRate4hr);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbWdRateXhr);
             this.Controls.Add(this.tbWdRate3hr);
             this.Controls.Add(this.tbWdRate2hr);
@@ -232,5 +253,7 @@
         private System.Windows.Forms.TextBox tbWdRate2hr;
         private System.Windows.Forms.TextBox tbWdRate3hr;
         private System.Windows.Forms.TextBox tbWdRateXhr;
+        private System.Windows.Forms.TextBox tbWdRate4hr;
+        private System.Windows.Forms.Label label7;
     }
 }

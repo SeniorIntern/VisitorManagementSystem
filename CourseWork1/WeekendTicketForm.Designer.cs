@@ -42,6 +42,8 @@
             this.tbWeRateXhr = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.weekendTicketId = new System.Windows.Forms.NumericUpDown();
+            this.tbWeRate4hr = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WeekendTicketsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekendTicketId)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +132,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 293);
+            this.label5.Location = new System.Drawing.Point(22, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 20);
             this.label5.TabIndex = 8;
@@ -152,7 +154,7 @@
             // 
             // tbWeRateXhr
             // 
-            this.tbWeRateXhr.Location = new System.Drawing.Point(164, 293);
+            this.tbWeRateXhr.Location = new System.Drawing.Point(164, 304);
             this.tbWeRateXhr.Name = "tbWeRateXhr";
             this.tbWeRateXhr.Size = new System.Drawing.Size(78, 20);
             this.tbWeRateXhr.TabIndex = 5;
@@ -174,11 +176,30 @@
             this.weekendTicketId.Size = new System.Drawing.Size(86, 20);
             this.weekendTicketId.TabIndex = 0;
             // 
+            // tbWeRate4hr
+            // 
+            this.tbWeRate4hr.Location = new System.Drawing.Point(164, 266);
+            this.tbWeRate4hr.Name = "tbWeRate4hr";
+            this.tbWeRate4hr.Size = new System.Drawing.Size(78, 20);
+            this.tbWeRate4hr.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 264);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Rate 4 Hours";
+            // 
             // WeekendTicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.tbWeRate4hr);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.weekendTicketId);
             this.Controls.Add(this.tbWeRateXhr);
@@ -219,5 +240,7 @@
         private System.Windows.Forms.TextBox tbWeRateXhr;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown weekendTicketId;
+        private System.Windows.Forms.TextBox tbWeRate4hr;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -70,11 +70,16 @@ namespace CourseWork1
             int durationMins = (DateTime.Now - Convert.ToDateTime(labelEntry.Text)).Minutes;
             labelDuration.Text = durationHr.ToString() + "Hrs" + durationMins.ToString() + "Mins";
             
+            
+            if(durationHr == 0 && durationMins == 0)
+            {
+                totalHours = 1;
+            }
             /* 
             a minute more will be taken as an additional hour. i.e duration 1hr 1 minute will be charged
             same as 2 hour.
             */
-            if(durationMins >= 1)
+            if (durationMins >= 1)
             {
                 totalHours = durationHr + 1; // if it's not been an hour i.e 0. +1 will set it as 1 hour
             }
@@ -124,6 +129,9 @@ namespace CourseWork1
                     break;
                 case 3:
                     rate = t.Rate3hr;
+                    break;
+                case 4:
+                    rate = t.Rate4hr;
                     break;
                 default:
                     rate = t.RateXhr;

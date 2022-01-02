@@ -61,13 +61,15 @@ namespace CourseWork1
             foreach (string t in tickets)
             {
                 string[] ts = t.Split(',');
-                if (ts.Length != 5) continue;
+                if (ts.Length != 7) continue;
                 Ticket tktObjOne = new Ticket();
                 tktObjOne.TktId = Convert.ToInt32(ts[0]);
                 tktObjOne.TktType = ts[1];
                 tktObjOne.Rate1hr = Convert.ToInt32(ts[2]);
                 tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
                 tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
+                tktObjOne.Rate4hr = Convert.ToInt32(ts[5]);
+                tktObjOne.RateXhr = Convert.ToInt32(ts[6]);
                 GlobalValues.TicketList.Add(tktObjOne);
             }
             return GlobalValues.TicketList;
@@ -82,7 +84,7 @@ namespace CourseWork1
             {
 
                 string[] st = line.Split(',');
-                if (st.Length != 6)
+                if (st.Length != 7)
                 {
                     continue;
                 }
@@ -92,7 +94,8 @@ namespace CourseWork1
                 s.weRate1hr = Convert.ToInt32(st[2]);
                 s.weRate2hr = Convert.ToInt32(st[3]);
                 s.weRate3hr = Convert.ToInt32(st[4]);
-                s.weRateXhr = Convert.ToInt32(st[5]);
+                s.weRate4hr = Convert.ToInt32(st[5]);
+                s.weRateXhr = Convert.ToInt32(st[6]);
                 GlobalValues.WeekendTicketList.Add(s);
             }
         }
@@ -106,7 +109,7 @@ namespace CourseWork1
             {
 
                 string[] st = line.Split(',');
-                if (st.Length != 6)
+                if (st.Length != 7)
                 {
                     continue;
                 }
@@ -116,7 +119,8 @@ namespace CourseWork1
                 s.Rate1hr = Convert.ToInt32(st[2]);
                 s.Rate2hr = Convert.ToInt32(st[3]);
                 s.Rate3hr = Convert.ToInt32(st[4]);
-                s.RateXhr = Convert.ToInt32(st[5]);
+                s.Rate4hr = Convert.ToInt32(st[5]);
+                s.RateXhr = Convert.ToInt32(st[6]);
                 GlobalValues.TicketList.Add(s);
             }
         }
@@ -222,7 +226,7 @@ namespace CourseWork1
                 recObj.vId = Convert.ToInt32(recs[0]);
                 recObj.vType = recs[1];
                 recObj.vCount = Convert.ToInt32(recs[2]);
-                recObj.vEntTime = Convert.ToDateTime(recs[3]);
+                recObj.vEntTime = Convert.ToDateTime(recs[3]);  // FormatException error
                 recObj.vExtTime = Convert.ToDateTime(recs[4]);
                 recObj.vDuration = recs[5];
                 recObj.vCost = Convert.ToInt32(recs[6]);
@@ -274,12 +278,12 @@ namespace CourseWork1
                     WeekendTicket rate = GlobalValues.WeekendTicketList[i];
                     if (i == GlobalValues.WeekendTicketList.Count - 1)
                     {
-                        rates += rate.weTktId + "," + rate.weTktType + "," + rate.weRate1hr + "," + rate.weRate2hr + "," + rate.weRate3hr + "," + rate.weRateXhr;
+                        rates += rate.weTktId + "," + rate.weTktType + "," + rate.weRate1hr + "," + rate.weRate2hr + "," + rate.weRate3hr + "," + rate.weRate4hr + "," + rate.weRateXhr;
 
                     }
                     else
                     {
-                        rates += rate.weTktId + "," + rate.weTktType + "," + rate.weRate1hr + "," + rate.weRate2hr + "," + rate.weRate3hr + "," + rate.weRateXhr + "\n";
+                        rates += rate.weTktId + "," + rate.weTktType + "," + rate.weRate1hr + "," + rate.weRate2hr + "," + rate.weRate3hr + "," + rate.weRate4hr + "," + rate.weRateXhr + "\n";
                     }
                 }
                 if (rates != "")
@@ -309,16 +313,16 @@ namespace CourseWork1
                     Ticket rate = GlobalValues.TicketList[i];
                     if (i == GlobalValues.TicketList.Count - 1)
                     {
-                        rates += rate.TktId + "," + rate.TktType + "," + rate.Rate1hr + "," + rate.Rate2hr + "," + rate.Rate3hr + "," + rate.RateXhr;
+                        rates += rate.TktId + "," + rate.TktType + "," + rate.Rate1hr + "," + rate.Rate2hr + "," + rate.Rate3hr + "," + rate.Rate4hr + "," + rate.RateXhr;
                     }
                     else
                     {
-                        rates += rate.TktId + "," + rate.TktType + "," + rate.Rate1hr + "," + rate.Rate2hr + "," + rate.Rate3hr + "," + rate.RateXhr + "\n";
+                        rates += rate.TktId + "," + rate.TktType + "," + rate.Rate1hr + "," + rate.Rate2hr + "," + rate.Rate3hr + "," + rate.Rate4hr + "," + rate.RateXhr + "\n";
                     }
                 }
                 if (rates != "")
                 {
-                    File.WriteAllText(path, rates);
+                    File.WriteAllText(path, rates); 
                 }
             }
             catch (Exception e)

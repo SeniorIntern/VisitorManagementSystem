@@ -22,10 +22,15 @@ namespace CourseWork1
             if (Helper.isAdmin)
             {
                 labelGreetUser.Text = "Welcome ADMIN";
+                labelEmployeeMsg.Visible = false;
             }
             else
             {
                 labelGreetUser.Text = "Welcome Employee";
+                btnDailyRepForm.Enabled = false;
+                btnTicketsForm.Enabled = false;
+                btnWeeklyRepForm.Enabled = false;
+                labelEmployeeMsg.Visible = true;
             }
         }
 

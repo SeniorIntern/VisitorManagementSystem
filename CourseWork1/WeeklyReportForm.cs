@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,7 +77,6 @@ namespace CourseWork1
             return report;
         }
 
-        // A -> G => Saturday(A) -> Sunday(G)
         private void UpdateReportA(Report r)
         {
             DayACountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -181,6 +181,97 @@ namespace CourseWork1
         private void btnGetReport_Click(object sender, EventArgs e)
         {
             CalculateValues();
+            labelSortOpt.Visible = true;
+            radioBtnSortByCount.Visible = true;
+            radioBtnSortByEarnings.Visible = true;
+        }
+
+        private void sortingByCount() {
+            int a, b, c, d, e, f, g;
+            a = Convert.ToInt32(DayACountTotal.Text);
+            b = Convert.ToInt32(DayBCountTotal.Text);
+            c = Convert.ToInt32(DayCCountTotal.Text);
+            d = Convert.ToInt32(DayDCountTotal.Text);
+            e = Convert.ToInt32(DayECountTotal.Text);
+            f = Convert.ToInt32(DayFCountTotal.Text);
+            g = Convert.ToInt32(DayGCountTotal.Text);
+
+            int[] arr = { a, b, c, d, e, f, g };
+            int temp;
+            for (int j = 0; j <= arr.Length - 2; j++) {
+                for (int i = 0; i <= arr.Length - 2; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        temp= arr[i + 1];
+                        arr[i + 1] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+            }
+
+            label5.Text = arr[0].ToString();
+            label6.Text = arr[1].ToString();
+            label7.Text = arr[2].ToString();
+            label8.Text = arr[3].ToString();
+            label9.Text = arr[4].ToString();
+            label10.Text = arr[5].ToString();
+            label11.Text = arr[6].ToString();
+        }
+
+        private void sortingByEarnings()
+        {
+            int a, b, c, d, e, f, g;
+            a = Convert.ToInt32(DayATxnTotal.Text);
+            b = Convert.ToInt32(DayBTxnTotal.Text);
+            c = Convert.ToInt32(DayCTxnTotal.Text);
+            d = Convert.ToInt32(DayDTxnTotal.Text);
+            e = Convert.ToInt32(DayETxnTotal.Text);
+            f = Convert.ToInt32(DayFTxnTotal.Text);
+            g = Convert.ToInt32(DayGTxnTotal.Text);
+
+            // BUBLE SORTING
+            int[] arr = { a, b, c, d, e, f, g };
+            int temp;
+            for (int j = 0; j <= arr.Length - 2; j++)
+            {
+                for (int i = 0; i <= arr.Length - 2; i++)
+                {
+                    if (arr[i] > arr[i + 1])
+                    {
+                        temp = arr[i + 1];
+                        arr[i + 1] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+            }
+
+            label5.Text = arr[0].ToString();
+            label6.Text = arr[1].ToString();
+            label7.Text = arr[2].ToString();
+            label8.Text = arr[3].ToString();
+            label9.Text = arr[4].ToString();
+            label10.Text = arr[5].ToString();
+            label11.Text = arr[6].ToString();
+        }
+
+
+        private void radioBtnSortByCount_CheckedChanged(object sender, EventArgs e)
+        {
+            sortingByCount();
+            //dictionaryForSorting()
+        }
+
+        private void radioBtnSortByEarnings_CheckedChanged(object sender, EventArgs e)
+        {
+            sortingByEarnings();
+            //dictionaryForSorting()
+        }
+
+        private void dictionaryForSorting()
+        {
+            Dictionary<String, String> d = new Dictionary<String, String>();
+            d.Add("1", "Mahadev");  // test data
+            d.Add("2", "Mahesh");
+            Console.WriteLine(d["1"]);
         }
     }
 }
