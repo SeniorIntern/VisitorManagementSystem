@@ -8,7 +8,6 @@ namespace CourseWork1
 {
     class GlobalValues
     {
-        public static bool IsAdmin;
         public static List<Visitor> VisitorList = new List<Visitor>();
         public static List<Ticket> TicketList = new List<Ticket>();
         public static List<WeekendTicket> WeekendTicketList = new List<WeekendTicket>();

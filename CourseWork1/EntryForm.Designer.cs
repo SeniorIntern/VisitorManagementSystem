@@ -36,15 +36,14 @@ namespace CourseWork1
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TktGridView = new System.Windows.Forms.DataGridView();
-            this.VisitorId = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.radioButtonWeekDay = new System.Windows.Forms.RadioButton();
             this.radioButtonWeekEnd = new System.Windows.Forms.RadioButton();
             this.btnSerialize = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.VisitorId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TktGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VisitorId)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnAddStudent
@@ -110,17 +109,10 @@ namespace CourseWork1
             // TktGridView
             // 
             this.TktGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TktGridView.Location = new System.Drawing.Point(190, 288);
+            this.TktGridView.Location = new System.Drawing.Point(115, 281);
             this.TktGridView.Name = "TktGridView";
-            this.TktGridView.Size = new System.Drawing.Size(554, 163);
+            this.TktGridView.Size = new System.Drawing.Size(577, 231);
             this.TktGridView.TabIndex = 16;
-            // 
-            // VisitorId
-            // 
-            this.VisitorId.Location = new System.Drawing.Point(115, 48);
-            this.VisitorId.Name = "VisitorId";
-            this.VisitorId.Size = new System.Drawing.Size(87, 20);
-            this.VisitorId.TabIndex = 0;
             // 
             // button1
             // 
@@ -136,7 +128,7 @@ namespace CourseWork1
             // 
             this.radioButtonWeekDay.AutoSize = true;
             this.radioButtonWeekDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonWeekDay.Location = new System.Drawing.Point(527, 48);
+            this.radioButtonWeekDay.Location = new System.Drawing.Point(596, 95);
             this.radioButtonWeekDay.Name = "radioButtonWeekDay";
             this.radioButtonWeekDay.Size = new System.Drawing.Size(96, 24);
             this.radioButtonWeekDay.TabIndex = 18;
@@ -149,7 +141,7 @@ namespace CourseWork1
             // 
             this.radioButtonWeekEnd.AutoSize = true;
             this.radioButtonWeekEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButtonWeekEnd.Location = new System.Drawing.Point(527, 113);
+            this.radioButtonWeekEnd.Location = new System.Drawing.Point(595, 125);
             this.radioButtonWeekEnd.Name = "radioButtonWeekEnd";
             this.radioButtonWeekEnd.Size = new System.Drawing.Size(97, 24);
             this.radioButtonWeekEnd.TabIndex = 19;
@@ -173,23 +165,33 @@ namespace CourseWork1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(398, 50);
+            this.label4.Location = new System.Drawing.Point(604, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 21;
             this.label4.Text = "RateType";
+            // 
+            // VisitorId
+            // 
+            this.VisitorId.AutoSize = true;
+            this.VisitorId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisitorId.Location = new System.Drawing.Point(111, 47);
+            this.VisitorId.Name = "VisitorId";
+            this.VisitorId.Size = new System.Drawing.Size(51, 20);
+            this.VisitorId.TabIndex = 22;
+            this.VisitorId.Text = "label5";
             // 
             // EntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.VisitorId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSerialize);
             this.Controls.Add(this.radioButtonWeekEnd);
             this.Controls.Add(this.radioButtonWeekDay);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.VisitorId);
             this.Controls.Add(this.TktGridView);
             this.Controls.Add(this.BtnAddStudent);
             this.Controls.Add(this.VisitorType);
@@ -202,7 +204,6 @@ namespace CourseWork1
             this.Load += new System.EventHandler(this.EntryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TktGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VisitorId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,11 +217,11 @@ namespace CourseWork1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TktGridView;
-        private System.Windows.Forms.NumericUpDown VisitorId;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton radioButtonWeekDay;
         private System.Windows.Forms.RadioButton radioButtonWeekEnd;
         private System.Windows.Forms.Button btnSerialize;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label VisitorId;
     }
 }

@@ -10,11 +10,11 @@ namespace CourseWork1
 {
     internal class Helper
     {
+        public static bool isAdmin = false;
         public static string entryFilePath = "visitors.csv";
         public static string ticketFilePath = "ticketRate.csv";
         public static string weTicketFilePath = "WeekEndtktRate.csv";
         public static string recordFilePath = "records.csv";
-
         public static string SerializedFilePath = "Record.save";
         //public static RecordCollxn RecordCollxnList; //for serializing
 
@@ -204,18 +204,12 @@ namespace CourseWork1
             return ticket;
         }
 
-        // for saving exit details on CSV 
-        public static void AddRecordToCsv(List<Record> recList)
-        {
-
-        }
         public static void AddRecordToCsv(int vId, string vType, int vCount, DateTime vEntTime, DateTime vExtTime, string vDuration, int vCost)
         {
             string newRc = "\n" + vId + "," + vType + "," + vCount + "," + vEntTime + "," + vExtTime + "," + vDuration + "," + vCost;
             File.AppendAllText(recordFilePath, newRc);
         }
 
-        //public static List<Record> GetRecordsFromCSV(string filePath)
         public static List<Record> GetRecordsFromCSV(string recordFilePath)
         {
             GlobalValues.RecordList = new List<Record>();
@@ -239,7 +233,6 @@ namespace CourseWork1
 
         public static Report GetReportByDate(DateTime day)
         {
-            //List<Record> recordList = GetRecordsFromCSV(Globalvalues.RecordFilePath);
             List<Record> recordList = GetRecordsFromCSV(recordFilePath);
             Report report = new Report();
             report.Date = day;

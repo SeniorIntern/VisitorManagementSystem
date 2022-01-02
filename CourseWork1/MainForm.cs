@@ -5,8 +5,9 @@ namespace CourseWork1
 {
     public partial class MainForm : Form
     {
-        WeeklyReportForm wrf;
+        //WeeklyReportForm wrf;
         LoginForm LF;
+        MainForm MF;
 
         public MainForm()
         {
@@ -18,8 +19,17 @@ namespace CourseWork1
         private void MainForm_Load(object sender, EventArgs e)
         {
             //menuStrip.Enabled = false; // fow disabling menustrip
+            if (Helper.isAdmin)
+            {
+                labelGreetUser.Text = "Welcome ADMIN";
+            }
+            else
+            {
+                labelGreetUser.Text = "Welcome Employee";
+            }
         }
 
+        //labelGreetUser.Text = "Welcome, Admin";
         private void timer1_Tick(object sender, EventArgs e)
         {
             // creating DateTime object: dt

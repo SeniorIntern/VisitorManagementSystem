@@ -48,8 +48,8 @@ namespace CourseWork1
             //check username and password
             if (LoginUserInput.Text == "Admin" && LoginPasswordInput.Text == "Admin")
             {
+                Helper.isAdmin = true;
                 //set the user as admin
-                GlobalValues.IsAdmin = true;
                 // show mainform form
                 MainForm f1 = new MainForm();
                 this.Hide();
@@ -61,9 +61,17 @@ namespace CourseWork1
                 MessageBox.Show("Your Username/Password is not correct");
             }
         }
+
         private void BtnGuest_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEmpLogin_Click(object sender, EventArgs e)
+        {
+            MainForm f1 = new MainForm();
+            this.Hide();
+            f1.Show();
         }
     }
 }

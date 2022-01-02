@@ -15,20 +15,19 @@ namespace CourseWork1
 {
     public partial class EntryForm : Form
     {
-
+        public static string entryFilePath = "visitors.csv";
         public EntryForm()
         {
             InitializeComponent();
             Helper.ReadWETktRate();
             Helper.ReadWDTktRate();
+            Helper.ReadCsvFile(entryFilePath);
         }
 
         private void EntryForm_Load(object sender, EventArgs e)
         {
-            //TktGridView.DataSource = null;
             radioButtonWeekDay.Checked = true;
-            //TktGridView.DataSource = Helper.ReadCsvFile(Helper.entryFilePath);
-            //DeserializableRecordData()
+            VisitorId.Text = Convert.ToString(GlobalValues.VisitorList.Max<Visitor>(vtrObjOne => vtrObjOne.Id) + 1); // increase Id value after adding visitor
         }
 
         /*
@@ -83,7 +82,7 @@ namespace CourseWork1
                 try
                 {
                     Visitor vtrObjTwo = new Visitor();
-                    vtrObjTwo.Id = (int)VisitorId.Value;
+                    vtrObjTwo.Id = Convert.ToInt32(VisitorId.Text);
                     vtrObjTwo.Type = VisitorType.Text;
                     vtrObjTwo.Count = (int)VisitorCount.Value;
                     vtrObjTwo.entryTime = DateTime.Now;
@@ -91,9 +90,10 @@ namespace CourseWork1
                     GlobalValues.VisitorList.Add(vtrObjTwo);
 
                     AddStudentToCsv(vtrObjTwo.Id, vtrObjTwo.Type, vtrObjTwo.Count, vtrObjTwo.entryTime);
-                    VisitorId.Value = vtrObjTwo.Id + 1; // auto increment for by 1 with inital visitor Id value
+                    VisitorId.Text = vtrObjTwo.Id.ToString();
                     VisitorType.Text = "";
                     VisitorCount.Value = vtrObjTwo.Count;
+                    VisitorId.Text = Convert.ToString(GlobalValues.VisitorList.Max<Visitor>(vtrObjOne => vtrObjOne.Id) + 1); // increase Id value after adding visitor
 
                     MessageBox.Show("Visitor entry done");
                 }
