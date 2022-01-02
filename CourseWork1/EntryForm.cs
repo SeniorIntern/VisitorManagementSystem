@@ -19,13 +19,36 @@ namespace CourseWork1
         public EntryForm()
         {
             InitializeComponent();
+            Helper.ReadWETktRate();
+            Helper.ReadWDTktRate();
         }
-        
+
         private void EntryForm_Load(object sender, EventArgs e)
         {
-            VisitorsGridView.DataSource = null;
-            VisitorsGridView.DataSource = Helper.ReadCsvFile(Helper.entryFilePath);
+            //TktGridView.DataSource = null;
+            radioButtonWeekDay.Checked = true;
+            //TktGridView.DataSource = Helper.ReadCsvFile(Helper.entryFilePath);
+            //DeserializableRecordData()
         }
+
+        /*
+        public static void DeserializableRecordData()
+        {
+            if (File.Exists(Helper.SerializedFilePath))
+            {
+                Stream stream = File.Open(Helper.SerializedFilePath, FileMode.Open);
+                if (stream != null && stream.Length > 0)
+                {
+                    BinaryFormatter BF = new BinaryFormatter();
+
+                    // Reading visit list information
+                    Helper.RecordCollxnList = (RecordCollxn)BF.Deserialize(stream);
+                    MessageBox.Show("Sucessfully deserlized");
+                }
+                stream.Close();
+            }
+        }
+        */
 
         public static void EntryForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -38,7 +61,7 @@ namespace CourseWork1
             File.AppendAllText(Helper.entryFilePath, newVt);
         }
 
-        private void BtnAddStudent_Click_1(object sender, EventArgs e)
+        private void BtnAddStudent_Click(object sender, EventArgs e)
         {
             if (VisitorType.SelectedItem.ToString().Equals("") || VisitorCount.Value == 0)
             {
@@ -78,10 +101,25 @@ namespace CourseWork1
                 {
                     MessageBox.Show("Invalid Input! Please enter correct data.");
                 }
-                VisitorsGridView.DataSource = null;
-                VisitorsGridView.DataSource = GlobalValues.VisitorList;
+                //TktGridView.DataSource = null;
+                //TktGridView.DataSource = GlobalValues.VisitorList;
             }
+        }
 
+        private void btnSerialize_Click(object sender, EventArgs e)
+        {
+            //Helper.AddRecordToCsv(GlobalValues.RecordList);
+            //Helper.SerializableRecordData(GlobalValues.RecordList);
+        }
+
+        private void radioButtonWeekDay_CheckedChanged(object sender, EventArgs e)
+        {
+            TktGridView.DataSource = GlobalValues.TicketList;
+        }
+
+        private void radioButtonWeekEnd_CheckedChanged(object sender, EventArgs e)
+        {
+            TktGridView.DataSource = GlobalValues.WeekendTicketList;
         }
     }
 }

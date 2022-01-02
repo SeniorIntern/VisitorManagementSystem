@@ -129,15 +129,8 @@ namespace CourseWork1
                     rate = t.RateXhr;
                     break;
             }
-
             labelCost.Visible = true;
-            if(DateTime.Now.DayOfWeek.ToString().Equals("Saturday")) {
-                // applying 20% discount
-                totalCharge = rate/5 * m;
-            }
-            else{
-                totalCharge = rate * m;
-            }
+            totalCharge = rate * m;
             labelCost.Text = totalCharge.ToString();
         }
 

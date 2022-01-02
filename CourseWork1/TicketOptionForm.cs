@@ -50,7 +50,22 @@ namespace CourseWork1
 
         private void btnHolidaysTicket_Click(object sender, EventArgs e)
         {
+            ShowWeekendTicketForm();
+        }
 
+        public static WeekendTicketForm WeTicketView;
+        private void ShowWeekendTicketForm()
+        {
+            if (WeTicketView == null)
+            {
+                WeTicketView = new WeekendTicketForm();
+                WeTicketView.FormClosed += WeekendTicketForm.WeekendTicketForm_FormClosed;
+                WeTicketView.Show();
+            }
+            else
+            {
+                WeTicketView.Activate();
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,38 +18,6 @@ namespace CourseWork1
         public LoginForm()
         {
             InitializeComponent();
-        }
-
-        private void BtnGuest_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BtnLogin_Click_1(object sender, EventArgs e)
-        {
-            openHour = (DateTime.Now).Hour;
-            if (false) //openHour < 10 || openHour > 18
-            {
-                MessageBox.Show("You can not open outside office hour(10:00 AM to 6:00 PM)");
-            }
-            else
-            {
-                //check username and password
-                if (LoginUserInput.Text == "Admin" && LoginPasswordInput.Text == "Admin")
-                {
-                    //set the user as admin
-                    GlobalValues.IsAdmin = true;
-                    // show mainform form
-                    MainForm f1 = new MainForm();
-                    this.Hide();
-                    f1.Show();
-                }
-                else
-                {
-                    // show labelMessage(Username password not valid)
-                    MessageBox.Show("Your Username/Password is not correct");
-                }
-            }
         }
 
         private void PasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -66,6 +35,35 @@ namespace CourseWork1
         private void LoginForm_Load(object sender, EventArgs e)
         {
             PasswordCheckBox_CheckedChanged(sender, e);
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            /*openHour = (DateTime.Now).Hour;
+            if (false) //openHour < 10 || openHour > 18
+            {
+                MessageBox.Show("You can not open outside office hour(10:00 AM to 6:00 PM)");
+            }
+            */
+            //check username and password
+            if (LoginUserInput.Text == "Admin" && LoginPasswordInput.Text == "Admin")
+            {
+                //set the user as admin
+                GlobalValues.IsAdmin = true;
+                // show mainform form
+                MainForm f1 = new MainForm();
+                this.Hide();
+                f1.Show();
+            }
+            else
+            {
+                // show labelMessage(Username password not valid)
+                MessageBox.Show("Your Username/Password is not correct");
+            }
+        }
+        private void BtnGuest_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

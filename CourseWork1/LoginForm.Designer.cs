@@ -63,7 +63,7 @@ namespace CourseWork1
             this.BtnLogin.TabIndex = 3;
             this.BtnLogin.Text = "Login";
             this.BtnLogin.UseVisualStyleBackColor = true;
-            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click_1);
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // label1
             // 
@@ -93,7 +93,7 @@ namespace CourseWork1
             this.BtnGuest.TabIndex = 4;
             this.BtnGuest.Text = "Exit";
             this.BtnGuest.UseVisualStyleBackColor = true;
-            this.BtnGuest.Click += new System.EventHandler(this.BtnGuest_Click_1);
+            this.BtnGuest.Click += new System.EventHandler(this.BtnGuest_Click);
             // 
             // PasswordCheckBox
             // 

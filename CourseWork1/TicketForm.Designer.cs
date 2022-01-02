@@ -28,88 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TicketsGridView = new System.Windows.Forms.DataGridView();
+            this.WeekdayTicketsGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAddRate = new System.Windows.Forms.Button();
-            this.TicketFirstRate = new System.Windows.Forms.NumericUpDown();
-            this.TicketSecondRate = new System.Windows.Forms.NumericUpDown();
             this.TicketType = new System.Windows.Forms.ComboBox();
-            this.TicketThirdRate = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.TicketId = new System.Windows.Forms.NumericUpDown();
+            this.weekdayTicketId = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.Terms = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.TicketFourthRate = new System.Windows.Forms.NumericUpDown();
-            this.btnUpdateRate = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketFirstRate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketSecondRate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketThirdRate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketFourthRate)).BeginInit();
+            this.btnUpdateWDRate = new System.Windows.Forms.Button();
+            this.tbWdRate1hr = new System.Windows.Forms.TextBox();
+            this.tbWdRate2hr = new System.Windows.Forms.TextBox();
+            this.tbWdRate3hr = new System.Windows.Forms.TextBox();
+            this.tbWdRateXhr = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.WeekdayTicketsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weekdayTicketId)).BeginInit();
             this.SuspendLayout();
             // 
-            // TicketsGridView
+            // WeekdayTicketsGridView
             // 
-            this.TicketsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TicketsGridView.Location = new System.Drawing.Point(236, 12);
-            this.TicketsGridView.Name = "TicketsGridView";
-            this.TicketsGridView.Size = new System.Drawing.Size(518, 240);
-            this.TicketsGridView.TabIndex = 0;
+            this.WeekdayTicketsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.WeekdayTicketsGridView.Location = new System.Drawing.Point(237, 35);
+            this.WeekdayTicketsGridView.Name = "WeekdayTicketsGridView";
+            this.WeekdayTicketsGridView.Size = new System.Drawing.Size(518, 240);
+            this.WeekdayTicketsGridView.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "1 Hour Rate";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Type";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "2 Hour Rate";
-            // 
-            // btnAddRate
-            // 
-            this.btnAddRate.Location = new System.Drawing.Point(24, 327);
-            this.btnAddRate.Name = "btnAddRate";
-            this.btnAddRate.Size = new System.Drawing.Size(107, 29);
-            this.btnAddRate.TabIndex = 4;
-            this.btnAddRate.Text = "Add";
-            this.btnAddRate.UseVisualStyleBackColor = true;
-            this.btnAddRate.Click += new System.EventHandler(this.btnAddRate_Click);
-            // 
-            // TicketFirstRate
-            // 
-            this.TicketFirstRate.Location = new System.Drawing.Point(108, 133);
-            this.TicketFirstRate.Name = "TicketFirstRate";
-            this.TicketFirstRate.Size = new System.Drawing.Size(84, 20);
-            this.TicketFirstRate.TabIndex = 1;
-            // 
-            // TicketSecondRate
-            // 
-            this.TicketSecondRate.Location = new System.Drawing.Point(108, 185);
-            this.TicketSecondRate.Name = "TicketSecondRate";
-            this.TicketSecondRate.Size = new System.Drawing.Size(84, 20);
-            this.TicketSecondRate.TabIndex = 2;
             // 
             // TicketType
             // 
@@ -120,40 +94,35 @@
             "Group5",
             "Group10",
             "Group15"});
-            this.TicketType.Location = new System.Drawing.Point(108, 83);
+            this.TicketType.Location = new System.Drawing.Point(137, 90);
             this.TicketType.Name = "TicketType";
             this.TicketType.Size = new System.Drawing.Size(84, 21);
             this.TicketType.TabIndex = 0;
             // 
-            // TicketThirdRate
-            // 
-            this.TicketThirdRate.Location = new System.Drawing.Point(108, 232);
-            this.TicketThirdRate.Name = "TicketThirdRate";
-            this.TicketThirdRate.Size = new System.Drawing.Size(84, 20);
-            this.TicketThirdRate.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 239);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.Size = new System.Drawing.Size(96, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "3 Hour Rate";
             // 
-            // TicketId
+            // weekdayTicketId
             // 
-            this.TicketId.Location = new System.Drawing.Point(106, 35);
-            this.TicketId.Name = "TicketId";
-            this.TicketId.Size = new System.Drawing.Size(86, 20);
-            this.TicketId.TabIndex = 10;
+            this.weekdayTicketId.Location = new System.Drawing.Point(137, 54);
+            this.weekdayTicketId.Name = "weekdayTicketId";
+            this.weekdayTicketId.Size = new System.Drawing.Size(86, 20);
+            this.weekdayTicketId.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 42);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Ticket Id";
             // 
@@ -171,58 +140,76 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 284);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.Size = new System.Drawing.Size(125, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "Whole Day Rate";
             // 
-            // TicketFourthRate
+            // btnUpdateWDRate
             // 
-            this.TicketFourthRate.Location = new System.Drawing.Point(108, 282);
-            this.TicketFourthRate.Name = "TicketFourthRate";
-            this.TicketFourthRate.Size = new System.Drawing.Size(84, 20);
-            this.TicketFourthRate.TabIndex = 13;
+            this.btnUpdateWDRate.Location = new System.Drawing.Point(43, 354);
+            this.btnUpdateWDRate.Name = "btnUpdateWDRate";
+            this.btnUpdateWDRate.Size = new System.Drawing.Size(109, 39);
+            this.btnUpdateWDRate.TabIndex = 16;
+            this.btnUpdateWDRate.Text = "Update";
+            this.btnUpdateWDRate.UseVisualStyleBackColor = true;
+            this.btnUpdateWDRate.Click += new System.EventHandler(this.btnUpdateRate_Click);
             // 
-            // btnUpdateRate
+            // tbWdRate1hr
             // 
-            this.btnUpdateRate.Location = new System.Drawing.Point(24, 381);
-            this.btnUpdateRate.Name = "btnUpdateRate";
-            this.btnUpdateRate.Size = new System.Drawing.Size(107, 29);
-            this.btnUpdateRate.TabIndex = 16;
-            this.btnUpdateRate.Text = "Update";
-            this.btnUpdateRate.UseVisualStyleBackColor = true;
+            this.tbWdRate1hr.Location = new System.Drawing.Point(137, 135);
+            this.tbWdRate1hr.Name = "tbWdRate1hr";
+            this.tbWdRate1hr.Size = new System.Drawing.Size(84, 20);
+            this.tbWdRate1hr.TabIndex = 17;
+            // 
+            // tbWdRate2hr
+            // 
+            this.tbWdRate2hr.Location = new System.Drawing.Point(137, 187);
+            this.tbWdRate2hr.Name = "tbWdRate2hr";
+            this.tbWdRate2hr.Size = new System.Drawing.Size(84, 20);
+            this.tbWdRate2hr.TabIndex = 18;
+            // 
+            // tbWdRate3hr
+            // 
+            this.tbWdRate3hr.Location = new System.Drawing.Point(137, 239);
+            this.tbWdRate3hr.Name = "tbWdRate3hr";
+            this.tbWdRate3hr.Size = new System.Drawing.Size(84, 20);
+            this.tbWdRate3hr.TabIndex = 19;
+            // 
+            // tbWdRateXhr
+            // 
+            this.tbWdRateXhr.Location = new System.Drawing.Point(137, 284);
+            this.tbWdRateXhr.Name = "tbWdRateXhr";
+            this.tbWdRateXhr.Size = new System.Drawing.Size(84, 20);
+            this.tbWdRateXhr.TabIndex = 20;
             // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 749);
-            this.Controls.Add(this.btnUpdateRate);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.tbWdRateXhr);
+            this.Controls.Add(this.tbWdRate3hr);
+            this.Controls.Add(this.tbWdRate2hr);
+            this.Controls.Add(this.tbWdRate1hr);
+            this.Controls.Add(this.btnUpdateWDRate);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TicketFourthRate);
             this.Controls.Add(this.Terms);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TicketId);
+            this.Controls.Add(this.weekdayTicketId);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TicketThirdRate);
             this.Controls.Add(this.TicketType);
-            this.Controls.Add(this.TicketSecondRate);
-            this.Controls.Add(this.TicketFirstRate);
-            this.Controls.Add(this.btnAddRate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TicketsGridView);
+            this.Controls.Add(this.WeekdayTicketsGridView);
             this.Name = "TicketForm";
             this.Text = "TicketForm";
-            this.Load += new System.EventHandler(this.TicketForm_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.TicketsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketFirstRate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketSecondRate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketThirdRate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketFourthRate)).EndInit();
+            this.Load += new System.EventHandler(this.TicketForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.WeekdayTicketsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weekdayTicketId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,21 +217,20 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView TicketsGridView;
+        private System.Windows.Forms.DataGridView WeekdayTicketsGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAddRate;
-        private System.Windows.Forms.NumericUpDown TicketFirstRate;
-        private System.Windows.Forms.NumericUpDown TicketSecondRate;
         private System.Windows.Forms.ComboBox TicketType;
-        private System.Windows.Forms.NumericUpDown TicketThirdRate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown TicketId;
+        private System.Windows.Forms.NumericUpDown weekdayTicketId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Terms;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown TicketFourthRate;
-        private System.Windows.Forms.Button btnUpdateRate;
+        private System.Windows.Forms.Button btnUpdateWDRate;
+        private System.Windows.Forms.TextBox tbWdRate1hr;
+        private System.Windows.Forms.TextBox tbWdRate2hr;
+        private System.Windows.Forms.TextBox tbWdRate3hr;
+        private System.Windows.Forms.TextBox tbWdRateXhr;
     }
 }

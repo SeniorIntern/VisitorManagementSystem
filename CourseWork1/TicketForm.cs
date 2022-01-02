@@ -15,15 +15,18 @@ namespace CourseWork1
 {
     public partial class TicketForm : Form
     {
+        Ticket wdRates;
+
         public TicketForm()
         {
             InitializeComponent();
         }
 
-        private void TicketForm_Load_1(object sender, EventArgs e)
+        private void TicketForm_Load(object sender, EventArgs e)
         {
-            TicketsGridView.DataSource = null;
             ReadTktCsvFile();
+            WeekdayTicketsGridView.DataSource = null;
+            WeekdayTicketsGridView.DataSource = GlobalValues.TicketList;
         }
 
         public static void TicketForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,13 +34,6 @@ namespace CourseWork1
             TicketOptionForm.TicketView = null;
         }
 
-        private void AddTktRateToCsv(int TktId, string TktType, int Rate1hr, int Rate2hr, int Rate3hr, int RateXhr)
-        {
-            string newRt = "\n" + TktId + "," + TktType + "," + Rate1hr + "," + Rate2hr + "," + Rate3hr + "," + RateXhr;
-            File.AppendAllText(Helper.ticketFilePath, newRt);
-        }
-
-        // public static List<CreateUser> ReadTktCsvFile(string TfilePath)
         public void ReadTktCsvFile()
         {
             GlobalValues.TicketList = new List<Ticket>();
@@ -53,44 +49,33 @@ namespace CourseWork1
                 tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
                 tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
                 tktObjOne.RateXhr = Convert.ToInt32(ts[5]);
-
                 GlobalValues.TicketList.Add(tktObjOne);
             }
-            TicketsGridView.DataSource = GlobalValues.TicketList;
         }
 
-        private void btnAddRate_Click(object sender, EventArgs e)
+        private void btnUpdateRate_Click(object sender, EventArgs e)
         {
-            try
+            string wdTktType = TicketType.Text;
+
+            wdRates = Helper.ChangeWeekdayRate(wdTktType);  //to create
+            if (tbWdRate1hr.Text == "" || tbWdRate2hr.Text == "" || tbWdRate3hr.Text == "" || tbWdRateXhr.Text == "")
             {
-                Ticket tktObjTwo = new Ticket();
-                tktObjTwo.TktId = (int)TicketId.Value;
-                tktObjTwo.TktType = TicketType.Text;
-                tktObjTwo.Rate1hr = (int)TicketFirstRate.Value;
-                tktObjTwo.Rate2hr = (int)TicketSecondRate.Value;
-                tktObjTwo.Rate3hr = (int)TicketThirdRate.Value;
-                tktObjTwo.RateXhr = (int)TicketFourthRate.Value;
-
-
-                GlobalValues.TicketList.Add(tktObjTwo);
-
-                AddTktRateToCsv(tktObjTwo.TktId, tktObjTwo.TktType, tktObjTwo.Rate1hr, tktObjTwo.Rate2hr, tktObjTwo.Rate3hr, tktObjTwo.RateXhr);
-                TicketId.Value = tktObjTwo.TktId + 1;
-                TicketType.Text = tktObjTwo.TktType;
-                TicketFirstRate.Value = tktObjTwo.Rate1hr;
-                TicketSecondRate.Value = tktObjTwo.Rate2hr;
-                TicketThirdRate.Value = tktObjTwo.Rate3hr;
-                TicketFourthRate.Value = tktObjTwo.RateXhr;
-
-
-                MessageBox.Show("Ticket Rate Added Sucessfully");
+                MessageBox.Show("Textbox must not be empty.");
             }
-            catch (FormatException)
+
+            else
             {
-                MessageBox.Show("Invalid Input! Please enter correct data.");
+                wdRates.TktId = Convert.ToInt32(weekdayTicketId.Text);
+                wdRates.Rate1hr = Convert.ToInt32(tbWdRate1hr.Text);
+                wdRates.Rate2hr = Convert.ToInt32(tbWdRate2hr.Text);
+                wdRates.Rate3hr = Convert.ToInt32(tbWdRate3hr.Text);
+                wdRates.RateXhr = Convert.ToInt32(tbWdRateXhr.Text);
+                Helper.UpdateWeekdayRateToCsv();      //to create
+                MessageBox.Show("Update Sucessfull");
+                ReadTktCsvFile();
+                WeekdayTicketsGridView.DataSource = null;
+                WeekdayTicketsGridView.DataSource = GlobalValues.TicketList; // to correct
             }
-            TicketsGridView.DataSource = null;
-            TicketsGridView.DataSource = GlobalValues.TicketList;
         }
     }
 }
