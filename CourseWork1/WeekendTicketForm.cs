@@ -29,7 +29,7 @@ namespace CourseWork1
 
         public static void WeekendTicketForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            TicketOptionForm.WeTicketView = null;
+            MainForm.WeTicketView = null;
         }
 
         public void ReadWeekendTktCsvFile()

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.WeeklyReportchart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,21 +85,21 @@
             // 
             // WeeklyReportchart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.WeeklyReportchart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.WeeklyReportchart.Legends.Add(legend3);
-            this.WeeklyReportchart.Location = new System.Drawing.Point(540, 123);
+            chartArea1.Name = "ChartArea1";
+            this.WeeklyReportchart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.WeeklyReportchart.Legends.Add(legend1);
+            this.WeeklyReportchart.Location = new System.Drawing.Point(526, 181);
             this.WeeklyReportchart.Name = "WeeklyReportchart";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "TotalVisitors";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "TotalEarnings";
-            this.WeeklyReportchart.Series.Add(series5);
-            this.WeeklyReportchart.Series.Add(series6);
-            this.WeeklyReportchart.Size = new System.Drawing.Size(391, 343);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "TotalVisitors";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "TotalEarnings";
+            this.WeeklyReportchart.Series.Add(series1);
+            this.WeeklyReportchart.Series.Add(series2);
+            this.WeeklyReportchart.Size = new System.Drawing.Size(402, 345);
             this.WeeklyReportchart.TabIndex = 1;
             this.WeeklyReportchart.Text = "chart1";
             // 
@@ -466,9 +466,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(364, 123);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 20);
+            this.label13.Size = new System.Drawing.Size(110, 20);
             this.label13.TabIndex = 45;
-            this.label13.Text = "TestSort";
+            this.label13.Text = "Series Order";
             // 
             // WeeklyReportForm
             // 

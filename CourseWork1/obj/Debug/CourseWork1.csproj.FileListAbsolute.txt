@@ -25,7 +25,6 @@ L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\D
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.Properties.Resources.resources
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.DailyReportForm.resources
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.TicketForm.resources
-L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.TicketOptionForm.resources
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.WeekendTicketForm.resources
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.WeeklyReportForm.resources
 L:\College\3rd Year-1st Semister\Coursework I\Application Development CS6004NP\Development\VisitorManagementSystem\CourseWork1\obj\Debug\CourseWork1.csproj.GenerateResource.cache

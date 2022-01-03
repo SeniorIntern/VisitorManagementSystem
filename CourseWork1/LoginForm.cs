@@ -13,8 +13,7 @@ namespace CourseWork1
 {
     public partial class LoginForm : Form
     {
-        public int openHour;
-
+        
         public LoginForm()
         {
             InitializeComponent();
@@ -39,25 +38,18 @@ namespace CourseWork1
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            /*openHour = (DateTime.Now).Hour;
-            if (false) //openHour < 10 || openHour > 18
-            {
-                MessageBox.Show("You can not open outside office hour(10:00 AM to 6:00 PM)");
-            }
-            */
             //check username and password
             if (LoginUserInput.Text == "Admin" && LoginPasswordInput.Text == "Admin")
             {
                 Helper.isAdmin = true;
                 //set the user as admin
-                // show mainform form
+                // show mainform
                 MainForm f1 = new MainForm();
                 this.Hide();
                 f1.Show();
             }
             else
             {
-                // show labelMessage(Username password not valid)
                 MessageBox.Show("Your Username/Password is not correct");
             }
         }

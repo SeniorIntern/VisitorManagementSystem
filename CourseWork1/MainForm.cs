@@ -5,20 +5,17 @@ namespace CourseWork1
 {
     public partial class MainForm : Form
     {
-        //WeeklyReportForm wrf;
         LoginForm LF;
         MainForm MF;
 
         public MainForm()
         {
             InitializeComponent();
-            //ShowLogin(); // For showing login Form when program starts
-            timer1.Start(); // for showing time
+            timer1.Start(); // for showing system' time in menu strip
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //menuStrip.Enabled = false; // fow disabling menustrip
             if (Helper.isAdmin)
             {
                 labelGreetUser.Text = "Welcome ADMIN";
@@ -32,13 +29,14 @@ namespace CourseWork1
                 btnWeeklyRepForm.Enabled = false;
                 labelEmployeeMsg.Visible = true;
             }
+
+            btnWeekdaysRate.Visible = false;
+            btnWeekendRate.Visible = false;
         }
 
-        //labelGreetUser.Text = "Welcome, Admin";
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // creating DateTime object: dt
-            DateTime dt = DateTime.Now;
+            DateTime dt = DateTime.Now; //  creating DateTime object: dt
             this.LabelDate.Text = dt.ToString();
         }
 
@@ -112,22 +110,9 @@ namespace CourseWork1
 
         private void btnTicketsForm_Click(object sender, EventArgs e)
         {
-            ShowTicketOptForm();
-        }
+            btnWeekdaysRate.Visible = true;
+            btnWeekendRate.Visible = true;
 
-        public static TicketOptionForm TicketOptView;
-        private void ShowTicketOptForm()
-        {
-            if (TicketOptView == null)
-            {
-                TicketOptView = new TicketOptionForm();
-                TicketOptView.FormClosed += TicketOptionForm.TicketOptionForm_FormClosed;
-                TicketOptView.Show();
-            }
-            else
-            {
-                TicketOptView.Activate();
-            }
         }
 
         private void btnWeeklyRepForm_Click(object sender, EventArgs e)
@@ -155,6 +140,46 @@ namespace CourseWork1
             this.Close();
             LF = new LoginForm();
             LF.Show();
+        }
+
+        private void btnWeekdaysRate_Click(object sender, EventArgs e)
+        {
+            ShowTicketForm();
+        }
+
+        public static TicketForm TicketView;
+        private void ShowTicketForm()
+        {
+            if (TicketView == null)
+            {
+                TicketView = new TicketForm();
+                TicketView.FormClosed += TicketForm.TicketForm_FormClosed;
+                TicketView.Show();
+            }
+            else
+            {
+                TicketView.Activate();
+            }
+        }
+
+        private void btnWeekendRate_Click(object sender, EventArgs e)
+        {
+            ShowWeekendTicketForm();
+        }
+
+        public static WeekendTicketForm WeTicketView;
+        private void ShowWeekendTicketForm()
+        {
+            if (WeTicketView == null)
+            {
+                WeTicketView = new WeekendTicketForm();
+                WeTicketView.FormClosed += WeekendTicketForm.WeekendTicketForm_FormClosed;
+                WeTicketView.Show();
+            }
+            else
+            {
+                WeTicketView.Activate();
+            }
         }
 
     }

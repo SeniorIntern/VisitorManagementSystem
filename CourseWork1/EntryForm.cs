@@ -16,6 +16,7 @@ namespace CourseWork1
 {
     public partial class EntryForm : Form
     {
+        public int openHour;
         public static string entryFilePath = "visitors.csv";
         public static string srzFilePath = "visitorData";
 
@@ -34,6 +35,20 @@ namespace CourseWork1
 
             EntryGridView.DataSource = null;
             EntryGridView.DataSource = GlobalValues.VisitorList;
+
+            openHour = (DateTime.Now).Hour;
+            try {
+                if (openHour < 10 || openHour > 18) // Disable visitor entry outside office hours. 
+                {
+                    BtnAddStudent.Enabled = false;
+                    MessageBox.Show("Visitor can not enter outside visiting hours(10:00 AM to 6:00 PM)");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Visitor should not be entered outside visiting hours");
+            }
+
         }
 
         public static void EntryForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -100,8 +115,6 @@ namespace CourseWork1
                 {
                     MessageBox.Show("Invalid Input! Please enter correct data.");
                 }
-                //TktGridView.DataSource = null;
-                //TktGridView.DataSource = GlobalValues.VisitorList;
             }
         }
 
@@ -132,7 +145,7 @@ namespace CourseWork1
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("DeSerialization unsucessfull");
             }
         }
 

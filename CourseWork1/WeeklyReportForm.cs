@@ -257,21 +257,14 @@ namespace CourseWork1
         private void radioBtnSortByCount_CheckedChanged(object sender, EventArgs e)
         {
             sortingByCount();
-            //dictionaryForSorting()
+            label13.Text = "Visitor Count by rising order";
         }
 
         private void radioBtnSortByEarnings_CheckedChanged(object sender, EventArgs e)
         {
             sortingByEarnings();
-            //dictionaryForSorting()
+            label13.Text = "Total Income by rising order";
         }
 
-        private void dictionaryForSorting()
-        {
-            Dictionary<String, String> d = new Dictionary<String, String>();
-            d.Add("1", "Mahadev");  // test data
-            d.Add("2", "Mahesh");
-            Console.WriteLine(d["1"]);
-        }
     }
 }

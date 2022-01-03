@@ -28,10 +28,10 @@ namespace CourseWork1
             WeekdayTicketsGridView.DataSource = null;
             WeekdayTicketsGridView.DataSource = GlobalValues.TicketList;
         }
-
+        
         public static void TicketForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            TicketOptionForm.TicketView = null;
+            MainForm.TicketView = null;
         }
 
         public void ReadTktCsvFile()
