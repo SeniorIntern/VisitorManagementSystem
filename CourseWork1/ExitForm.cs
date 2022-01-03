@@ -15,7 +15,7 @@ namespace CourseWork1
     {
 
         // settings instance variables
-        static int TktId;
+        static int TktIdvalue;
         static int totalHours;
         static int totalCharge;
         static int rate;
@@ -31,8 +31,10 @@ namespace CourseWork1
             TicketForm TF = new TicketForm();
             WeekendTicketForm WeekendTF = new WeekendTicketForm();
             TF.ReadTktCsvFile();
+            WeekendTF.ReadWeekendTktCsvFile();
             radioButtonApplyWeekdayRate.Visible = false;
             radioButtonApplyWeekendRate.Visible = false;
+            labelRateType.Visible = false;
         }
 
         public static void ExitForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -45,6 +47,7 @@ namespace CourseWork1
         {
             String Id = searchId.Text;
             Visitor v = Helper.GetRecordWithId(Id);
+            labelRateType.Visible = true;
             radioButtonApplyWeekdayRate.Visible = true;
             radioButtonApplyWeekendRate.Visible = true;
 
@@ -91,62 +94,127 @@ namespace CourseWork1
                 totalHours = durationHr + 1; // if it's not been an hour i.e 0. +1 will set it as 1 hour
             }
 
-            // calculate cost
-            if (labelType.Text == "Child")
+            // calculate cost for weekend
+            if (radioButtonApplyWeekendRate.Checked == true)
             {
-                TktId = 1;
-                m = Convert.ToInt32(labelCount.Text);
-            }
-            else if (labelType.Text == "Adult")
-            {
-                TktId = 2;
-                m = Convert.ToInt32(labelCount.Text);
-            }
-            else if (labelType.Text == "Group")
-            { 
-                m = 1;
-                if(Convert.ToInt32(labelCount.Text) <= 5)
+                if (labelType.Text == "Child")
                 {
-                    TktId = 3;
+                    TktIdvalue = 1;
+                    m = Convert.ToInt32(labelCount.Text);
                 }
-                if (Convert.ToInt32(labelCount.Text) > 5 &  Convert.ToInt32(labelCount.Text) <= 10)
+                else if (labelType.Text == "Adult")
                 {
-                    TktId = 4;
+                    TktIdvalue = 2;
+                    m = Convert.ToInt32(labelCount.Text);
                 }
-                if (Convert.ToInt32(labelCount.Text) > 10 & Convert.ToInt32(labelCount.Text) <= 15)
+                else if (labelType.Text == "Group")
                 {
-                    TktId = 5;
+                    m = 1;
+                    if (Convert.ToInt32(labelCount.Text) <= 5)
+                    {
+                        TktIdvalue = 3;
+                    }
+                    if (Convert.ToInt32(labelCount.Text) > 5 & Convert.ToInt32(labelCount.Text) <= 10)
+                    {
+                        TktIdvalue = 4;
+                    }
+                    if (Convert.ToInt32(labelCount.Text) > 10 & Convert.ToInt32(labelCount.Text) <= 15)
+                    {
+                        TktIdvalue = 5;
+                    }
+                    // visitor count is limited to 15 in entryForm
                 }
-                // visitor count is limited to 15 in entryForm
-            }
-            else
-            {
-                MessageBox.Show("Not available");
-            }
-            
-            Ticket t = Helper.GetTktRecordWithId(TktId);
+                else
+                {
+                    MessageBox.Show("Not available");
+                }
 
-            switch (totalHours)
-            {
-                case 1:
-                    rate = t.Rate1hr;
-                    break;
-                case 2:
-                    rate = t.Rate2hr;
-                    break;
-                case 3:
-                    rate = t.Rate3hr;
-                    break;
-                case 4:
-                    rate = t.Rate4hr;
-                    break;
-                default:
-                    rate = t.RateXhr;
-                    break;
+                WeekendTicket wt = Helper.GetWeTktRecordWithId(TktIdvalue);
+
+                switch (totalHours)
+                {
+                    case 1:
+                        rate = wt.weRate1hr;
+                        break;
+                    case 2:
+                        rate = wt.weRate2hr;
+                        break;
+                    case 3:
+                        rate = wt.weRate3hr;
+                        break;
+                    case 4:
+                        rate = wt.weRate4hr;
+                        break;
+                    default:
+                        rate = wt.weRateXhr;
+                        break;
+                }
+                labelCost.Visible = true;
+                totalCharge = rate * m;
+                labelCost.Text = totalCharge.ToString();
             }
-            labelCost.Visible = true;
-            totalCharge = rate * m;
-            labelCost.Text = totalCharge.ToString();
+
+            // calculate cost for weekday
+            if (radioButtonApplyWeekdayRate.Checked == true)
+            {
+                if (labelType.Text == "Child")
+                {
+                    TktIdvalue = 1;
+                    m = Convert.ToInt32(labelCount.Text);
+                }
+                else if (labelType.Text == "Adult")
+                {
+                    TktIdvalue = 2;
+                    m = Convert.ToInt32(labelCount.Text);
+                }
+                else if (labelType.Text == "Group")
+                {
+                    m = 1;
+                    if (Convert.ToInt32(labelCount.Text) <= 5)
+                    {
+                        TktIdvalue = 3;
+                    }
+                    if (Convert.ToInt32(labelCount.Text) > 5 & Convert.ToInt32(labelCount.Text) <= 10)
+                    {
+                        TktIdvalue = 4;
+                    }
+                    if (Convert.ToInt32(labelCount.Text) > 10 & Convert.ToInt32(labelCount.Text) <= 15)
+                    {
+                        TktIdvalue = 5;
+                    }
+                    // visitor count is limited to 15 in entryForm
+                }
+                else
+                {
+                    MessageBox.Show("Not available");
+                }
+
+                Ticket t = Helper.GetTktRecordWithId(TktIdvalue);
+
+                switch (totalHours)
+                {
+                    case 1:
+                        rate = t.Rate1hr;
+                        break;
+                    case 2:
+                        rate = t.Rate2hr;
+                        break;
+                    case 3:
+                        rate = t.Rate3hr;
+                        break;
+                    case 4:
+                        rate = t.Rate4hr;
+                        break;
+                    default:
+                        rate = t.RateXhr;
+                        break;
+                }
+                labelCost.Visible = true;
+                totalCharge = rate * m;
+                labelCost.Text = totalCharge.ToString();
+            }
+
+            
         }
 
         private void btnComplete_Click(object sender, EventArgs e)

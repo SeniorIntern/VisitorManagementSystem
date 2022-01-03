@@ -48,7 +48,7 @@ namespace CourseWork1
             this.btnComplete = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelRateType = new System.Windows.Forms.Label();
             this.radioButtonApplyWeekendRate = new System.Windows.Forms.RadioButton();
             this.radioButtonApplyWeekdayRate = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.searchId)).BeginInit();
@@ -247,21 +247,21 @@ namespace CourseWork1
             this.label9.TabIndex = 18;
             this.label9.Text = "Inside";
             // 
-            // label10
+            // labelRateType
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(487, 33);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 20);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Apply RateType";
+            this.labelRateType.AutoSize = true;
+            this.labelRateType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRateType.Location = new System.Drawing.Point(487, 33);
+            this.labelRateType.Name = "labelRateType";
+            this.labelRateType.Size = new System.Drawing.Size(135, 20);
+            this.labelRateType.TabIndex = 24;
+            this.labelRateType.Text = "Apply RateType";
             // 
             // radioButtonApplyWeekendRate
             // 
             this.radioButtonApplyWeekendRate.AutoSize = true;
             this.radioButtonApplyWeekendRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButtonApplyWeekendRate.Location = new System.Drawing.Point(565, 109);
+            this.radioButtonApplyWeekendRate.Location = new System.Drawing.Point(566, 109);
             this.radioButtonApplyWeekendRate.Name = "radioButtonApplyWeekendRate";
             this.radioButtonApplyWeekendRate.Size = new System.Drawing.Size(97, 24);
             this.radioButtonApplyWeekendRate.TabIndex = 23;
@@ -288,7 +288,7 @@ namespace CourseWork1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.labelRateType);
             this.Controls.Add(this.radioButtonApplyWeekendRate);
             this.Controls.Add(this.radioButtonApplyWeekdayRate);
             this.Controls.Add(this.label9);
@@ -340,7 +340,7 @@ namespace CourseWork1
         private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelRateType;
         private System.Windows.Forms.RadioButton radioButtonApplyWeekendRate;
         private System.Windows.Forms.RadioButton radioButtonApplyWeekdayRate;
     }

@@ -56,6 +56,28 @@ namespace CourseWork1
             return GlobalValues.TicketList;
         }
 
+        public static List<WeekendTicket> ReadWeTktCsvFile(string ticketFilePath)
+        {
+            GlobalValues.WeekendTicketList = new List<WeekendTicket>();
+            string[] weTickets = File.ReadAllLines(weTicketFilePath);
+            foreach (string t in weTickets)
+            {
+                string[] wts = t.Split(',');
+                if (wts.Length != 7) continue;
+                WeekendTicket weTktObjOne = new WeekendTicket();
+                weTktObjOne.weTktId = Convert.ToInt32(wts[0]);
+                weTktObjOne.weTktType = wts[1];
+                weTktObjOne.weRate1hr = Convert.ToInt32(wts[2]);
+                weTktObjOne.weRate2hr = Convert.ToInt32(wts[3]);
+                weTktObjOne.weRate3hr = Convert.ToInt32(wts[4]);
+                weTktObjOne.weRate4hr = Convert.ToInt32(wts[5]);
+                weTktObjOne.weRateXhr = Convert.ToInt32(wts[6]);
+                GlobalValues.WeekendTicketList.Add(weTktObjOne);
+            }
+            return GlobalValues.WeekendTicketList;
+        }
+
+
         // Read weekend ticket price rates from CSV file
         public static void ReadWETktRate()
         {
@@ -169,7 +191,7 @@ namespace CourseWork1
             return visitor;
         }
 
-        // ExitForm- get ticket Id using visitor type
+        // ExitForm- get Weekday ticket Id using visitor type
         public static Ticket GetTktRecordWithId(int searchterm)
         {
             if (GlobalValues.TicketList == null)
@@ -188,6 +210,27 @@ namespace CourseWork1
             }
             return ticket;
         }
+
+        // ExitForm- get Weekend ticket Id using visitor type
+        public static WeekendTicket GetWeTktRecordWithId(int searchterm)
+        {
+            if (GlobalValues.WeekendTicketList == null)
+            {
+                GlobalValues.WeekendTicketList = ReadWeTktCsvFile(weTicketFilePath); //change read method
+            }
+
+            int tktid = searchterm;
+            WeekendTicket weTicket = null;
+            foreach (WeekendTicket wt in GlobalValues.WeekendTicketList)
+            {
+                if (wt.weTktId == tktid)
+                {
+                    weTicket = wt;
+                }
+            }
+            return weTicket;
+        }
+
 
         public static void AddRecordToCsv(int vId, string vType, int vCount, DateTime vEntTime, DateTime vExtTime, string vDuration, int vCost)
         {
