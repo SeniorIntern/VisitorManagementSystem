@@ -127,6 +127,7 @@
             // 
             this.DayACountTotal.AutoSize = true;
             this.DayACountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayACountTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayACountTotal.Location = new System.Drawing.Point(131, 169);
             this.DayACountTotal.Name = "DayACountTotal";
             this.DayACountTotal.Size = new System.Drawing.Size(60, 20);
@@ -137,6 +138,7 @@
             // 
             this.DayATxnTotal.AutoSize = true;
             this.DayATxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayATxnTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayATxnTotal.Location = new System.Drawing.Point(245, 169);
             this.DayATxnTotal.Name = "DayATxnTotal";
             this.DayATxnTotal.Size = new System.Drawing.Size(60, 20);
@@ -147,6 +149,7 @@
             // 
             this.DayCCountTotal.AutoSize = true;
             this.DayCCountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayCCountTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayCCountTotal.Location = new System.Drawing.Point(131, 251);
             this.DayCCountTotal.Name = "DayCCountTotal";
             this.DayCCountTotal.Size = new System.Drawing.Size(60, 20);
@@ -157,6 +160,7 @@
             // 
             this.DayBCountTotal.AutoSize = true;
             this.DayBCountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayBCountTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayBCountTotal.Location = new System.Drawing.Point(131, 210);
             this.DayBCountTotal.Name = "DayBCountTotal";
             this.DayBCountTotal.Size = new System.Drawing.Size(60, 20);
@@ -167,6 +171,7 @@
             // 
             this.DayDCountTotal.AutoSize = true;
             this.DayDCountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayDCountTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayDCountTotal.Location = new System.Drawing.Point(131, 291);
             this.DayDCountTotal.Name = "DayDCountTotal";
             this.DayDCountTotal.Size = new System.Drawing.Size(60, 20);
@@ -177,6 +182,7 @@
             // 
             this.DayECountTotal.AutoSize = true;
             this.DayECountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayECountTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayECountTotal.Location = new System.Drawing.Point(131, 335);
             this.DayECountTotal.Name = "DayECountTotal";
             this.DayECountTotal.Size = new System.Drawing.Size(60, 20);
@@ -187,6 +193,7 @@
             // 
             this.DayFCountTotal.AutoSize = true;
             this.DayFCountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayFCountTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayFCountTotal.Location = new System.Drawing.Point(131, 374);
             this.DayFCountTotal.Name = "DayFCountTotal";
             this.DayFCountTotal.Size = new System.Drawing.Size(60, 20);
@@ -197,6 +204,7 @@
             // 
             this.DayGCountTotal.AutoSize = true;
             this.DayGCountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayGCountTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayGCountTotal.Location = new System.Drawing.Point(131, 417);
             this.DayGCountTotal.Name = "DayGCountTotal";
             this.DayGCountTotal.Size = new System.Drawing.Size(60, 20);
@@ -207,6 +215,7 @@
             // 
             this.DayGTxnTotal.AutoSize = true;
             this.DayGTxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayGTxnTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayGTxnTotal.Location = new System.Drawing.Point(245, 417);
             this.DayGTxnTotal.Name = "DayGTxnTotal";
             this.DayGTxnTotal.Size = new System.Drawing.Size(60, 20);
@@ -217,6 +226,7 @@
             // 
             this.DayFTxnTotal.AutoSize = true;
             this.DayFTxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayFTxnTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayFTxnTotal.Location = new System.Drawing.Point(245, 374);
             this.DayFTxnTotal.Name = "DayFTxnTotal";
             this.DayFTxnTotal.Size = new System.Drawing.Size(60, 20);
@@ -227,6 +237,7 @@
             // 
             this.DayETxnTotal.AutoSize = true;
             this.DayETxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayETxnTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayETxnTotal.Location = new System.Drawing.Point(245, 335);
             this.DayETxnTotal.Name = "DayETxnTotal";
             this.DayETxnTotal.Size = new System.Drawing.Size(60, 20);
@@ -237,6 +248,7 @@
             // 
             this.DayDTxnTotal.AutoSize = true;
             this.DayDTxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayDTxnTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayDTxnTotal.Location = new System.Drawing.Point(245, 291);
             this.DayDTxnTotal.Name = "DayDTxnTotal";
             this.DayDTxnTotal.Size = new System.Drawing.Size(60, 20);
@@ -247,6 +259,7 @@
             // 
             this.DayBTxnTotal.AutoSize = true;
             this.DayBTxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayBTxnTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayBTxnTotal.Location = new System.Drawing.Point(245, 210);
             this.DayBTxnTotal.Name = "DayBTxnTotal";
             this.DayBTxnTotal.Size = new System.Drawing.Size(60, 20);
@@ -257,6 +270,7 @@
             // 
             this.DayCTxnTotal.AutoSize = true;
             this.DayCTxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.DayCTxnTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DayCTxnTotal.Location = new System.Drawing.Point(245, 251);
             this.DayCTxnTotal.Name = "DayCTxnTotal";
             this.DayCTxnTotal.Size = new System.Drawing.Size(60, 20);
@@ -275,12 +289,17 @@
             // 
             // btnGetReport
             // 
+            this.btnGetReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnGetReport.FlatAppearance.BorderSize = 0;
+            this.btnGetReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGetReport.Location = new System.Drawing.Point(125, 469);
             this.btnGetReport.Name = "btnGetReport";
-            this.btnGetReport.Size = new System.Drawing.Size(75, 23);
-            this.btnGetReport.TabIndex = 26;
+            this.btnGetReport.Size = new System.Drawing.Size(83, 30);
+            this.btnGetReport.TabIndex = 0;
             this.btnGetReport.Text = "Get Report";
-            this.btnGetReport.UseVisualStyleBackColor = true;
+            this.btnGetReport.UseVisualStyleBackColor = false;
             this.btnGetReport.Click += new System.EventHandler(this.btnGetReport_Click);
             // 
             // DayA
@@ -394,6 +413,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(367, 169);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
@@ -404,6 +424,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(367, 210);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
@@ -414,6 +435,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(367, 253);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 20);
@@ -424,6 +446,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(367, 293);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
@@ -434,6 +457,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(367, 337);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 20);
@@ -444,6 +468,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(367, 376);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 20);
@@ -454,6 +479,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(367, 419);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 20);
@@ -474,6 +500,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(972, 561);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);

@@ -52,7 +52,7 @@
             // WeekdayTicketsGridView
             // 
             this.WeekdayTicketsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.WeekdayTicketsGridView.Location = new System.Drawing.Point(237, 35);
+            this.WeekdayTicketsGridView.Location = new System.Drawing.Point(238, 54);
             this.WeekdayTicketsGridView.Name = "WeekdayTicketsGridView";
             this.WeekdayTicketsGridView.Size = new System.Drawing.Size(518, 240);
             this.WeekdayTicketsGridView.TabIndex = 0;
@@ -61,6 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(12, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 20);
@@ -71,6 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(12, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 20);
@@ -81,6 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(12, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
@@ -105,6 +108,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(12, 239);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 20);
@@ -122,6 +126,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(12, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 20);
@@ -132,10 +137,11 @@
             // 
             this.Terms.AutoSize = true;
             this.Terms.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Terms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Terms.Location = new System.Drawing.Point(71, 9);
+            this.Terms.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Terms.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Terms.Location = new System.Drawing.Point(331, 9);
             this.Terms.Name = "Terms";
-            this.Terms.Size = new System.Drawing.Size(121, 17);
+            this.Terms.Size = new System.Drawing.Size(154, 24);
             this.Terms.TabIndex = 12;
             this.Terms.Text = "Weekdays Rate";
             // 
@@ -143,6 +149,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(12, 311);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 20);
@@ -151,12 +158,17 @@
             // 
             // btnUpdateWDRate
             // 
+            this.btnUpdateWDRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnUpdateWDRate.FlatAppearance.BorderSize = 0;
+            this.btnUpdateWDRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateWDRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateWDRate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUpdateWDRate.Location = new System.Drawing.Point(43, 354);
             this.btnUpdateWDRate.Name = "btnUpdateWDRate";
             this.btnUpdateWDRate.Size = new System.Drawing.Size(109, 39);
             this.btnUpdateWDRate.TabIndex = 16;
             this.btnUpdateWDRate.Text = "Update";
-            this.btnUpdateWDRate.UseVisualStyleBackColor = true;
+            this.btnUpdateWDRate.UseVisualStyleBackColor = false;
             this.btnUpdateWDRate.Click += new System.EventHandler(this.btnUpdateRate_Click);
             // 
             // tbWdRate1hr
@@ -198,6 +210,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(12, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 20);
@@ -208,6 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.tbWdRate4hr);
             this.Controls.Add(this.label7);

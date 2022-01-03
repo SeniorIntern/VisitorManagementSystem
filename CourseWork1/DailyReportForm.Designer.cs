@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,141 +57,158 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(39, 104);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(39, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 25);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Type";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(39, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.Size = new System.Drawing.Size(46, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Adult";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(39, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 18);
+            this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Children";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(39, 251);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 18);
+            this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Group";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("JetBrains Mono", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(152, 104);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(152, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 25);
+            this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Count";
             // 
             // labelCountAdult
             // 
             this.labelCountAdult.AutoSize = true;
-            this.labelCountAdult.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelCountAdult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelCountAdult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelCountAdult.Location = new System.Drawing.Point(152, 169);
             this.labelCountAdult.Name = "labelCountAdult";
-            this.labelCountAdult.Size = new System.Drawing.Size(56, 18);
+            this.labelCountAdult.Size = new System.Drawing.Size(51, 20);
             this.labelCountAdult.TabIndex = 5;
             this.labelCountAdult.Text = "label6";
             // 
             // labelCountChild
             // 
             this.labelCountChild.AutoSize = true;
-            this.labelCountChild.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelCountChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelCountChild.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelCountChild.Location = new System.Drawing.Point(152, 212);
             this.labelCountChild.Name = "labelCountChild";
-            this.labelCountChild.Size = new System.Drawing.Size(56, 18);
+            this.labelCountChild.Size = new System.Drawing.Size(51, 20);
             this.labelCountChild.TabIndex = 6;
             this.labelCountChild.Text = "label7";
             // 
             // labelCountGroup
             // 
             this.labelCountGroup.AutoSize = true;
-            this.labelCountGroup.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelCountGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelCountGroup.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelCountGroup.Location = new System.Drawing.Point(152, 251);
             this.labelCountGroup.Name = "labelCountGroup";
-            this.labelCountGroup.Size = new System.Drawing.Size(56, 18);
+            this.labelCountGroup.Size = new System.Drawing.Size(51, 20);
             this.labelCountGroup.TabIndex = 7;
             this.labelCountGroup.Text = "label8";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("JetBrains Mono", 14F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(263, 104);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(263, 124);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 25);
+            this.label9.Size = new System.Drawing.Size(103, 20);
             this.label9.TabIndex = 8;
             this.label9.Text = "Transaction";
             // 
             // labelTxnAdult
             // 
             this.labelTxnAdult.AutoSize = true;
-            this.labelTxnAdult.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelTxnAdult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelTxnAdult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelTxnAdult.Location = new System.Drawing.Point(263, 169);
             this.labelTxnAdult.Name = "labelTxnAdult";
-            this.labelTxnAdult.Size = new System.Drawing.Size(64, 18);
+            this.labelTxnAdult.Size = new System.Drawing.Size(60, 20);
             this.labelTxnAdult.TabIndex = 9;
             this.labelTxnAdult.Text = "label10";
             // 
             // labelTxnChild
             // 
             this.labelTxnChild.AutoSize = true;
-            this.labelTxnChild.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelTxnChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelTxnChild.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelTxnChild.Location = new System.Drawing.Point(265, 212);
             this.labelTxnChild.Name = "labelTxnChild";
-            this.labelTxnChild.Size = new System.Drawing.Size(64, 18);
+            this.labelTxnChild.Size = new System.Drawing.Size(60, 20);
             this.labelTxnChild.TabIndex = 10;
             this.labelTxnChild.Text = "label11";
             // 
             // labelTxnGroup
             // 
             this.labelTxnGroup.AutoSize = true;
-            this.labelTxnGroup.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelTxnGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelTxnGroup.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelTxnGroup.Location = new System.Drawing.Point(265, 251);
             this.labelTxnGroup.Name = "labelTxnGroup";
-            this.labelTxnGroup.Size = new System.Drawing.Size(64, 18);
+            this.labelTxnGroup.Size = new System.Drawing.Size(60, 20);
             this.labelTxnGroup.TabIndex = 11;
             this.labelTxnGroup.Text = "label12";
             // 
             // btnGetReport
             // 
-            this.btnGetReport.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnGetReport.FlatAppearance.BorderSize = 0;
+            this.btnGetReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnGetReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGetReport.Location = new System.Drawing.Point(77, 425);
             this.btnGetReport.Name = "btnGetReport";
             this.btnGetReport.Size = new System.Drawing.Size(135, 32);
             this.btnGetReport.TabIndex = 12;
             this.btnGetReport.Text = "Get Report";
-            this.btnGetReport.UseVisualStyleBackColor = true;
+            this.btnGetReport.UseVisualStyleBackColor = false;
             this.btnGetReport.Click += new System.EventHandler(this.btnGetReport_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("JetBrains Mono", 10F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label14.Location = new System.Drawing.Point(40, 309);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 18);
+            this.label14.Size = new System.Drawing.Size(49, 20);
             this.label14.TabIndex = 14;
             this.label14.Text = "Total";
             // 
@@ -205,48 +222,50 @@
             // labelTxnTotal
             // 
             this.labelTxnTotal.AutoSize = true;
-            this.labelTxnTotal.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelTxnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.labelTxnTotal.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelTxnTotal.Location = new System.Drawing.Point(265, 309);
             this.labelTxnTotal.Name = "labelTxnTotal";
-            this.labelTxnTotal.Size = new System.Drawing.Size(64, 18);
+            this.labelTxnTotal.Size = new System.Drawing.Size(67, 20);
             this.labelTxnTotal.TabIndex = 19;
             this.labelTxnTotal.Text = "label12";
             // 
             // labelCountTotal
             // 
             this.labelCountTotal.AutoSize = true;
-            this.labelCountTotal.Font = new System.Drawing.Font("JetBrains Mono", 10F);
+            this.labelCountTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.labelCountTotal.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelCountTotal.Location = new System.Drawing.Point(152, 309);
             this.labelCountTotal.Name = "labelCountTotal";
-            this.labelCountTotal.Size = new System.Drawing.Size(64, 18);
+            this.labelCountTotal.Size = new System.Drawing.Size(67, 20);
             this.labelCountTotal.TabIndex = 20;
             this.labelCountTotal.Text = "label12";
             // 
             // chartCount
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartCount.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartCount.Legends.Add(legend1);
-            this.chartCount.Location = new System.Drawing.Point(348, 169);
+            chartArea3.Name = "ChartArea1";
+            this.chartCount.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartCount.Legends.Add(legend3);
+            this.chartCount.Location = new System.Drawing.Point(357, 169);
             this.chartCount.Name = "chartCount";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Count";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Income";
-            this.chartCount.Series.Add(series1);
-            this.chartCount.Series.Add(series2);
-            this.chartCount.Size = new System.Drawing.Size(421, 334);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Count";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Income";
+            this.chartCount.Series.Add(series5);
+            this.chartCount.Series.Add(series6);
+            this.chartCount.Size = new System.Drawing.Size(412, 334);
             this.chartCount.TabIndex = 21;
             this.chartCount.Text = "chart1";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(344, 47);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(328, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 24);
             this.label6.TabIndex = 22;
@@ -256,6 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.chartCount);

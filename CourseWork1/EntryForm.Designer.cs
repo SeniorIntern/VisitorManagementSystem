@@ -49,13 +49,17 @@ namespace CourseWork1
             // 
             // BtnAddStudent
             // 
+            this.BtnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.BtnAddStudent.FlatAppearance.BorderSize = 0;
+            this.BtnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnAddStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnAddStudent.Location = new System.Drawing.Point(25, 218);
             this.BtnAddStudent.Name = "BtnAddStudent";
             this.BtnAddStudent.Size = new System.Drawing.Size(87, 27);
             this.BtnAddStudent.TabIndex = 3;
             this.BtnAddStudent.Text = "Add";
-            this.BtnAddStudent.UseVisualStyleBackColor = true;
+            this.BtnAddStudent.UseVisualStyleBackColor = false;
             this.BtnAddStudent.Click += new System.EventHandler(this.BtnAddStudent_Click);
             // 
             // VisitorType
@@ -117,13 +121,17 @@ namespace CourseWork1
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(137, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 27);
             this.button1.TabIndex = 17;
             this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // VisitorId
             // 
@@ -183,6 +191,7 @@ namespace CourseWork1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.radioButtonWeekEnd);

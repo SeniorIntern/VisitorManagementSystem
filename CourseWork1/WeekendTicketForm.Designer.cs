@@ -69,12 +69,16 @@
             // 
             // btnUpdateWERate
             // 
+            this.btnUpdateWERate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnUpdateWERate.FlatAppearance.BorderSize = 0;
+            this.btnUpdateWERate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateWERate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUpdateWERate.Location = new System.Drawing.Point(82, 358);
             this.btnUpdateWERate.Name = "btnUpdateWERate";
             this.btnUpdateWERate.Size = new System.Drawing.Size(92, 37);
             this.btnUpdateWERate.TabIndex = 6;
             this.btnUpdateWERate.Text = "Update";
-            this.btnUpdateWERate.UseVisualStyleBackColor = true;
+            this.btnUpdateWERate.UseVisualStyleBackColor = false;
             this.btnUpdateWERate.Click += new System.EventHandler(this.btnUpdateWERate_Click);
             // 
             // tbWeRate1hr
@@ -197,6 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.tbWeRate4hr);
             this.Controls.Add(this.label7);

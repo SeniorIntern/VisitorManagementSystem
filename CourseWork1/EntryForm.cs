@@ -38,7 +38,8 @@ namespace CourseWork1
 
             openHour = (DateTime.Now).Hour;
             try {
-                if (openHour < 10 || openHour > 18) // Disable visitor entry outside office hours. 
+                //openHour < 10 || openHour > 18
+                if (false) // Disable visitor entry outside office hours. 
                 {
                     BtnAddStudent.Enabled = false;
                     MessageBox.Show("Visitor can not enter outside visiting hours(10:00 AM to 6:00 PM)");
@@ -99,6 +100,7 @@ namespace CourseWork1
 
                     MessageBox.Show("Visitor entry done");
 
+                    // seraialization process
                     using (FileStream stream = new FileStream(srzFilePath, FileMode.Create))
                     {
                         VisitorCollection vColl = new VisitorCollection();
@@ -108,7 +110,7 @@ namespace CourseWork1
                         stream.Close();
                     }
                     MessageBox.Show("Sucessfully Serialized");
-                    DeSerializeEntryData();
+                    DeSerializeEntryData(); // callind DeSerialization method
 
                 }
                 catch (FormatException)

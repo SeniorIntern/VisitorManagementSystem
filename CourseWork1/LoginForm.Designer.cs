@@ -59,42 +59,52 @@ namespace CourseWork1
             // 
             // BtnLogin
             // 
+            this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.BtnLogin.FlatAppearance.BorderSize = 0;
+            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnLogin.Location = new System.Drawing.Point(250, 381);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(80, 26);
             this.BtnLogin.TabIndex = 3;
             this.BtnLogin.Text = "Login";
-            this.BtnLogin.UseVisualStyleBackColor = true;
+            this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(110, 288);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(128, 288);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "UserName";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(110, 335);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(128, 338);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 21);
+            this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
             // BtnGuest
             // 
+            this.BtnGuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.BtnGuest.FlatAppearance.BorderSize = 0;
+            this.BtnGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnGuest.Location = new System.Drawing.Point(255, 481);
             this.BtnGuest.Name = "BtnGuest";
             this.BtnGuest.Size = new System.Drawing.Size(75, 23);
             this.BtnGuest.TabIndex = 5;
             this.BtnGuest.Text = "Exit";
-            this.BtnGuest.UseVisualStyleBackColor = true;
+            this.BtnGuest.UseVisualStyleBackColor = false;
             this.BtnGuest.Click += new System.EventHandler(this.BtnGuest_Click);
             // 
             // PasswordCheckBox
@@ -112,20 +122,25 @@ namespace CourseWork1
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(143, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 248);
+            this.pictureBox1.Size = new System.Drawing.Size(452, 257);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // btnEmpLogin
             // 
+            this.btnEmpLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnEmpLogin.FlatAppearance.BorderSize = 0;
+            this.btnEmpLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEmpLogin.Location = new System.Drawing.Point(250, 427);
             this.btnEmpLogin.Name = "btnEmpLogin";
             this.btnEmpLogin.Size = new System.Drawing.Size(80, 23);
             this.btnEmpLogin.TabIndex = 4;
             this.btnEmpLogin.Text = "Employee";
-            this.btnEmpLogin.UseVisualStyleBackColor = true;
+            this.btnEmpLogin.UseVisualStyleBackColor = false;
             this.btnEmpLogin.Click += new System.EventHandler(this.btnEmpLogin_Click);
             // 
             // label3

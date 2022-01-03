@@ -59,7 +59,7 @@ namespace CourseWork1
             // 
             // menuStrip
             // 
-            this.menuStrip.BackColor = System.Drawing.SystemColors.ControlText;
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(784, 24);
@@ -69,10 +69,12 @@ namespace CourseWork1
             // LabelDate
             // 
             this.LabelDate.AutoSize = true;
-            this.LabelDate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LabelDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.LabelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LabelDate.Location = new System.Drawing.Point(306, 6);
             this.LabelDate.Name = "LabelDate";
-            this.LabelDate.Size = new System.Drawing.Size(53, 13);
+            this.LabelDate.Size = new System.Drawing.Size(69, 17);
             this.LabelDate.TabIndex = 9;
             this.LabelDate.Text = "DateHere";
             // 
@@ -82,62 +84,92 @@ namespace CourseWork1
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(599, 1);
+            this.btnLogOut.BackColor = System.Drawing.Color.Red;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogOut.Location = new System.Drawing.Point(606, 1);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
             this.btnLogOut.TabIndex = 11;
             this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnEntryForm
             // 
+            this.btnEntryForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnEntryForm.FlatAppearance.BorderSize = 0;
+            this.btnEntryForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntryForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntryForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEntryForm.Location = new System.Drawing.Point(40, 419);
             this.btnEntryForm.Name = "btnEntryForm";
             this.btnEntryForm.Size = new System.Drawing.Size(123, 40);
-            this.btnEntryForm.TabIndex = 12;
+            this.btnEntryForm.TabIndex = 2;
             this.btnEntryForm.Text = "Visitor Entry";
-            this.btnEntryForm.UseVisualStyleBackColor = true;
+            this.btnEntryForm.UseVisualStyleBackColor = false;
             this.btnEntryForm.Click += new System.EventHandler(this.btnEntryForm_Click);
             // 
             // btnExitForm
             // 
+            this.btnExitForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnExitForm.FlatAppearance.BorderSize = 0;
+            this.btnExitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExitForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExitForm.Location = new System.Drawing.Point(606, 419);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(123, 40);
-            this.btnExitForm.TabIndex = 13;
+            this.btnExitForm.TabIndex = 3;
             this.btnExitForm.Text = "Visitor Exit";
-            this.btnExitForm.UseVisualStyleBackColor = true;
+            this.btnExitForm.UseVisualStyleBackColor = false;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
             // 
             // btnDailyRepForm
             // 
-            this.btnDailyRepForm.Location = new System.Drawing.Point(40, 222);
+            this.btnDailyRepForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnDailyRepForm.FlatAppearance.BorderSize = 0;
+            this.btnDailyRepForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDailyRepForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDailyRepForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDailyRepForm.Location = new System.Drawing.Point(40, 212);
             this.btnDailyRepForm.Name = "btnDailyRepForm";
             this.btnDailyRepForm.Size = new System.Drawing.Size(123, 40);
-            this.btnDailyRepForm.TabIndex = 14;
+            this.btnDailyRepForm.TabIndex = 0;
             this.btnDailyRepForm.Text = "Daily Report";
-            this.btnDailyRepForm.UseVisualStyleBackColor = true;
+            this.btnDailyRepForm.UseVisualStyleBackColor = false;
             this.btnDailyRepForm.Click += new System.EventHandler(this.btnDailyRepForm_Click);
             // 
             // btnWeeklyRepForm
             // 
-            this.btnWeeklyRepForm.Location = new System.Drawing.Point(599, 222);
+            this.btnWeeklyRepForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnWeeklyRepForm.FlatAppearance.BorderSize = 0;
+            this.btnWeeklyRepForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWeeklyRepForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWeeklyRepForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnWeeklyRepForm.Location = new System.Drawing.Point(599, 212);
             this.btnWeeklyRepForm.Name = "btnWeeklyRepForm";
             this.btnWeeklyRepForm.Size = new System.Drawing.Size(123, 40);
-            this.btnWeeklyRepForm.TabIndex = 15;
+            this.btnWeeklyRepForm.TabIndex = 1;
             this.btnWeeklyRepForm.Text = "Weekly Report";
-            this.btnWeeklyRepForm.UseVisualStyleBackColor = true;
+            this.btnWeeklyRepForm.UseVisualStyleBackColor = false;
             this.btnWeeklyRepForm.Click += new System.EventHandler(this.btnWeeklyRepForm_Click);
             // 
             // btnTicketsForm
             // 
+            this.btnTicketsForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnTicketsForm.FlatAppearance.BorderSize = 0;
+            this.btnTicketsForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTicketsForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTicketsForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTicketsForm.Location = new System.Drawing.Point(319, 212);
             this.btnTicketsForm.Name = "btnTicketsForm";
             this.btnTicketsForm.Size = new System.Drawing.Size(123, 40);
-            this.btnTicketsForm.TabIndex = 16;
+            this.btnTicketsForm.TabIndex = 4;
             this.btnTicketsForm.Text = "Manage Tickets";
-            this.btnTicketsForm.UseVisualStyleBackColor = true;
+            this.btnTicketsForm.UseVisualStyleBackColor = false;
             this.btnTicketsForm.Click += new System.EventHandler(this.btnTicketsForm_Click);
             // 
             // labelEmployeeMsg
@@ -154,13 +186,14 @@ namespace CourseWork1
             // labelGreetUser
             // 
             this.labelGreetUser.AutoSize = true;
-            this.labelGreetUser.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelGreetUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.labelGreetUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGreetUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelGreetUser.Location = new System.Drawing.Point(30, 6);
+            this.labelGreetUser.Location = new System.Drawing.Point(43, 4);
             this.labelGreetUser.Name = "labelGreetUser";
-            this.labelGreetUser.Size = new System.Drawing.Size(35, 13);
+            this.labelGreetUser.Size = new System.Drawing.Size(111, 17);
             this.labelGreetUser.TabIndex = 18;
-            this.labelGreetUser.Text = "label1";
+            this.labelGreetUser.Text = "greetingsHere";
             // 
             // pictureBox1
             // 
@@ -174,9 +207,9 @@ namespace CourseWork1
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 103);
+            this.pictureBox3.Location = new System.Drawing.Point(46, 93);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(130, 93);
+            this.pictureBox3.Size = new System.Drawing.Size(117, 102);
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             // 
@@ -185,33 +218,33 @@ namespace CourseWork1
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(319, 93);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(130, 93);
+            this.pictureBox4.Size = new System.Drawing.Size(123, 113);
             this.pictureBox4.TabIndex = 22;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(599, 103);
+            this.pictureBox5.Location = new System.Drawing.Point(599, 93);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(130, 93);
+            this.pictureBox5.Size = new System.Drawing.Size(106, 93);
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(297, 55);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(262, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 26);
+            this.label1.Size = new System.Drawing.Size(263, 29);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Recreation Center";
+            this.label1.Text = "AZ Recreation Center";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 295);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 305);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(130, 93);
             this.pictureBox2.TabIndex = 25;
@@ -219,28 +252,39 @@ namespace CourseWork1
             // 
             // btnWeekdaysRate
             // 
+            this.btnWeekdaysRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnWeekdaysRate.FlatAppearance.BorderSize = 0;
+            this.btnWeekdaysRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWeekdaysRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWeekdaysRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnWeekdaysRate.Location = new System.Drawing.Point(199, 286);
             this.btnWeekdaysRate.Name = "btnWeekdaysRate";
             this.btnWeekdaysRate.Size = new System.Drawing.Size(123, 40);
-            this.btnWeekdaysRate.TabIndex = 26;
+            this.btnWeekdaysRate.TabIndex = 5;
             this.btnWeekdaysRate.Text = "Weekdays Rate";
-            this.btnWeekdaysRate.UseVisualStyleBackColor = true;
+            this.btnWeekdaysRate.UseVisualStyleBackColor = false;
             this.btnWeekdaysRate.Click += new System.EventHandler(this.btnWeekdaysRate_Click);
             // 
             // btnWeekendRate
             // 
+            this.btnWeekendRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnWeekendRate.FlatAppearance.BorderSize = 0;
+            this.btnWeekendRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWeekendRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWeekendRate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnWeekendRate.Location = new System.Drawing.Point(446, 286);
             this.btnWeekendRate.Name = "btnWeekendRate";
             this.btnWeekendRate.Size = new System.Drawing.Size(123, 40);
-            this.btnWeekendRate.TabIndex = 27;
+            this.btnWeekendRate.TabIndex = 6;
             this.btnWeekendRate.Text = "Weekend Rate";
-            this.btnWeekendRate.UseVisualStyleBackColor = true;
+            this.btnWeekendRate.UseVisualStyleBackColor = false;
             this.btnWeekendRate.Click += new System.EventHandler(this.btnWeekendRate_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.btnWeekendRate);
             this.Controls.Add(this.btnWeekdaysRate);
@@ -260,6 +304,7 @@ namespace CourseWork1
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.LabelDate);
             this.Controls.Add(this.menuStrip);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
