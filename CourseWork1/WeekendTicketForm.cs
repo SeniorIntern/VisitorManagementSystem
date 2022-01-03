@@ -48,7 +48,6 @@ namespace CourseWork1
                 weTktObjOne.weRate3hr = Convert.ToInt32(wts[4]);
                 weTktObjOne.weRate4hr = Convert.ToInt32(wts[5]);
                 weTktObjOne.weRateXhr = Convert.ToInt32(wts[6]);
-
                 GlobalValues.WeekendTicketList.Add(weTktObjOne);
             }
         }

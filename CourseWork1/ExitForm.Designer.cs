@@ -48,6 +48,9 @@ namespace CourseWork1
             this.btnComplete = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.radioButtonApplyWeekendRate = new System.Windows.Forms.RadioButton();
+            this.radioButtonApplyWeekdayRate = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.searchId)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,9 +133,9 @@ namespace CourseWork1
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(237, 30);
+            this.btnSearch.Location = new System.Drawing.Point(232, 30);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(80, 23);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -140,9 +143,9 @@ namespace CourseWork1
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(339, 30);
+            this.btnExit.Location = new System.Drawing.Point(63, 336);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(112, 33);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -244,11 +247,50 @@ namespace CourseWork1
             this.label9.TabIndex = 18;
             this.label9.Text = "Inside";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(487, 33);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(135, 20);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Apply RateType";
+            // 
+            // radioButtonApplyWeekendRate
+            // 
+            this.radioButtonApplyWeekendRate.AutoSize = true;
+            this.radioButtonApplyWeekendRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.radioButtonApplyWeekendRate.Location = new System.Drawing.Point(565, 109);
+            this.radioButtonApplyWeekendRate.Name = "radioButtonApplyWeekendRate";
+            this.radioButtonApplyWeekendRate.Size = new System.Drawing.Size(97, 24);
+            this.radioButtonApplyWeekendRate.TabIndex = 23;
+            this.radioButtonApplyWeekendRate.TabStop = true;
+            this.radioButtonApplyWeekendRate.Text = "WeekEnd";
+            this.radioButtonApplyWeekendRate.UseVisualStyleBackColor = true;
+            this.radioButtonApplyWeekendRate.CheckedChanged += new System.EventHandler(this.radioButtonApplyWeekendRate_CheckedChanged);
+            // 
+            // radioButtonApplyWeekdayRate
+            // 
+            this.radioButtonApplyWeekdayRate.AutoSize = true;
+            this.radioButtonApplyWeekdayRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonApplyWeekdayRate.Location = new System.Drawing.Point(566, 67);
+            this.radioButtonApplyWeekdayRate.Name = "radioButtonApplyWeekdayRate";
+            this.radioButtonApplyWeekdayRate.Size = new System.Drawing.Size(96, 24);
+            this.radioButtonApplyWeekdayRate.TabIndex = 22;
+            this.radioButtonApplyWeekdayRate.TabStop = true;
+            this.radioButtonApplyWeekdayRate.Text = "WeekDay";
+            this.radioButtonApplyWeekdayRate.UseVisualStyleBackColor = true;
+            this.radioButtonApplyWeekdayRate.CheckedChanged += new System.EventHandler(this.radioButtonApplyWeekdayRate_CheckedChanged);
+            // 
             // ExitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.radioButtonApplyWeekendRate);
+            this.Controls.Add(this.radioButtonApplyWeekdayRate);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnComplete);
@@ -298,5 +340,8 @@ namespace CourseWork1
         private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton radioButtonApplyWeekendRate;
+        private System.Windows.Forms.RadioButton radioButtonApplyWeekdayRate;
     }
 }

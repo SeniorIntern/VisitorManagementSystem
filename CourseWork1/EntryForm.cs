@@ -84,8 +84,7 @@ namespace CourseWork1
 
                     MessageBox.Show("Visitor entry done");
 
-                    // Serializating entry data
-                    using(FileStream stream = new FileStream(srzFilePath, FileMode.Create))
+                    using (FileStream stream = new FileStream(srzFilePath, FileMode.Create))
                     {
                         VisitorCollection vColl = new VisitorCollection();
                         vColl.VisitorList = GlobalValues.VisitorList;
@@ -94,7 +93,7 @@ namespace CourseWork1
                         stream.Close();
                     }
                     MessageBox.Show("Sucessfully Serialized");
-                    DeSerializeEntryData(); // calling deserialization method
+                    DeSerializeEntryData();
 
                 }
                 catch (FormatException)
@@ -112,9 +111,9 @@ namespace CourseWork1
             {
                 if (File.Exists(srzFilePath))
                 {
-                    using(FileStream stream = new FileStream(srzFilePath, FileMode.Open))
+                    using (FileStream stream = new FileStream(srzFilePath, FileMode.Open))
                     {
-                        if(stream != null && stream.Length > 0)
+                        if (stream != null && stream.Length > 0)
                         {
                             VisitorCollection vColl = new VisitorCollection();
                             BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -131,17 +130,11 @@ namespace CourseWork1
                     EntryGridView.DataSource = GlobalValues.VisitorList;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
         }
-
-        /*private void btnSerialize_Click(object sender, EventArgs e)
-        {
-            //Helper.AddRecordToCsv(GlobalValues.RecordList);
-            //Helper.SerializableRecordData(GlobalValues.RecordList);
-        }*/
 
         private void radioButtonWeekDay_CheckedChanged(object sender, EventArgs e)
         {
@@ -152,5 +145,6 @@ namespace CourseWork1
         {
             TktGridView.DataSource = GlobalValues.WeekendTicketList;
         }
+
     }
 }

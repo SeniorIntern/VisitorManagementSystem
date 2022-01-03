@@ -29,7 +29,10 @@ namespace CourseWork1
         private void ExitForm_Load(object sender, EventArgs e)
         {
             TicketForm TF = new TicketForm();
+            WeekendTicketForm WeekendTF = new WeekendTicketForm();
             TF.ReadTktCsvFile();
+            radioButtonApplyWeekdayRate.Visible = false;
+            radioButtonApplyWeekendRate.Visible = false;
         }
 
         public static void ExitForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -40,10 +43,11 @@ namespace CourseWork1
         // fetch cost data for ticketType
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
             String Id = searchId.Text;
             Visitor v = Helper.GetRecordWithId(Id);
-            btnExit.Visible = true;
+            radioButtonApplyWeekdayRate.Visible = true;
+            radioButtonApplyWeekendRate.Visible = true;
+
             try
             {
                 labelType.Text = v.Type.ToString();
@@ -65,11 +69,14 @@ namespace CourseWork1
 
             labelExit.Text = DateTime.Now.ToString();
 
+            // Select ticket rate options to apply
+            //radioButtonApplyWeekdayRate
+            
+
             // calculate duration
             int durationHr = (DateTime.Now - Convert.ToDateTime(labelEntry.Text)).Hours;
             int durationMins = (DateTime.Now - Convert.ToDateTime(labelEntry.Text)).Minutes;
             labelDuration.Text = durationHr.ToString() + "Hrs" + durationMins.ToString() + "Mins";
-            
             
             if(durationHr == 0 && durationMins == 0)
             {
@@ -173,6 +180,16 @@ namespace CourseWork1
             {
                 MessageBox.Show("Something went wrong with btnComplete");
             }
+        }
+
+        private void radioButtonApplyWeekdayRate_CheckedChanged(object sender, EventArgs e)
+        {
+            btnExit.Visible = true;
+        }
+
+        private void radioButtonApplyWeekendRate_CheckedChanged(object sender, EventArgs e)
+        {
+            btnExit.Visible = true;
         }
     }
 }

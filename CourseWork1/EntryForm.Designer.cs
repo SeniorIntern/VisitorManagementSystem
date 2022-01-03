@@ -37,11 +37,11 @@ namespace CourseWork1
             this.label1 = new System.Windows.Forms.Label();
             this.TktGridView = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButtonWeekDay = new System.Windows.Forms.RadioButton();
-            this.radioButtonWeekEnd = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.VisitorId = new System.Windows.Forms.Label();
             this.EntryGridView = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.radioButtonWeekEnd = new System.Windows.Forms.RadioButton();
+            this.radioButtonWeekDay = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TktGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EntryGridView)).BeginInit();
@@ -125,42 +125,6 @@ namespace CourseWork1
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // radioButtonWeekDay
-            // 
-            this.radioButtonWeekDay.AutoSize = true;
-            this.radioButtonWeekDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonWeekDay.Location = new System.Drawing.Point(37, 366);
-            this.radioButtonWeekDay.Name = "radioButtonWeekDay";
-            this.radioButtonWeekDay.Size = new System.Drawing.Size(96, 24);
-            this.radioButtonWeekDay.TabIndex = 18;
-            this.radioButtonWeekDay.TabStop = true;
-            this.radioButtonWeekDay.Text = "WeekDay";
-            this.radioButtonWeekDay.UseVisualStyleBackColor = true;
-            this.radioButtonWeekDay.CheckedChanged += new System.EventHandler(this.radioButtonWeekDay_CheckedChanged);
-            // 
-            // radioButtonWeekEnd
-            // 
-            this.radioButtonWeekEnd.AutoSize = true;
-            this.radioButtonWeekEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButtonWeekEnd.Location = new System.Drawing.Point(36, 396);
-            this.radioButtonWeekEnd.Name = "radioButtonWeekEnd";
-            this.radioButtonWeekEnd.Size = new System.Drawing.Size(97, 24);
-            this.radioButtonWeekEnd.TabIndex = 19;
-            this.radioButtonWeekEnd.TabStop = true;
-            this.radioButtonWeekEnd.Text = "WeekEnd";
-            this.radioButtonWeekEnd.UseVisualStyleBackColor = true;
-            this.radioButtonWeekEnd.CheckedChanged += new System.EventHandler(this.radioButtonWeekEnd_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 321);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "RateType";
-            // 
             // VisitorId
             // 
             this.VisitorId.AutoSize = true;
@@ -179,16 +143,52 @@ namespace CourseWork1
             this.EntryGridView.Size = new System.Drawing.Size(545, 223);
             this.EntryGridView.TabIndex = 23;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(26, 291);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 20);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Show Rates";
+            // 
+            // radioButtonWeekEnd
+            // 
+            this.radioButtonWeekEnd.AutoSize = true;
+            this.radioButtonWeekEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.radioButtonWeekEnd.Location = new System.Drawing.Point(104, 367);
+            this.radioButtonWeekEnd.Name = "radioButtonWeekEnd";
+            this.radioButtonWeekEnd.Size = new System.Drawing.Size(97, 24);
+            this.radioButtonWeekEnd.TabIndex = 26;
+            this.radioButtonWeekEnd.TabStop = true;
+            this.radioButtonWeekEnd.Text = "WeekEnd";
+            this.radioButtonWeekEnd.UseVisualStyleBackColor = true;
+            this.radioButtonWeekEnd.CheckedChanged += new System.EventHandler(this.radioButtonWeekEnd_CheckedChanged);
+            // 
+            // radioButtonWeekDay
+            // 
+            this.radioButtonWeekDay.AutoSize = true;
+            this.radioButtonWeekDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonWeekDay.Location = new System.Drawing.Point(105, 325);
+            this.radioButtonWeekDay.Name = "radioButtonWeekDay";
+            this.radioButtonWeekDay.Size = new System.Drawing.Size(96, 24);
+            this.radioButtonWeekDay.TabIndex = 25;
+            this.radioButtonWeekDay.TabStop = true;
+            this.radioButtonWeekDay.Text = "WeekDay";
+            this.radioButtonWeekDay.UseVisualStyleBackColor = true;
+            this.radioButtonWeekDay.CheckedChanged += new System.EventHandler(this.radioButtonWeekDay_CheckedChanged);
+            // 
             // EntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.EntryGridView);
-            this.Controls.Add(this.VisitorId);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.radioButtonWeekEnd);
             this.Controls.Add(this.radioButtonWeekDay);
+            this.Controls.Add(this.EntryGridView);
+            this.Controls.Add(this.VisitorId);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TktGridView);
             this.Controls.Add(this.BtnAddStudent);
@@ -217,10 +217,10 @@ namespace CourseWork1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TktGridView;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButtonWeekDay;
-        private System.Windows.Forms.RadioButton radioButtonWeekEnd;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label VisitorId;
         private System.Windows.Forms.DataGridView EntryGridView;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton radioButtonWeekEnd;
+        private System.Windows.Forms.RadioButton radioButtonWeekDay;
     }
 }
