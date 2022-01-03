@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseWork1
 {
+    [Serializable]
     public class Visitor
     {
         public int Id { get; set; }

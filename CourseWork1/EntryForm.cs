@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 // added for using input output functionality with CSV File
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace CourseWork1
 {
     public partial class EntryForm : Form
     {
         public static string entryFilePath = "visitors.csv";
+        public static string srzFilePath = "visitorData";
+
         public EntryForm()
         {
             InitializeComponent();
@@ -28,26 +31,10 @@ namespace CourseWork1
         {
             radioButtonWeekDay.Checked = true;
             VisitorId.Text = Convert.ToString(GlobalValues.VisitorList.Max<Visitor>(vtrObjOne => vtrObjOne.Id) + 1); // increase Id value after adding visitor
-        }
 
-        /*
-        public static void DeserializableRecordData()
-        {
-            if (File.Exists(Helper.SerializedFilePath))
-            {
-                Stream stream = File.Open(Helper.SerializedFilePath, FileMode.Open);
-                if (stream != null && stream.Length > 0)
-                {
-                    BinaryFormatter BF = new BinaryFormatter();
-
-                    // Reading visit list information
-                    Helper.RecordCollxnList = (RecordCollxn)BF.Deserialize(stream);
-                    MessageBox.Show("Sucessfully deserlized");
-                }
-                stream.Close();
-            }
+            EntryGridView.DataSource = null;
+            EntryGridView.DataSource = GlobalValues.VisitorList;
         }
-        */
 
         public static void EntryForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -96,6 +83,19 @@ namespace CourseWork1
                     VisitorId.Text = Convert.ToString(GlobalValues.VisitorList.Max<Visitor>(vtrObjOne => vtrObjOne.Id) + 1); // increase Id value after adding visitor
 
                     MessageBox.Show("Visitor entry done");
+
+                    // Serializating entry data
+                    using(FileStream stream = new FileStream(srzFilePath, FileMode.Create))
+                    {
+                        VisitorCollection vColl = new VisitorCollection();
+                        vColl.VisitorList = GlobalValues.VisitorList;
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        formatter.Serialize(stream, vColl);
+                        stream.Close();
+                    }
+                    MessageBox.Show("Sucessfully Serialized");
+                    DeSerializeEntryData(); // calling deserialization method
+
                 }
                 catch (FormatException)
                 {
@@ -106,11 +106,42 @@ namespace CourseWork1
             }
         }
 
-        private void btnSerialize_Click(object sender, EventArgs e)
+        public void DeSerializeEntryData()
+        {
+            try
+            {
+                if (File.Exists(srzFilePath))
+                {
+                    using(FileStream stream = new FileStream(srzFilePath, FileMode.Open))
+                    {
+                        if(stream != null && stream.Length > 0)
+                        {
+                            VisitorCollection vColl = new VisitorCollection();
+                            BinaryFormatter binaryFormatter = new BinaryFormatter();
+
+                            // Reading visitor list information
+                            vColl = (VisitorCollection)binaryFormatter.Deserialize(stream);
+                            GlobalValues.VisitorList = vColl.VisitorList;
+                            MessageBox.Show("Visitor Count: " + GlobalValues.VisitorList.Count);
+                            MessageBox.Show("Sucessfully deserialized");
+                        }
+                        stream.Close();
+                    }
+                    EntryGridView.DataSource = null;
+                    EntryGridView.DataSource = GlobalValues.VisitorList;
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        /*private void btnSerialize_Click(object sender, EventArgs e)
         {
             //Helper.AddRecordToCsv(GlobalValues.RecordList);
             //Helper.SerializableRecordData(GlobalValues.RecordList);
-        }
+        }*/
 
         private void radioButtonWeekDay_CheckedChanged(object sender, EventArgs e)
         {

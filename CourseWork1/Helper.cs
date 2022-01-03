@@ -16,26 +16,7 @@ namespace CourseWork1
         public static string weTicketFilePath = "WeekEndtktRate.csv";
         public static string recordFilePath = "records.csv";
         public static string SerializedFilePath = "Record.save";
-        //public static RecordCollxn RecordCollxnList; //for serializing
-
-        /*
-        // entry form record serialization
-        public static void SerializableRecordData(List<Record> reco)
-        {
-            RecordCollxn rc = new RecordCollxn();
-            rc.RecList = reco;
-            // serialize the record data
-            Stream str = File.Open(Helper.SerializedFilePath, FileMode.Create);
-            BinaryFormatter BF = new BinaryFormatter();
-            BF.Serialize(str, rc);
-            str.Flush();
-            str.Close();
-            //MessageBox.Show("Sucessfully saved and srlized", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //MessageBox.Show("Sucessfully saved and srlized");
-        }
-        */
-
-        // create a method with return type-list for reading entry csv file
+        
         public static List<Visitor> ReadCsvFile(string entryFilePath)
         {
             GlobalValues.VisitorList = new List<Visitor>();

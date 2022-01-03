@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CourseWork1
 {
+
     [Serializable]
-    class RecordCollxn
+    public class VisitorCollection
     {
-        public List<Record> RecList;
+        public List<Visitor> VisitorList;
     }
 }

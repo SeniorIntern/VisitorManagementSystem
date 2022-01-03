@@ -39,11 +39,12 @@ namespace CourseWork1
             this.button1 = new System.Windows.Forms.Button();
             this.radioButtonWeekDay = new System.Windows.Forms.RadioButton();
             this.radioButtonWeekEnd = new System.Windows.Forms.RadioButton();
-            this.btnSerialize = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.VisitorId = new System.Windows.Forms.Label();
+            this.EntryGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TktGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EntryGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnAddStudent
@@ -109,9 +110,9 @@ namespace CourseWork1
             // TktGridView
             // 
             this.TktGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TktGridView.Location = new System.Drawing.Point(115, 281);
+            this.TktGridView.Location = new System.Drawing.Point(314, 269);
             this.TktGridView.Name = "TktGridView";
-            this.TktGridView.Size = new System.Drawing.Size(577, 231);
+            this.TktGridView.Size = new System.Drawing.Size(545, 235);
             this.TktGridView.TabIndex = 16;
             // 
             // button1
@@ -128,7 +129,7 @@ namespace CourseWork1
             // 
             this.radioButtonWeekDay.AutoSize = true;
             this.radioButtonWeekDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonWeekDay.Location = new System.Drawing.Point(596, 95);
+            this.radioButtonWeekDay.Location = new System.Drawing.Point(37, 366);
             this.radioButtonWeekDay.Name = "radioButtonWeekDay";
             this.radioButtonWeekDay.Size = new System.Drawing.Size(96, 24);
             this.radioButtonWeekDay.TabIndex = 18;
@@ -141,7 +142,7 @@ namespace CourseWork1
             // 
             this.radioButtonWeekEnd.AutoSize = true;
             this.radioButtonWeekEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButtonWeekEnd.Location = new System.Drawing.Point(595, 125);
+            this.radioButtonWeekEnd.Location = new System.Drawing.Point(36, 396);
             this.radioButtonWeekEnd.Name = "radioButtonWeekEnd";
             this.radioButtonWeekEnd.Size = new System.Drawing.Size(97, 24);
             this.radioButtonWeekEnd.TabIndex = 19;
@@ -150,22 +151,11 @@ namespace CourseWork1
             this.radioButtonWeekEnd.UseVisualStyleBackColor = true;
             this.radioButtonWeekEnd.CheckedChanged += new System.EventHandler(this.radioButtonWeekEnd_CheckedChanged);
             // 
-            // btnSerialize
-            // 
-            this.btnSerialize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSerialize.Location = new System.Drawing.Point(259, 218);
-            this.btnSerialize.Name = "btnSerialize";
-            this.btnSerialize.Size = new System.Drawing.Size(118, 27);
-            this.btnSerialize.TabIndex = 20;
-            this.btnSerialize.Text = "Serialize";
-            this.btnSerialize.UseVisualStyleBackColor = true;
-            this.btnSerialize.Click += new System.EventHandler(this.btnSerialize_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(604, 47);
+            this.label4.Location = new System.Drawing.Point(32, 321);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 21;
@@ -181,14 +171,22 @@ namespace CourseWork1
             this.VisitorId.TabIndex = 22;
             this.VisitorId.Text = "label5";
             // 
+            // EntryGridView
+            // 
+            this.EntryGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EntryGridView.Location = new System.Drawing.Point(314, 22);
+            this.EntryGridView.Name = "EntryGridView";
+            this.EntryGridView.Size = new System.Drawing.Size(545, 223);
+            this.EntryGridView.TabIndex = 23;
+            // 
             // EntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.EntryGridView);
             this.Controls.Add(this.VisitorId);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnSerialize);
             this.Controls.Add(this.radioButtonWeekEnd);
             this.Controls.Add(this.radioButtonWeekDay);
             this.Controls.Add(this.button1);
@@ -204,6 +202,7 @@ namespace CourseWork1
             this.Load += new System.EventHandler(this.EntryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VisitorCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TktGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EntryGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,8 +219,8 @@ namespace CourseWork1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton radioButtonWeekDay;
         private System.Windows.Forms.RadioButton radioButtonWeekEnd;
-        private System.Windows.Forms.Button btnSerialize;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label VisitorId;
+        private System.Windows.Forms.DataGridView EntryGridView;
     }
 }
