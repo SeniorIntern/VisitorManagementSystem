@@ -26,6 +26,7 @@ namespace CourseWork1
             InitializeComponent();
         }
 
+        // load necessary class' objects as required
         private void ExitForm_Load(object sender, EventArgs e)
         {
             TicketForm TF = new TicketForm();
@@ -42,7 +43,7 @@ namespace CourseWork1
             MainForm.ExitView = null;
         }
 
-        // fetch cost data for ticketType
+        // fetch visitor data
         private void btnSearch_Click(object sender, EventArgs e)
         {
             String Id = searchId.Text;
@@ -63,6 +64,7 @@ namespace CourseWork1
             }
         }
 
+        // logic for calculating cost based on duration hours and day
         private void btnExit_Click(object sender, EventArgs e)
         {
             // settings visibility
@@ -214,12 +216,11 @@ namespace CourseWork1
                 labelCost.Text = totalCharge.ToString();
             }
 
-            
-        }
 
+        }
+        // btnComplete will save all the details on a csv file.
         private void btnComplete_Click(object sender, EventArgs e)
         {
-            // btnComplete will save all the details on a csv file.
             try
             {
                 Record rcd = new Record();    // creating record' object
@@ -250,11 +251,13 @@ namespace CourseWork1
             }
         }
 
+        // set button exit visibility as true when weekday rate radio button is clicked
         private void radioButtonApplyWeekdayRate_CheckedChanged(object sender, EventArgs e)
         {
             btnExit.Visible = true;
         }
 
+        // set button exit visibility as true when Weekend rate radio button is clicked
         private void radioButtonApplyWeekendRate_CheckedChanged(object sender, EventArgs e)
         {
             btnExit.Visible = true;

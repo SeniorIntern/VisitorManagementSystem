@@ -20,6 +20,7 @@ namespace CourseWork1
         public static string entryFilePath = "visitors.csv";
         public static string srzFilePath = "visitorData";
 
+        //  call necessary methods 
         public EntryForm()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace CourseWork1
 
         private void EntryForm_Load(object sender, EventArgs e)
         {
-            radioButtonWeekDay.Checked = true;
+            radioButtonWeekDay.Checked = true;  // check radio button when form loads 
             VisitorId.Text = Convert.ToString(GlobalValues.VisitorList.Max<Visitor>(vtrObjOne => vtrObjOne.Id) + 1); // increase Id value after adding visitor
 
             EntryGridView.DataSource = null;
@@ -41,7 +42,7 @@ namespace CourseWork1
                 //openHour < 10 || openHour > 18
                 if (false) // Disable visitor entry outside office hours. 
                 {
-                    BtnAddStudent.Enabled = false;
+                    btnAddVisitor.Enabled = false;
                     MessageBox.Show("Visitor can not enter outside visiting hours(10:00 AM to 6:00 PM)");
                 }
             }
@@ -52,18 +53,64 @@ namespace CourseWork1
 
         }
 
+        // form close action
         public static void EntryForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             MainForm.EntryView = null;
         }
 
+        // logic to add Visitor to CSV 
         private void AddStudentToCsv(int Id, string Type, int Count, DateTime entryTime)
         {
             string newVt = "\n" + Id + "," + Type + "," + Count + "," + entryTime;
             File.AppendAllText(Helper.entryFilePath, newVt);
         }
 
-        private void BtnAddStudent_Click(object sender, EventArgs e)
+        // Deserialized added visitor details
+        public void DeSerializeEntryData()
+        {
+            try
+            {
+                if (File.Exists(srzFilePath))
+                {
+                    using (FileStream stream = new FileStream(srzFilePath, FileMode.Open))
+                    {
+                        if (stream != null && stream.Length > 0)
+                        {
+                            VisitorCollection vColl = new VisitorCollection();
+                            BinaryFormatter binaryFormatter = new BinaryFormatter();
+
+                            // Reading visitor list information
+                            vColl = (VisitorCollection)binaryFormatter.Deserialize(stream);
+                            GlobalValues.VisitorList = vColl.VisitorList;
+                            MessageBox.Show("Sucessfully deserialized");
+                        }
+                        stream.Close();
+                    }
+                    EntryGridView.DataSource = null;
+                    EntryGridView.DataSource = GlobalValues.VisitorList;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DeSerialization unsucessfull");
+            }
+        }
+
+        // Show Weekday ticket rate when weekday radio button is checked
+        private void radioButtonWeekDay_CheckedChanged(object sender, EventArgs e)
+        {
+            TktGridView.DataSource = GlobalValues.TicketList;
+        }
+
+        // Show Weekend ticket rate when weekday radio button is checked
+        private void radioButtonWeekEnd_CheckedChanged(object sender, EventArgs e)
+        {
+            TktGridView.DataSource = GlobalValues.WeekendTicketList;
+        }
+
+        // trigger form validation, logic to add visitor details on visitor list
+        private void btnAddVisitor_Click(object sender, EventArgs e)
         {
             if (VisitorType.SelectedItem.ToString().Equals("") || VisitorCount.Value == 0)
             {
@@ -119,47 +166,5 @@ namespace CourseWork1
                 }
             }
         }
-
-        public void DeSerializeEntryData()
-        {
-            try
-            {
-                if (File.Exists(srzFilePath))
-                {
-                    using (FileStream stream = new FileStream(srzFilePath, FileMode.Open))
-                    {
-                        if (stream != null && stream.Length > 0)
-                        {
-                            VisitorCollection vColl = new VisitorCollection();
-                            BinaryFormatter binaryFormatter = new BinaryFormatter();
-
-                            // Reading visitor list information
-                            vColl = (VisitorCollection)binaryFormatter.Deserialize(stream);
-                            GlobalValues.VisitorList = vColl.VisitorList;
-                            MessageBox.Show("Visitor Count: " + GlobalValues.VisitorList.Count);
-                            MessageBox.Show("Sucessfully deserialized");
-                        }
-                        stream.Close();
-                    }
-                    EntryGridView.DataSource = null;
-                    EntryGridView.DataSource = GlobalValues.VisitorList;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("DeSerialization unsucessfull");
-            }
-        }
-
-        private void radioButtonWeekDay_CheckedChanged(object sender, EventArgs e)
-        {
-            TktGridView.DataSource = GlobalValues.TicketList;
-        }
-
-        private void radioButtonWeekEnd_CheckedChanged(object sender, EventArgs e)
-        {
-            TktGridView.DataSource = GlobalValues.WeekendTicketList;
-        }
-
     }
 }

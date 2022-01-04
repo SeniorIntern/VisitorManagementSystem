@@ -16,6 +16,7 @@ namespace CourseWork1
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // set button visibility and labels for admin and staff
             if (Helper.isAdmin)
             {
                 labelGreetUser.Text = "Welcome ADMIN";
@@ -34,6 +35,7 @@ namespace CourseWork1
             btnWeekendRate.Visible = false;
         }
 
+        // setup timer on a label to show time on menustrip
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now; //  creating DateTime object: dt
@@ -47,13 +49,15 @@ namespace CourseWork1
             menuStrip.Enabled = true;   // enable MenuStrip
         }
 
-        // for showing entry form onClicking button
+        // for showing Entry Form
         private void btnEntryForm_Click(object sender, EventArgs e)
         {
-            ShowEntryForm();
+            ShowEntryForm();    // calling entry form-showing method
         }
 
         public static EntryForm EntryView;
+
+        // Logic to show entry form
         private void ShowEntryForm()
         {
             if (EntryView == null)
@@ -70,10 +74,11 @@ namespace CourseWork1
 
         private void btnExitForm_Click(object sender, EventArgs e)
         {
-            ShowExitForm();
+            ShowExitForm(); // calling exit form-showing method
         }
 
         public static ExitForm ExitView;
+        // Logic to show Exit Form
         private void ShowExitForm()
         {
             if (ExitView == null)
@@ -90,10 +95,11 @@ namespace CourseWork1
 
         private void btnDailyRepForm_Click(object sender, EventArgs e)
         {
-            ShowDayReportForm();
+            ShowDayReportForm();    // calling daily report form-showing method
         }
 
         public static DailyReportForm ReportView;
+        // Logic to show Daily Report Form
         private void ShowDayReportForm()
         {
             if (ReportView == null)
@@ -108,6 +114,7 @@ namespace CourseWork1
             }
         }
 
+        // Logic to set button visibility for Weekday ticket rate button and weekend ticket rate button
         private void btnTicketsForm_Click(object sender, EventArgs e)
         {
             btnWeekdaysRate.Visible = true;
@@ -117,10 +124,11 @@ namespace CourseWork1
 
         private void btnWeeklyRepForm_Click(object sender, EventArgs e)
         {
-            ShowWeeklyReportForm();
+            ShowWeeklyReportForm(); // calling weekly report form-showing method
         }
 
         public static WeeklyReportForm WeeklyReportView;
+        // Logic to show Weekly Report Form
         private void ShowWeeklyReportForm()
         {
             if (WeeklyReportView == null)
@@ -135,19 +143,21 @@ namespace CourseWork1
             }
         }
 
+        // logout button logic.
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();   // close current form
             LF = new LoginForm();
-            LF.Show();
+            LF.Show();  // show login form
         }
 
         private void btnWeekdaysRate_Click(object sender, EventArgs e)
         {
-            ShowTicketForm();
+            ShowTicketForm();   // calling weekday ticket form-showing method
         }
 
         public static TicketForm TicketView;
+        // Logic to show Ticket Form
         private void ShowTicketForm()
         {
             if (TicketView == null)
@@ -164,8 +174,8 @@ namespace CourseWork1
 
         private void btnWeekendRate_Click(object sender, EventArgs e)
         {
-            ShowWeekendTicketForm();
-        }
+            ShowWeekendTicketForm();    // calling weekly ticket form-showing method
+        }   
 
         public static WeekendTicketForm WeTicketView;
         private void ShowWeekendTicketForm()

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CourseWork1
 {
@@ -16,6 +17,7 @@ namespace CourseWork1
         public static string recordFilePath = "records.csv";
         public static string SerializedFilePath = "Record.save";
         
+        // Read visitor entry record csv file return visitor list
         public static List<Visitor> ReadCsvFile(string entryFilePath)
         {
             GlobalValues.VisitorList = new List<Visitor>();
@@ -34,6 +36,7 @@ namespace CourseWork1
             return GlobalValues.VisitorList;
         }
 
+        // Read ticket rate csv file return TicketList
         public static List<Ticket> ReadTktCsvFile(string ticketFilePath)
         {
             GlobalValues.TicketList = new List<Ticket>();
@@ -55,6 +58,7 @@ namespace CourseWork1
             return GlobalValues.TicketList;
         }
 
+        // Read weekend ticket rate csv file return WeekendTicketList
         public static List<WeekendTicket> ReadWeTktCsvFile(string ticketFilePath)
         {
             GlobalValues.WeekendTicketList = new List<WeekendTicket>();
@@ -102,7 +106,7 @@ namespace CourseWork1
             }
         }
 
-        // Read weekend ticket price rates from CSV file
+        // Read weekday ticket price rates from CSV file
         public static void ReadWDTktRate()
         {
             GlobalValues.TicketList = new List<Ticket>();
@@ -127,27 +131,7 @@ namespace CourseWork1
             }
         }
 
-        /*
-        public void ReadTktCsvFile()
-        {
-            GlobalValues.TicketList = new List<Ticket>();
-            string[] tickets = File.ReadAllLines(ticketFilePath);
-            foreach (string t in tickets)
-            {
-                string[] ts = t.Split(',');
-                if (ts.Length != 6) continue;
-                Ticket tktObjOne = new Ticket();    // creating object of Visitor class
-                tktObjOne.TktId = Convert.ToInt32(ts[0]);
-                tktObjOne.TktType = ts[1];
-                tktObjOne.Rate1hr = Convert.ToInt32(ts[2]);
-                tktObjOne.Rate2hr = Convert.ToInt32(ts[3]);
-                tktObjOne.Rate3hr = Convert.ToInt32(ts[4]);
-                tktObjOne.RateXhr = Convert.ToInt32(ts[5]);
-                GlobalValues.TicketList.Add(tktObjOne);
-            }
-        }
-        */
-
+        // Read visitor exit record csv file and return RecordList
         public static List<Record> ReadRecordCsvFile(string recordFilePath)
         {
             GlobalValues.RecordList = new List<Record>();
@@ -169,7 +153,7 @@ namespace CourseWork1
             return GlobalValues.RecordList;
         }
 
-        // ExitForm-find entry details of the visitor by using visitorId
+        // Find entry details of the visitor by using visitorId
         public static Visitor GetRecordWithId(string searchterm)
         {
             if (GlobalValues.VisitorList == null || GlobalValues.VisitorList.Count < 1)
@@ -190,7 +174,7 @@ namespace CourseWork1
             return visitor;
         }
 
-        // ExitForm- get Weekday ticket Id using visitor type
+        // get Weekday ticket Id using visitor type
         public static Ticket GetTktRecordWithId(int searchterm)
         {
             if (GlobalValues.TicketList == null)
@@ -231,12 +215,14 @@ namespace CourseWork1
         }
 
 
+        // Add record to csv file after visitor exits
         public static void AddRecordToCsv(int vId, string vType, int vCount, DateTime vEntTime, DateTime vExtTime, string vDuration, int vCost)
         {
             string newRc = "\n" + vId + "," + vType + "," + vCount + "," + vEntTime + "," + vExtTime + "," + vDuration + "," + vCost;
             File.AppendAllText(recordFilePath, newRc);
         }
 
+        // Read visitor exit record csv file and return RecordList
         public static List<Record> GetRecordsFromCSV(string recordFilePath)
         {
             GlobalValues.RecordList = new List<Record>();
@@ -258,6 +244,7 @@ namespace CourseWork1
             return GlobalValues.RecordList;
         }
 
+        // get records from csv file on the basis of day
         public static Report GetReportByDate(DateTime day)
         {
             List<Record> recordList = GetRecordsFromCSV(recordFilePath);
@@ -285,11 +272,13 @@ namespace CourseWork1
             return report;
         }
 
+        // find and return weekend ticket type
         public static WeekendTicket ChangeWeekendRate(string weTktType)
         {
             return GlobalValues.WeekendTicketList.Find(weRates => weRates.weTktType == weTktType);
         }
 
+        // update weekend ticket rate' csv file after admin performs update action
         public static void UpdateWeekendRateToCsv()
         {
             try
@@ -316,15 +305,17 @@ namespace CourseWork1
             }
             catch (Exception e)
             {
-                
+                MessageBox.Show("Something went wrong when upating weekday rate csv file");
             }
         }
 
+        // find and return weekday ticket type from the csv file
         public static Ticket ChangeWeekdayRate(string wdTktType)
         {
             return GlobalValues.TicketList.Find(wdRates => wdRates.TktType == wdTktType);
         }
 
+        // update weekend ticket rate' csv file after admin performs update action
         public static void UpdateWeekdayRateToCsv()
         {
             try
@@ -350,7 +341,7 @@ namespace CourseWork1
             }
             catch (Exception e)
             {
-
+                MessageBox.Show("Something went wrong when upating weekday rate csv file");
             }
         }
 

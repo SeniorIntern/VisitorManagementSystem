@@ -35,7 +35,7 @@ namespace CourseWork1
             this.BtnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnGuest = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.PasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEmpLogin = new System.Windows.Forms.Button();
@@ -92,20 +92,20 @@ namespace CourseWork1
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
-            // BtnGuest
+            // btnExit
             // 
-            this.BtnGuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.BtnGuest.FlatAppearance.BorderSize = 0;
-            this.BtnGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnGuest.Location = new System.Drawing.Point(255, 481);
-            this.BtnGuest.Name = "BtnGuest";
-            this.BtnGuest.Size = new System.Drawing.Size(75, 23);
-            this.BtnGuest.TabIndex = 5;
-            this.BtnGuest.Text = "Exit";
-            this.BtnGuest.UseVisualStyleBackColor = false;
-            this.BtnGuest.Click += new System.EventHandler(this.BtnGuest_Click);
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExit.Location = new System.Drawing.Point(255, 481);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // PasswordCheckBox
             // 
@@ -164,7 +164,7 @@ namespace CourseWork1
             this.Controls.Add(this.btnEmpLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PasswordCheckBox);
-            this.Controls.Add(this.BtnGuest);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnLogin);
@@ -190,7 +190,7 @@ namespace CourseWork1
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BtnGuest;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.CheckBox PasswordCheckBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEmpLogin;

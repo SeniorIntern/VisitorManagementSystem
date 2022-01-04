@@ -29,6 +29,7 @@ namespace CourseWork1
             MainForm.WeeklyReportView = null;
         }
 
+        // Get record data from visitor' record stored csv file
         public static List<Record> GetRecordsFromCSV(string recordFilePath)
         {
             GlobalValues.RecordList = new List<Record>();
@@ -50,6 +51,7 @@ namespace CourseWork1
             return GlobalValues.RecordList;
         }
 
+        // Get report per day 
         public static Report GetReportPerDay(DateTime day)
         {
             List<Record> recordList = GetRecordsFromCSV(Helper.recordFilePath);
@@ -77,6 +79,7 @@ namespace CourseWork1
             return report;
         }
 
+        // Update Record For present day
         private void UpdateReportA(Report r)
         {
             DayACountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -88,6 +91,7 @@ namespace CourseWork1
             WeeklyReportchart.Series["TotalEarnings"].Points.AddXY(DayA.Text, DayATxnTotal.Text);
         }
 
+        // Update Record For 2 day before
         private void UpdateReportB(Report r)
         {
             DayBCountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -97,6 +101,7 @@ namespace CourseWork1
             WeeklyReportchart.Series["TotalEarnings"].Points.AddXY(DayB.Text, DayBTxnTotal.Text);
         }
 
+        // Update Record For 3 day before
         private void UpdateReportC(Report r)
         {
             DayCCountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -106,6 +111,7 @@ namespace CourseWork1
             WeeklyReportchart.Series["TotalEarnings"].Points.AddXY(DayC.Text, DayCTxnTotal.Text);
         }
 
+        // Update Record For 4 day before
         private void UpdateReportD(Report r)
         {
             DayDCountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -115,6 +121,7 @@ namespace CourseWork1
             WeeklyReportchart.Series["TotalEarnings"].Points.AddXY(DayD.Text, DayDTxnTotal.Text);
         }
 
+        // Update Record For 5 day before
         private void UpdateReportE(Report r)
         {
             DayECountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -124,6 +131,7 @@ namespace CourseWork1
             WeeklyReportchart.Series["TotalEarnings"].Points.AddXY(DayE.Text, DayETxnTotal.Text);
         }
 
+        // Update Record For 6 day before
         private void UpdateReportF(Report r)
         {
             DayFCountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -133,6 +141,7 @@ namespace CourseWork1
             WeeklyReportchart.Series["TotalEarnings"].Points.AddXY(DayF.Text, DayFTxnTotal.Text);
         }
 
+        // Update Record For 7 day before
         private void UpdateReportG(Report r)
         {
             DayGCountTotal.Text = (r.Adult + r.Children + r.Group).ToString();
@@ -142,6 +151,7 @@ namespace CourseWork1
             WeeklyReportchart.Series["TotalEarnings"].Points.AddXY(DayG.Text, DayGTxnTotal.Text);
         }
 
+        // calculate report data for each day
         private void CalculateValues()
         {
             for (int i = 0; i < 7; i++)
@@ -178,6 +188,7 @@ namespace CourseWork1
             }
         }
 
+        // call CalculateValues() method and set sorting button visibility to true
         private void btnGetReport_Click(object sender, EventArgs e)
         {
             CalculateValues();
@@ -186,6 +197,7 @@ namespace CourseWork1
             radioBtnSortByEarnings.Visible = true;
         }
 
+        // Bubble sorting visitor counts from each day
         private void sortingByCount() {
             int a, b, c, d, e, f, g;
             a = Convert.ToInt32(DayACountTotal.Text);
@@ -217,6 +229,7 @@ namespace CourseWork1
             label11.Text = arr[6].ToString();
         }
 
+        // Bubble sorting total earnings from each day
         private void sortingByEarnings()
         {
             int a, b, c, d, e, f, g;
@@ -254,12 +267,14 @@ namespace CourseWork1
         }
 
 
+        // show sorting by visitor count 
         private void radioBtnSortByCount_CheckedChanged(object sender, EventArgs e)
         {
             sortingByCount();
             label13.Text = "Visitor Count by rising order";
         }
 
+        // show sorting by visitor income
         private void radioBtnSortByEarnings_CheckedChanged(object sender, EventArgs e)
         {
             sortingByEarnings();

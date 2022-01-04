@@ -29,14 +29,13 @@ namespace CourseWork1
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnAddStudent = new System.Windows.Forms.Button();
+            this.btnAddVisitor = new System.Windows.Forms.Button();
             this.VisitorType = new System.Windows.Forms.ComboBox();
             this.VisitorCount = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TktGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.VisitorId = new System.Windows.Forms.Label();
             this.EntryGridView = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,20 +46,20 @@ namespace CourseWork1
             ((System.ComponentModel.ISupportInitialize)(this.EntryGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // BtnAddStudent
+            // btnAddVisitor
             // 
-            this.BtnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.BtnAddStudent.FlatAppearance.BorderSize = 0;
-            this.BtnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnAddStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnAddStudent.Location = new System.Drawing.Point(25, 218);
-            this.BtnAddStudent.Name = "BtnAddStudent";
-            this.BtnAddStudent.Size = new System.Drawing.Size(87, 27);
-            this.BtnAddStudent.TabIndex = 3;
-            this.BtnAddStudent.Text = "Add";
-            this.BtnAddStudent.UseVisualStyleBackColor = false;
-            this.BtnAddStudent.Click += new System.EventHandler(this.BtnAddStudent_Click);
+            this.btnAddVisitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.btnAddVisitor.FlatAppearance.BorderSize = 0;
+            this.btnAddVisitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddVisitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddVisitor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAddVisitor.Location = new System.Drawing.Point(25, 218);
+            this.btnAddVisitor.Name = "btnAddVisitor";
+            this.btnAddVisitor.Size = new System.Drawing.Size(87, 27);
+            this.btnAddVisitor.TabIndex = 3;
+            this.btnAddVisitor.Text = "Add";
+            this.btnAddVisitor.UseVisualStyleBackColor = false;
+            this.btnAddVisitor.Click += new System.EventHandler(this.btnAddVisitor_Click);
             // 
             // VisitorType
             // 
@@ -118,20 +117,6 @@ namespace CourseWork1
             this.TktGridView.Name = "TktGridView";
             this.TktGridView.Size = new System.Drawing.Size(545, 235);
             this.TktGridView.TabIndex = 16;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(137, 218);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 27);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // VisitorId
             // 
@@ -198,9 +183,8 @@ namespace CourseWork1
             this.Controls.Add(this.radioButtonWeekDay);
             this.Controls.Add(this.EntryGridView);
             this.Controls.Add(this.VisitorId);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.TktGridView);
-            this.Controls.Add(this.BtnAddStudent);
+            this.Controls.Add(this.btnAddVisitor);
             this.Controls.Add(this.VisitorType);
             this.Controls.Add(this.VisitorCount);
             this.Controls.Add(this.label3);
@@ -218,14 +202,13 @@ namespace CourseWork1
         }
 
         #endregion
-        private System.Windows.Forms.Button BtnAddStudent;
+        private System.Windows.Forms.Button btnAddVisitor;
         private System.Windows.Forms.ComboBox VisitorType;
         private System.Windows.Forms.NumericUpDown VisitorCount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TktGridView;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label VisitorId;
         private System.Windows.Forms.DataGridView EntryGridView;
         private System.Windows.Forms.Label label10;

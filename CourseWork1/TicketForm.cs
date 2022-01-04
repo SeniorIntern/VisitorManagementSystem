@@ -22,9 +22,10 @@ namespace CourseWork1
             InitializeComponent();
         }
 
+        //Call ReadTktCsvFile method to read ticket csv file when loading form
         private void TicketForm_Load(object sender, EventArgs e)
         {
-            ReadTktCsvFile();
+            ReadTktCsvFile();   // Call ReadTktCsvFile method
             WeekdayTicketsGridView.DataSource = null;
             WeekdayTicketsGridView.DataSource = GlobalValues.TicketList;
         }
@@ -34,6 +35,7 @@ namespace CourseWork1
             MainForm.TicketView = null;
         }
 
+        // Read weekday ticket rate csv file
         public void ReadTktCsvFile()
         {
             GlobalValues.TicketList = new List<Ticket>();
@@ -54,6 +56,7 @@ namespace CourseWork1
             }
         }
 
+        //  Update rate values in the CSV file
         private void btnUpdateRate_Click(object sender, EventArgs e)
         {
             string wdTktType = TicketType.Text;

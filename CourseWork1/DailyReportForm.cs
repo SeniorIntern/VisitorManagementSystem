@@ -29,6 +29,7 @@ namespace CourseWork1
             MainForm.ReportView = null;
         }
 
+        // Update labels and charts providing data from today' record
         private void UpdateReport(Report r)
         {
             labelCountAdult.Text = r.Adult.ToString();
@@ -50,10 +51,11 @@ namespace CourseWork1
             chartCount.Series["Income"].Points.AddXY("Group", r.GroupIncome);
         }
 
+        // provide data from report according to present date/dateTimePicket.Value
         private void btnGetReport_Click(object sender, EventArgs e)
         {
             Report r = Helper.GetReportByDate(dateTimerPicker.Value);
-            UpdateReport(r);
+            UpdateReport(r);    // call updateReport method passing arguments
         }
  
     }

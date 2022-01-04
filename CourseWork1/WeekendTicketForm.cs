@@ -20,6 +20,7 @@ namespace CourseWork1
             InitializeComponent();
         }
 
+        //  Call ReadWeekendTktCsvFile() method to read weekend ticket csv file when loading form.
         private void WeekendTicketForm_Load(object sender, EventArgs e)
         {
             ReadWeekendTktCsvFile();
@@ -32,6 +33,7 @@ namespace CourseWork1
             MainForm.WeTicketView = null;
         }
 
+        //  Read weekend ticket rate csv file.
         public void ReadWeekendTktCsvFile()
         {
             GlobalValues.WeekendTicketList = new List<WeekendTicket>();
@@ -51,7 +53,8 @@ namespace CourseWork1
                 GlobalValues.WeekendTicketList.Add(weTktObjOne);
             }
         }
-
+        
+        //  Update weekend ticket rate values in the CSV file.
         private void btnUpdateWERate_Click(object sender, EventArgs e)
         {
             string TktType = weekendTicketType.Text;
