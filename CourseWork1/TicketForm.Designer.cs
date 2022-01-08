@@ -45,6 +45,7 @@
             this.tbWdRateXhr = new System.Windows.Forms.TextBox();
             this.tbWdRate4hr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WeekdayTicketsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekdayTicketId)).BeginInit();
             this.SuspendLayout();
@@ -102,7 +103,7 @@
             this.TicketType.Location = new System.Drawing.Point(137, 90);
             this.TicketType.Name = "TicketType";
             this.TicketType.Size = new System.Drawing.Size(84, 21);
-            this.TicketType.TabIndex = 0;
+            this.TicketType.TabIndex = 1;
             // 
             // label4
             // 
@@ -120,7 +121,7 @@
             this.weekdayTicketId.Location = new System.Drawing.Point(137, 54);
             this.weekdayTicketId.Name = "weekdayTicketId";
             this.weekdayTicketId.Size = new System.Drawing.Size(86, 20);
-            this.weekdayTicketId.TabIndex = 10;
+            this.weekdayTicketId.TabIndex = 0;
             // 
             // label5
             // 
@@ -176,35 +177,35 @@
             this.tbWdRate1hr.Location = new System.Drawing.Point(137, 135);
             this.tbWdRate1hr.Name = "tbWdRate1hr";
             this.tbWdRate1hr.Size = new System.Drawing.Size(84, 20);
-            this.tbWdRate1hr.TabIndex = 17;
+            this.tbWdRate1hr.TabIndex = 2;
             // 
             // tbWdRate2hr
             // 
             this.tbWdRate2hr.Location = new System.Drawing.Point(137, 187);
             this.tbWdRate2hr.Name = "tbWdRate2hr";
             this.tbWdRate2hr.Size = new System.Drawing.Size(84, 20);
-            this.tbWdRate2hr.TabIndex = 18;
+            this.tbWdRate2hr.TabIndex = 3;
             // 
             // tbWdRate3hr
             // 
             this.tbWdRate3hr.Location = new System.Drawing.Point(137, 239);
             this.tbWdRate3hr.Name = "tbWdRate3hr";
             this.tbWdRate3hr.Size = new System.Drawing.Size(84, 20);
-            this.tbWdRate3hr.TabIndex = 19;
+            this.tbWdRate3hr.TabIndex = 4;
             // 
             // tbWdRateXhr
             // 
             this.tbWdRateXhr.Location = new System.Drawing.Point(137, 311);
             this.tbWdRateXhr.Name = "tbWdRateXhr";
             this.tbWdRateXhr.Size = new System.Drawing.Size(84, 20);
-            this.tbWdRateXhr.TabIndex = 20;
+            this.tbWdRateXhr.TabIndex = 6;
             // 
             // tbWdRate4hr
             // 
             this.tbWdRate4hr.Location = new System.Drawing.Point(137, 274);
             this.tbWdRate4hr.Name = "tbWdRate4hr";
             this.tbWdRate4hr.Size = new System.Drawing.Size(84, 20);
-            this.tbWdRate4hr.TabIndex = 22;
+            this.tbWdRate4hr.TabIndex = 5;
             // 
             // label7
             // 
@@ -217,12 +218,22 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "4 Hour Rate";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(185, 13);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Use Type for updating the rate values";
+            // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.tbWdRate4hr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbWdRateXhr);
@@ -269,5 +280,6 @@
         private System.Windows.Forms.TextBox tbWdRateXhr;
         private System.Windows.Forms.TextBox tbWdRate4hr;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

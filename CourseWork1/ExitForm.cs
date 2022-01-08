@@ -46,6 +46,8 @@ namespace CourseWork1
         // fetch visitor data
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            labelType.Visible = true;
+            labelCount.Visible = true;
             String Id = searchId.Text;
             Visitor v = Helper.GetRecordWithId(Id);
             labelRateType.Visible = true;
@@ -151,6 +153,7 @@ namespace CourseWork1
                         rate = wt.weRateXhr;
                         break;
                 }
+
                 labelCost.Visible = true;
                 totalCharge = rate * m;
                 labelCost.Text = totalCharge.ToString();

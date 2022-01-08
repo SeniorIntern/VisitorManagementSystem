@@ -169,6 +169,7 @@ namespace CourseWork1
             this.labelCount.Size = new System.Drawing.Size(57, 20);
             this.labelCount.TabIndex = 10;
             this.labelCount.Text = "label8";
+            this.labelCount.Visible = false;
             // 
             // labelType
             // 
@@ -180,6 +181,7 @@ namespace CourseWork1
             this.labelType.Size = new System.Drawing.Size(57, 20);
             this.labelType.TabIndex = 11;
             this.labelType.Text = "label9";
+            this.labelType.Visible = false;
             // 
             // labelEntry
             // 
@@ -188,9 +190,9 @@ namespace CourseWork1
             this.labelEntry.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelEntry.Location = new System.Drawing.Point(132, 154);
             this.labelEntry.Name = "labelEntry";
-            this.labelEntry.Size = new System.Drawing.Size(67, 20);
+            this.labelEntry.Size = new System.Drawing.Size(19, 20);
             this.labelEntry.TabIndex = 12;
-            this.labelEntry.Text = "label10";
+            this.labelEntry.Text = "e";
             // 
             // labelExit
             // 

@@ -44,6 +44,7 @@
             this.weekendTicketId = new System.Windows.Forms.NumericUpDown();
             this.tbWeRate4hr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WeekendTicketsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekendTicketId)).BeginInit();
             this.SuspendLayout();
@@ -197,12 +198,22 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Rate 4 Hours";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(23, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(185, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Use Type for updating the rate values";
+            // 
             // WeekendTicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.tbWeRate4hr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -247,5 +258,6 @@
         private System.Windows.Forms.NumericUpDown weekendTicketId;
         private System.Windows.Forms.TextBox tbWeRate4hr;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
