@@ -39,7 +39,8 @@ namespace CourseWork1
 
             openHour = (DateTime.Now).Hour;
             try {
-                if (openHour < 10 || openHour > 18) // Disable visitor entry outside office hours. 
+                //openHour < 10 || openHour > 18
+                if (false) // Disable visitor entry outside office hours. 
                 {
                     btnAddVisitor.Enabled = false;
                     MessageBox.Show("Visitor can not enter outside working hours(10:00 AM to 6:00 PM)");
